@@ -64,6 +64,10 @@
       });
     }
 
+    if (window.SorpresaReproductor) {
+      window.SorpresaReproductor.reproducirCategoria("ambiente");
+    }
+
     mostrarCartaInicial();
   });
 

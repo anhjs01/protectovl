@@ -160,6 +160,10 @@
       });
     }
 
+    if (window.SorpresaReproductor) {
+      window.SorpresaReproductor.reproducirCategoria(diaAbierto.tono || "amor");
+    }
+
     card.style.setProperty("--card-principal", diaAbierto.color.principal);
     card.style.setProperty("--card-suave", diaAbierto.color.suave);
     card.style.setProperty("--card-oscuro", diaAbierto.color.oscuro);

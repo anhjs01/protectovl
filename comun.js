@@ -49,46 +49,10 @@
   }
 
   /* -----------------------------------------------------------------
-     WIDGET DE MÚSICA
+     (el widget de música con lista de links fue reemplazado por
+     reproductor.js, que reproduce de verdad usando YouTube en vez
+     de solo abrir enlaces en otra pestaña)
      ----------------------------------------------------------------- */
-  function crearWidgetMusica() {
-    const host = document.getElementById("musicaWidget");
-    if (!host || typeof LISTA_CANCIONES === "undefined") return;
-
-    const boton = document.createElement("button");
-    boton.type = "button";
-    boton.className = "musica-boton";
-    boton.setAttribute("aria-label", "Nuestras canciones");
-    boton.textContent = "🎵";
-
-    const panel = document.createElement("div");
-    panel.className = "musica-panel";
-    panel.innerHTML = '<p class="musica-panel__titulo">Nuestras canciones</p>';
-
-    LISTA_CANCIONES.forEach((cancion) => {
-      const tieneLink = !!cancion.url;
-      const item = document.createElement(tieneLink ? "a" : "div");
-      item.className = "musica-item" + (tieneLink ? "" : " sin-link");
-      if (tieneLink) {
-        item.href = cancion.url;
-        item.target = "_blank";
-        item.rel = "noopener noreferrer";
-      }
-      item.innerHTML =
-        '<span class="musica-item__titulo">' + cancion.titulo + "</span><br>" +
-        '<span class="musica-item__artista">' + cancion.artista +
-        (tieneLink ? "" : " · (sin link todavía)") + "</span>";
-      panel.appendChild(item);
-    });
-
-    boton.addEventListener("click", () => panel.classList.toggle("is-open"));
-    document.addEventListener("click", (e) => {
-      if (!host.contains(e.target)) panel.classList.remove("is-open");
-    });
-
-    host.appendChild(panel);
-    host.appendChild(boton);
-  }
 
   /* -----------------------------------------------------------------
      ESTALLIDO DE PARTÍCULAS — se usa al abrir el corazón o un día
@@ -121,7 +85,6 @@
   }
 
   crearFondo();
-  crearWidgetMusica();
 
-  window.SorpresaComun = { crearFondo, crearWidgetMusica, estallarParticulas };
+  window.SorpresaComun = { crearFondo, estallarParticulas };
 })();
