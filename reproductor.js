@@ -7,11 +7,13 @@
    en catalogo-canciones.js.
 
    Por las reglas de los navegadores, la música solo puede empezar a
-   sonar después de que la persona haga un clic en algo (no se puede
-   forzar el sonido automático apenas abre la página). Por eso la
-   música arranca:
-     - en la portada: al tocar el corazón
-     - en el calendario: al abrir el primer día
+   SONAR (con volumen) después de un clic. Para que arranque lo más
+   rápido posible apenas hay ese primer clic, el reproductor deja una
+   canción "precargada" en silencio desde que la página abre (los
+   navegadores sí permiten reproducir en silencio sin necesidad de
+   clic) — así, cuando llega el primer clic real, casi siempre solo
+   hace falta quitarle el silencio en vez de cargar la canción desde
+   cero, y suena casi al instante.
    ======================================================================= */
 
 (function () {
@@ -20,11 +22,12 @@
   let player = null;
   let apiLista = false;
   let pendiente = null; // videoId en espera si se pidió reproducir antes de tiempo
+  let precargada = null; // cancion cargada en silencio de antemano, lista para sonar
   let cancionActual = null;
   let sonando = false;
 
   /* -----------------------------------------------------------------
-     1) CARGAR LA API DE YOUTUBE (una sola vez)
+     1) CARGAR LA API DE YOUTUBE (una sola vez, lo antes posible)
      ----------------------------------------------------------------- */
   function cargarAPI() {
     if (window.__ytApiCargando) return;
@@ -58,12 +61,16 @@
       events: {
         onReady: function () {
           apiLista = true;
+          player.mute();
           if (pendiente) {
-            reproducirId(pendiente);
+            reproducirId(pendiente, true);
             pendiente = null;
+          } else {
+            precargarPorAdelantado();
           }
         },
         onStateChange: function (e) {
+          if (!cancionActual) return; // ignora eventos de la precarga silenciosa
           sonando = e.data === 1; // 1 = YT.PlayerState.PLAYING
           actualizarUI();
         },
@@ -72,15 +79,35 @@
   }
 
   /* -----------------------------------------------------------------
-     2) REPRODUCIR
+     2) PRECARGA SILENCIOSA (apenas la página abre, sin esperar clic)
      ----------------------------------------------------------------- */
-  function reproducirId(videoId) {
-    if (!videoId) return;
-    if (!apiLista || !player || !player.loadVideoById) {
+  function precargarPorAdelantado() {
+    if (typeof CATALOGO_CANCIONES === "undefined" || !player || !player.loadVideoById) return;
+    // en la portada lo primero que suena es "ambiente"; en el calendario,
+    // la mayoria de los dias son "amor" — precargamos la que mas
+    // probablemente coincida con el primer toque real de cada página
+    const esPortada = !!document.getElementById("heartBtn");
+    const categoriaPreferida = esPortada ? "ambiente" : "amor";
+    const lista = (CATALOGO_CANCIONES[categoriaPreferida] || []).filter((c) => c.youtubeId);
+    if (lista.length === 0) return;
+    const elegida = lista[Math.floor(Math.random() * lista.length)];
+    precargada = { titulo: elegida.titulo, artista: elegida.artista, youtubeId: elegida.youtubeId, categoria: categoriaPreferida };
+    player.mute();
+    player.loadVideoById(elegida.youtubeId);
+    player.pauseVideo();
+  }
+
+  /* -----------------------------------------------------------------
+     3) REPRODUCIR
+     ----------------------------------------------------------------- */
+  function reproducirId(videoId, silencioso) {
+    if (!videoId || !player) return;
+    if (!apiLista || !player.loadVideoById) {
       pendiente = videoId;
       return;
     }
     player.loadVideoById(videoId);
+    if (!silencioso) player.unMute();
     player.playVideo();
   }
 
@@ -99,7 +126,17 @@
     const elegida = opciones[Math.floor(Math.random() * opciones.length)];
     cancionActual = elegida;
     cancionActual.categoria = categoria;
-    reproducirId(elegida.youtubeId);
+
+    // si la precarga silenciosa ya es justo esta cancion, solo hay
+    // que quitarle el silencio: suena casi instantaneo, sin recargar
+    if (precargada && player && precargada.youtubeId === elegida.youtubeId) {
+      player.unMute();
+      player.playVideo();
+    } else {
+      reproducirId(elegida.youtubeId, false);
+    }
+    precargada = null;
+    sonando = true;
     actualizarUI();
   }
 
@@ -119,7 +156,7 @@
   }
 
   /* -----------------------------------------------------------------
-     3) UI MÍNIMA — barra flotante "sonando ahora"
+     4) UI MÍNIMA — barra flotante "sonando ahora"
      ----------------------------------------------------------------- */
   let elBarra = null;
 
@@ -150,12 +187,13 @@
   }
 
   /* -----------------------------------------------------------------
-     4) INICIO
+     5) INICIO
      ----------------------------------------------------------------- */
   cargarAPI();
 
   window.SorpresaReproductor = {
     reproducirCategoria: reproducirCategoria,
     estaSonando: function () { return sonando; },
+    haIniciado: function () { return !!cancionActual; },
   };
 })();

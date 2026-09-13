@@ -274,7 +274,26 @@
   });
 
   /* -----------------------------------------------------------------
-     5) INICIO
+     5) MÚSICA DESDE EL PRIMER TOQUE
+     -----------------------------------------------------------------
+     Si lo primero que toca no es un día (por ejemplo, solo entra a
+     mirar la cuadrícula), igual empieza a sonar algo de ambiente
+     desde el primer toque en cualquier parte de la página. Si lo
+     primero que toca SÍ es un día, ese día ya elige su propia
+     música (ver abrirDia), así que este disparador no hace nada raro.
+     ----------------------------------------------------------------- */
+  document.addEventListener(
+    "click",
+    () => {
+      if (window.SorpresaReproductor && !window.SorpresaReproductor.haIniciado()) {
+        window.SorpresaReproductor.reproducirCategoria("amor");
+      }
+    },
+    { once: true }
+  );
+
+  /* -----------------------------------------------------------------
+     6) INICIO
      ----------------------------------------------------------------- */
   renderGrid();
 })();

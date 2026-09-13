@@ -48,30 +48,29 @@ const CATALOGO_CANCIONES = {
     { titulo: "Pero No Te Enamores", artista: "Fuerza Regida", youtubeId: "qGTBrBTFKOM", nota: "otra que ya se han compartido" },
     { titulo: "Bésame Mucho", artista: "Consuelo Velázquez (clásico)", youtubeId: "" },
     { titulo: "Eres Tú", artista: "Mocedades", youtubeId: "" },
-    { titulo: "Perfecta", artista: "Camilo", youtubeId: "" },
+    { titulo: "Perfecta", artista: "Camilo", youtubeId: "8BRXjKvWrtQ" },
+    { titulo: "Favorito", artista: "Camilo", youtubeId: "2mY7AFTtYwQ" },
     { titulo: "Amor Eterno", artista: "Juan Gabriel", youtubeId: "" },
     { titulo: "Contigo", artista: "(elige la que ustedes sientan como suya)", youtubeId: "" },
-    { titulo: "[agrega otra romántica aquí]", artista: "", youtubeId: "" },
-    { titulo: "[agrega otra más]", artista: "", youtubeId: "" }
+    { titulo: "[agrega otra romántica aquí]", artista: "", youtubeId: "" }
   ],
 
   filosofica: [
     { titulo: "(de tu playlist de lectura/poesía tranquila)", artista: "", youtubeId: "CK4M7y4Aets" },
-    { titulo: "River Flows in You", artista: "Yiruma", youtubeId: "" },
-    { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "" },
+    { titulo: "River Flows in You", artista: "Yiruma", youtubeId: "fiBvOKmuWKg" },
+    { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "CQ8zglIXZi8" },
     { titulo: "Comptine d'un autre été", artista: "Yann Tiersen", youtubeId: "" },
     { titulo: "Clair de Lune", artista: "Debussy", youtubeId: "" },
     { titulo: "Experience", artista: "Ludovico Einaudi", youtubeId: "" },
-    { titulo: "[agrega algo instrumental o spoken word]", artista: "", youtubeId: "" },
-    { titulo: "[agrega otra tranquila]", artista: "", youtubeId: "" }
+    { titulo: "[agrega algo instrumental o spoken word]", artista: "", youtubeId: "" }
   ],
 
   hot: [
     { titulo: "(de tu playlist hot)", artista: "The Weeknd", youtubeId: "47WlgETfamE" },
     { titulo: "Often", artista: "The Weeknd", youtubeId: "JPIhUaONiLU" },
     { titulo: "Save Your Tears", artista: "The Weeknd", youtubeId: "u6lihZAcy4s" },
-    { titulo: "Wicked Games", artista: "The Weeknd", youtubeId: "" },
-    { titulo: "Die For You", artista: "The Weeknd", youtubeId: "" },
+    { titulo: "Wicked Games", artista: "The Weeknd", youtubeId: "O1OTWCd40bc" },
+    { titulo: "Die For You", artista: "The Weeknd", youtubeId: "gSo0YiGPgHk" },
     { titulo: "Party Monster", artista: "The Weeknd", youtubeId: "" },
     { titulo: "The Hills", artista: "The Weeknd", youtubeId: "" },
     { titulo: "Priscilla", artista: "The Weeknd", youtubeId: "" },
@@ -81,8 +80,8 @@ const CATALOGO_CANCIONES = {
 
   ambiente: [
     { titulo: "(de tu playlist para el fondo de la portada)", artista: "", youtubeId: "uTBfN9KMfPk" },
-    { titulo: "River Flows in You", artista: "Yiruma", youtubeId: "" },
-    { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "" },
+    { titulo: "River Flows in You", artista: "Yiruma", youtubeId: "fiBvOKmuWKg" },
+    { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "CQ8zglIXZi8" },
     { titulo: "[agrega otra tranquila para el inicio]", artista: "", youtubeId: "" }
   ]
 
