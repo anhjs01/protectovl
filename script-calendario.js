@@ -187,13 +187,20 @@
     }
   }
 
+  const FASES_LUNA = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘", "🌙", "🌛", "🌜"];
+
   function renderPaso() {
     renderPasos();
     const d = diaAbierto;
+    const elDecoracion = document.getElementById("pasoDecoracion");
+
+    overlay.classList.remove("modo-manana", "modo-noche");
 
     if (pasoActual === 0) {
       elTitulo.textContent = "Buenos días";
       elContenido.innerHTML = "<p>" + d.buenosDias + "</p>";
+      overlay.classList.add("modo-manana");
+      elDecoracion.textContent = "☀️";
     } else if (pasoActual === 1) {
       elTitulo.textContent = "Para hoy";
       let html = d.poema.map((p) => "<p>" + p + "</p>").join("");
@@ -209,9 +216,14 @@
           '" target="_blank" rel="noopener noreferrer">🎵 Canción de hoy</a>';
       }
       elContenido.innerHTML = html;
+      elDecoracion.textContent = "";
     } else {
       elTitulo.textContent = "Buenas noches";
       elContenido.innerHTML = "<p>" + d.buenasNoches + "</p>";
+      overlay.classList.add("modo-noche");
+      // una fase de luna distinta cada vez que se abre este paso, sin
+      // que tenga que coincidir con la luna real de hoy
+      elDecoracion.textContent = FASES_LUNA[Math.floor(Math.random() * FASES_LUNA.length)];
     }
 
     btnAnterior.style.visibility = pasoActual === 0 ? "hidden" : "visible";

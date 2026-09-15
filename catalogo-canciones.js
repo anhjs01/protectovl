@@ -44,14 +44,21 @@ const CATALOGO_CANCIONES = {
 
   amor: [
     { titulo: "(de tu playlist de amor)", artista: "", youtubeId: "C4hwsb1HPaU" },
-    { titulo: "Hecha Pa' Mí", artista: "Grupo Frontera", youtubeId: "UrXhROQrTPs", nota: "ya se la han compartido antes 💛" },
+    { titulo: "Hecha Pa' Mí", artista: "Grupo Frontera", youtubeId: "IbE7peGTpmc", nota: "ya se la han compartido antes 💛" },
     { titulo: "Pero No Te Enamores", artista: "Fuerza Regida", youtubeId: "qGTBrBTFKOM", nota: "otra que ya se han compartido" },
-    { titulo: "Bésame Mucho", artista: "Consuelo Velázquez (clásico)", youtubeId: "" },
-    { titulo: "Eres Tú", artista: "Mocedades", youtubeId: "" },
     { titulo: "Perfecta", artista: "Camilo", youtubeId: "8BRXjKvWrtQ" },
     { titulo: "Favorito", artista: "Camilo", youtubeId: "2mY7AFTtYwQ" },
+    { titulo: "Vivir Mi Vida", artista: "Marc Anthony", youtubeId: "YXnjy5YlDwk", nota: "salsa, para los días más alegres" },
+    { titulo: "Cali Pachanguero", artista: "Grupo Niche", youtubeId: "7KxkMLAZlzw", nota: "salsa clásica, para bailar" },
+    { titulo: "Bésame Mucho", artista: "Consuelo Velázquez (clásico)", youtubeId: "" },
+    { titulo: "Eres Tú", artista: "Mocedades", youtubeId: "" },
     { titulo: "Amor Eterno", artista: "Juan Gabriel", youtubeId: "" },
     { titulo: "Contigo", artista: "(elige la que ustedes sientan como suya)", youtubeId: "" },
+    { titulo: "Querer Querernos", artista: "Canserbero", youtubeId: "" },
+    { titulo: "Amor Libre", artista: "Nach (feat. Shuga Wuga)", youtubeId: "" },
+    { titulo: "Día Tras Día", artista: "Andrés Cepeda", youtubeId: "" },
+    { titulo: "Lo Que en Ti Veo", artista: "Andrés Cepeda", youtubeId: "" },
+    { titulo: "Cómo Te Atreves", artista: "Morat", youtubeId: "" },
     { titulo: "[agrega otra romántica aquí]", artista: "", youtubeId: "" }
   ],
 
@@ -62,6 +69,8 @@ const CATALOGO_CANCIONES = {
     { titulo: "Comptine d'un autre été", artista: "Yann Tiersen", youtubeId: "" },
     { titulo: "Clair de Lune", artista: "Debussy", youtubeId: "" },
     { titulo: "Experience", artista: "Ludovico Einaudi", youtubeId: "" },
+    { titulo: "Pensando en Ti", artista: "Canserbero", youtubeId: "" },
+    { titulo: "Good News", artista: "Mac Miller", youtubeId: "" },
     { titulo: "[agrega algo instrumental o spoken word]", artista: "", youtubeId: "" }
   ],
 
@@ -74,6 +83,7 @@ const CATALOGO_CANCIONES = {
     { titulo: "Party Monster", artista: "The Weeknd", youtubeId: "" },
     { titulo: "The Hills", artista: "The Weeknd", youtubeId: "" },
     { titulo: "Priscilla", artista: "The Weeknd", youtubeId: "" },
+    { titulo: "Besos en Guerra", artista: "Morat", youtubeId: "" },
     { titulo: "[agrega otra de tu playlist]", artista: "", youtubeId: "" },
     { titulo: "[agrega otra más]", artista: "", youtubeId: "" }
   ],
