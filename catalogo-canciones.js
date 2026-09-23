@@ -59,6 +59,11 @@ const CATALOGO_CANCIONES = {
     { titulo: "Día Tras Día", artista: "Andrés Cepeda", youtubeId: "" },
     { titulo: "Lo Que en Ti Veo", artista: "Andrés Cepeda", youtubeId: "" },
     { titulo: "Cómo Te Atreves", artista: "Morat", youtubeId: "" },
+    { titulo: "pa quererte", artista: "Rels B", youtubeId: "XQeBTVeWkDo" },
+    { titulo: "Lo que hay x aquí", artista: "Rels B", youtubeId: "qWCup_EZSWE" },
+    { titulo: "Te Quiero Tanto", artista: "Kevin Kaarl", youtubeId: "q07Gd6Q-7dY" },
+    { titulo: "Como Me Encanta", artista: "Kevin Kaarl", youtubeId: "OgzNyN2bWac" },
+    { titulo: "Creo en Ti", artista: "Reik", youtubeId: "cqGyeFvhm8U" },
     { titulo: "[agrega otra romántica aquí]", artista: "", youtubeId: "" }
   ],
 
@@ -85,6 +90,7 @@ const CATALOGO_CANCIONES = {
     { titulo: "Priscilla", artista: "The Weeknd", youtubeId: "" },
     { titulo: "Besos en Guerra", artista: "Morat", youtubeId: "" },
     { titulo: "[agrega otra de tu playlist]", artista: "", youtubeId: "" },
+    { titulo: "Yo Contigo, Tú Conmigo", artista: "Morat & Álvaro Soler", youtubeId: "3SC0Ze4ta9o" },
     { titulo: "[agrega otra más]", artista: "", youtubeId: "" }
   ],
 

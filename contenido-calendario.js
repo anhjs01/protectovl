@@ -65,6 +65,23 @@ const CALENDARIO = [
 
   {
     dia: 3,
+    categoria: "La La Land",
+    icono: "🎹",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Anoche estuve pensando en una película que quiero ver contigo, de esas que dejan ganas de bailar en la sala sin razón.",
+    poema: [
+      "Hay una película sobre dos personas persiguiendo sus sueños mientras intentan no perderse el uno al otro en el camino, con canciones que se quedan pegadas días después.",
+      "Se llama 'La La Land'. Tiene finales agridulces, de esos que se sienten reales."
+    ],
+    detalle: "Pongámosla un viernes, con algo rico para picar y las luces bajitas.",
+    buenasNoches: "Buenas noches, con ganas de ese plan de cine pendiente.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 4,
     categoria: "Del Mar",
     icono: "🌊",
     tono: "amor",
@@ -81,7 +98,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 4,
+    dia: 5,
     categoria: "Cimientos",
     icono: "🖌️",
     tono: "filosofica",
@@ -98,7 +115,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 5,
+    dia: 6,
     categoria: "Sin palabras",
     icono: "🤍",
     tono: "hot",
@@ -115,7 +132,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 6,
+    dia: 7,
     categoria: "Hello Kitty",
     icono: "🎀",
     tono: "amor",
@@ -132,7 +149,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 7,
+    dia: 8,
+    categoria: "A Quiet Place",
+    icono: "🤫",
+    tono: "hot",
+    color: { principal: "#a10e35", suave: "#f0aabd", oscuro: "#140208" },
+    buenosDias: "Buenos días. Hoy quiero proponerte una película que da miedo de verdad, de esas donde uno termina abrazado sin darse cuenta cuándo pasó.",
+    poema: [
+      "Es sobre una familia que sobrevive quedándose en silencio absoluto para no llamar la atención de algo peligroso, y la tensión no baja en ningún momento.",
+      "Se llama 'A Quiet Place'. Perfecta para verla pegados, con la excusa de que da miedo."
+    ],
+    detalle: "Prepárate para agarrarme del brazo. O yo del tuyo, lo que sea más conveniente en el momento.",
+    buenasNoches: "Buenas noches, todavía con la adrenalina de una buena película de miedo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 9,
     categoria: "Vértigo",
     icono: "🌪️",
     tono: "filosofica",
@@ -149,7 +183,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 8,
+    dia: 10,
     categoria: "Girasol",
     icono: "🌻",
     tono: "amor",
@@ -166,7 +200,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 9,
+    dia: 11,
     categoria: "Gestos",
     icono: "🎥",
     tono: "amor",
@@ -183,7 +217,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 10,
+    dia: 12,
     categoria: "Tono de voz",
     icono: "📻",
     tono: "amor",
@@ -200,7 +234,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 11,
+    dia: 13,
+    categoria: "Crazy Rich Asians",
+    icono: "💍",
+    tono: "amor",
+    color: { principal: "#c98f9e", suave: "#f7d9e2", oscuro: "#26101a" },
+    buenosDias: "Buenos días. Hoy va una recomendación para reírnos y suspirar un poco a la vez.",
+    poema: [
+      "Es una comedia romántica sobre presentarle a la familia a la persona que uno ama, con toda la presión y la ternura que eso trae.",
+      "Se llama 'Crazy Rich Asians'. Fácil de ver, imposible no sonreír al final."
+    ],
+    detalle: "De esas para ver un domingo perezoso, sin pensar mucho.",
+    buenasNoches: "Buenas noches, con ganas de una tarde de domingo así, sin apuro.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 14,
     categoria: "Cerca",
     icono: "🔥",
     tono: "hot",
@@ -217,7 +268,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 12,
+    dia: 15,
     categoria: "Elegancia",
     icono: "👗",
     tono: "amor",
@@ -234,7 +285,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 13,
+    dia: 16,
     categoria: "Aprendizaje",
     icono: "🎀",
     tono: "amor",
@@ -251,7 +302,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 14,
+    dia: 17,
     categoria: "Nota musical",
     icono: "📻",
     tono: "amor",
@@ -268,7 +319,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 15,
+    dia: 18,
+    categoria: "The Menu",
+    icono: "🍽️",
+    tono: "filosofica",
+    color: { principal: "#6b2142", suave: "#e3b8c9", oscuro: "#180509" },
+    buenosDias: "Buenos días. Hoy quiero recomendarte algo distinto: humor negro con un final que se queda dando vueltas en la cabeza.",
+    poema: [
+      "Es sobre una cena exclusiva que se va saliendo de control poco a poco, con crítica social escondida entre platos elegantes.",
+      "Se llama 'The Menu'. No es para todos los gustos, pero si te gusta lo incómodo bien hecho, esta es de esas."
+    ],
+    detalle: "Después de verla vamos a necesitar hablar un rato largo sobre el final.",
+    buenasNoches: "Buenas noches, todavía procesando finales de película que incomodan bien.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 19,
     categoria: "Trivia musical",
     icono: "🎸",
     tono: "filosofica",
@@ -285,7 +353,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 16,
+    dia: 20,
     categoria: "Un día cualquiera",
     icono: "🍿",
     tono: "amor",
@@ -302,7 +370,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 17,
+    dia: 21,
     categoria: "Tormenta",
     icono: "⛈️",
     tono: "filosofica",
@@ -319,7 +387,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 18,
+    dia: 22,
     categoria: "Vivir Mi Vida",
     icono: "🎵",
     tono: "amor",
@@ -337,7 +405,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 19,
+    dia: 23,
     categoria: "Playlist privada",
     icono: "🎧",
     tono: "hot",
@@ -354,7 +422,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 20,
+    dia: 24,
+    categoria: "Orgullo y Prejuicio",
+    icono: "📖",
+    tono: "amor",
+    color: { principal: "#9e8fc9", suave: "#e2d9f7", oscuro: "#160f26" },
+    buenosDias: "Buenos días. Hoy va una recomendación clásica, de esas que nunca pasan de moda.",
+    poema: [
+      "Es la historia de dos personas que se equivocan constantemente al juzgarse, hasta que se dan cuenta de que estaban viendo mal desde el principio.",
+      "Se llama 'Orgullo y Prejuicio', la versión de 2005. Hay una escena bajo la lluvia que es prácticamente perfecta."
+    ],
+    detalle: "Ten pañuelos cerca, aunque sea comedia romántica también emociona.",
+    buenasNoches: "Buenas noches, con la escena de la lluvia todavía en la cabeza.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 25,
     categoria: "Incendio",
     icono: "🔥",
     tono: "filosofica",
@@ -371,7 +456,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 21,
+    dia: 26,
     categoria: "Palabras que faltan",
     icono: "🎬",
     tono: "amor",
@@ -388,7 +473,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 22,
+    dia: 27,
     categoria: "Make You Feel My Love",
     icono: "🌧️",
     tono: "amor",
@@ -405,7 +490,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 23,
+    dia: 28,
     categoria: "Crecer juntos",
     icono: "🦸",
     tono: "amor",
@@ -422,7 +507,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 24,
+    dia: 29,
+    categoria: "Deadpool",
+    icono: "🩹",
+    tono: "amor",
+    color: { principal: "#c81d4a", suave: "#f7c0d0", oscuro: "#1a0308" },
+    buenosDias: "Buenos días. Hoy toca algo para reírnos sin culpa, de esas películas que no se toman en serio a propósito.",
+    poema: [
+      "Es sobre un antihéroe imperfecto que, en medio de tanto chiste, tiene una historia de amor bastante sincera de fondo.",
+      "Se llama 'Deadpool'. Humor absurdo, corazón real."
+    ],
+    detalle: "Ideal para un día que necesite reírse sin pensar mucho.",
+    buenasNoches: "Buenas noches, con ganas de reírnos juntos pronto.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 30,
     categoria: "Mixtape",
     icono: "🎶",
     tono: "amor",
@@ -439,7 +541,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 25,
+    dia: 31,
     categoria: "Provocación",
     icono: "😈",
     tono: "hot",
@@ -456,7 +558,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 26,
+    dia: 32,
     categoria: "Música",
     icono: "🎶",
     tono: "amor",
@@ -473,7 +575,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 27,
+    dia: 33,
     categoria: "A oscuras",
     icono: "🕶️",
     tono: "hot",
@@ -490,7 +592,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 28,
+    dia: 34,
+    categoria: "Your Name",
+    icono: "🌠",
+    tono: "filosofica",
+    color: { principal: "#3a1f5c", suave: "#c9b8e6", oscuro: "#0c0716" },
+    buenosDias: "Buenos días. Hoy quiero recomendarte una película animada que parece simple y termina siendo devastadoramente bonita.",
+    poema: [
+      "Es sobre dos personas conectadas de una forma que no logran explicar del todo, buscándose a través del tiempo sin saber si algún día van a encontrarse.",
+      "Se llama 'Your Name' (Kimi no Na wa). Prepárate para sentir cosas."
+    ],
+    detalle: "Es japonesa, con subtítulos. Vale completamente la pena.",
+    buenasNoches: "Buenas noches, buscándote en el sentido bonito de la palabra.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 35,
     categoria: "Compás",
     icono: "🎼",
     tono: "amor",
@@ -507,7 +626,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 29,
+    dia: 36,
     categoria: "Silencio bonito",
     icono: "🖤",
     tono: "filosofica",
@@ -524,7 +643,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 30,
+    dia: 37,
     categoria: "Bonus privado",
     icono: "🍷",
     tono: "hot",
@@ -541,7 +660,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 31,
+    dia: 38,
     categoria: "Volver a empezar",
     icono: "🌺",
     tono: "filosofica",
@@ -558,7 +677,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 32,
+    dia: 39,
     categoria: "Canción bajo la lluvia",
     icono: "🎧",
     tono: "filosofica",
@@ -575,7 +694,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 33,
+    dia: 40,
+    categoria: "Corpse Bride",
+    icono: "🖤",
+    tono: "filosofica",
+    color: { principal: "#4a1830", suave: "#d9a7bd", oscuro: "#120206" },
+    buenosDias: "Buenos días. Hoy va una recomendación con estética oscura pero corazón dulce, justo tu estilo.",
+    poema: [
+      "Es sobre un compromiso accidental en el mundo de los muertos, y termina siendo, sin que uno lo espere, una historia sobre elegir bien a quién amar.",
+      "Se llama 'Corpse Bride', de Tim Burton. Visualmente es una belleza."
+    ],
+    detalle: "Encaja perfecto con esos días de vibra oscura-romántica que a veces nos dan.",
+    buenasNoches: "Buenas noches, con esa estética bonita-oscura todavía en la cabeza.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 41,
     categoria: "Canción al volante",
     icono: "📻",
     tono: "amor",
@@ -592,7 +728,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 34,
+    dia: 42,
     categoria: "Dorado",
     icono: "✨",
     tono: "amor",
@@ -609,7 +745,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 35,
+    dia: 43,
     categoria: "Tema principal",
     icono: "💿",
     tono: "amor",
@@ -626,7 +762,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 36,
+    dia: 44,
     categoria: "Costumbre",
     icono: "☁️",
     tono: "amor",
@@ -643,7 +779,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 37,
+    dia: 45,
+    categoria: "Crash Landing on You",
+    icono: "🪂",
+    tono: "amor",
+    color: { principal: "#c98f9e", suave: "#f7d9e2", oscuro: "#26101a" },
+    buenosDias: "Buenos días. Sé que te gustan los k-dramas, así que hoy va una recomendación que probablemente ya conoces, pero por si acaso.",
+    poema: [
+      "Es sobre una mujer que cae, literal, en un lugar completamente inesperado, y termina encontrando algo que no buscaba en absoluto.",
+      "Se llama 'Crash Landing on You'. Dieciséis episodios que se sienten como cuatro."
+    ],
+    detalle: "Prepara pañuelos y varios días libres, esta engancha rápido.",
+    buenasNoches: "Buenas noches, con ganas de maratonear episodios contigo pronto.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 46,
     categoria: "Constancia",
     icono: "🌹",
     tono: "amor",
@@ -660,7 +813,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 38,
+    dia: 47,
     categoria: "Aplausos",
     icono: "🎵",
     tono: "amor",
@@ -677,7 +830,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 39,
+    dia: 48,
     categoria: "A puerta cerrada",
     icono: "🗝️",
     tono: "hot",
@@ -694,7 +847,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 40,
+    dia: 49,
     categoria: "Letra que falta",
     icono: "🎤",
     tono: "amor",
@@ -711,7 +864,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 41,
+    dia: 50,
+    categoria: "Goblin",
+    icono: "⚔️",
+    tono: "filosofica",
+    color: { principal: "#3a1f5c", suave: "#c9b8e6", oscuro: "#0c0716" },
+    buenosDias: "Buenos días. Otra recomendación de k-drama, esta vez con toque fantástico y bastante melancólico.",
+    poema: [
+      "Es sobre un ser inmortal que busca la forma de terminar su existencia eterna, hasta que conoce a alguien que le hace querer quedarse un poco más.",
+      "Se llama 'Goblin'. Fotografía preciosa, historia que pega fuerte."
+    ],
+    detalle: "De esas series que dejan pensando varios días después de terminarlas.",
+    buenasNoches: "Buenas noches, con ganas de quedarme un poco más, como en la serie.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 51,
     categoria: "Recuerdos",
     icono: "📸",
     tono: "amor",
@@ -728,7 +898,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 42,
+    dia: 52,
     categoria: "Ojitos Lindos",
     icono: "👀",
     tono: "amor",
@@ -745,7 +915,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 43,
+    dia: 53,
     categoria: "Volumen alto",
     icono: "🎧",
     tono: "filosofica",
@@ -762,7 +932,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 44,
+    dia: 54,
     categoria: "Sorpresas",
     icono: "🎁",
     tono: "amor",
@@ -779,7 +949,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 45,
+    dia: 55,
     categoria: "Favorito",
     icono: "🎤",
     tono: "amor",
@@ -797,7 +967,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 46,
+    dia: 56,
+    categoria: "Bridgerton",
+    icono: "🎻",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy va una serie de época, de esas con vestidos elegantes y tensión romántica que se estira episodios enteros.",
+    poema: [
+      "Es sobre familias de la alta sociedad inglesa buscando pareja entre bailes, chismes y miradas que dicen más que las palabras.",
+      "Se llama 'Bridgerton'. Guilty pleasure garantizado."
+    ],
+    detalle: "Ideal para ver mientras tomamos algo rico y comentamos cada escena.",
+    buenasNoches: "Buenas noches, con miradas de época todavía en la cabeza.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 57,
     categoria: "Permanencia",
     icono: "⏳",
     tono: "filosofica",
@@ -814,7 +1001,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 47,
+    dia: 58,
     categoria: "Shuffle",
     icono: "🎤",
     tono: "amor",
@@ -831,7 +1018,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 48,
+    dia: 59,
     categoria: "Lugares",
     icono: "🗺️",
     tono: "filosofica",
@@ -848,7 +1035,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 49,
+    dia: 60,
     categoria: "Risas",
     icono: "😂",
     tono: "amor",
@@ -865,7 +1052,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 50,
+    dia: 61,
+    categoria: "La Casa de Papel",
+    icono: "🎭",
+    tono: "filosofica",
+    color: { principal: "#c22b2b", suave: "#f3b3b3", oscuro: "#1a0505" },
+    buenosDias: "Buenos días. Hoy va una serie española que seguramente ya viste, pero siempre vale la pena repetir.",
+    poema: [
+      "Es sobre un grupo que planea el atraco perfecto, con personajes que uno termina queriendo aunque estén haciendo algo completamente ilegal.",
+      "Se llama 'La Casa de Papel'. La canción que usan de fondo va a quedarse sonando en tu cabeza días después."
+    ],
+    detalle: "Si ya la viste, siempre se puede repetir algún capítulo favorito.",
+    buenasNoches: "Buenas noches, planeando el próximo maratón de series.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 62,
     categoria: "Rayando el Sol",
     icono: "☀️",
     tono: "filosofica",
@@ -882,7 +1086,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 51,
+    dia: 63,
     categoria: "Travesura",
     icono: "🍒",
     tono: "hot",
@@ -899,7 +1103,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 52,
+    dia: 64,
     categoria: "Cómo Te Atreves",
     icono: "💿",
     tono: "amor",
@@ -916,7 +1120,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 53,
+    dia: 65,
     categoria: "Complicidad",
     icono: "🔥",
     tono: "hot",
@@ -933,7 +1137,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 54,
+    dia: 66,
     categoria: "Coro improvisado",
     icono: "💿",
     tono: "amor",
@@ -950,24 +1154,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 55,
-    categoria: "Auriculares compartidos",
-    icono: "🎧",
+    dia: 67,
+    categoria: "Business Proposal",
+    icono: "💼",
     tono: "hot",
-    color: { principal: "#a10e35", suave: "#f0aabd", oscuro: "#140208" },
-    buenosDias: "Buenos días. Anoche imaginé algo simple: los dos compartiendo un solo audífono, tan cerca que la música casi sobra.",
+    color: { principal: "#d1163f", suave: "#f7bccb", oscuro: "#1c0409" },
+    buenosDias: "Buenos días. Otro k-drama, esta vez de esos con tensión y comedia mezcladas de forma perfecta.",
     poema: [
-      "Hay una cercanía distinta cuando dos personas escuchan lo mismo casi oído con oído, sin necesitar decir nada durante la canción entera.",
-      "Quiero esa escena contigo, pronto, real, sin pantallas de por medio."
+      "Es sobre una cita a ciegas que sale completamente distinta a lo planeado, con química que se nota desde el primer capítulo.",
+      "Se llama 'Business Proposal'. Ligera, divertida, con suficiente tensión para mantener enganchado."
     ],
-    detalle: "Trae tus audífonos la próxima vez. Ya tengo la canción elegida.",
-    buenasNoches: "Buenas noches, todavía imaginando esa cercanía tan simple.",
+    detalle: "De esas series perfectas para ver de noche, abrazados, sin planear parar en un capítulo.",
+    buenasNoches: "Buenas noches, con ganas de ese maratón de capítulos, abrazados.",
     notaImagen: "[PARA TI] a tu criterio.",
     notaCancion: "[PARA TI] automática, catálogo 'hot'."
   },
 
   {
-    dia: 56,
+    dia: 68,
     categoria: "Ritmo propio",
     icono: "🎼",
     tono: "amor",
@@ -984,24 +1188,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 57,
-    categoria: "Antojo",
-    icono: "🍓",
+    dia: 69,
+    categoria: "Auriculares compartidos",
+    icono: "🎧",
     tono: "hot",
-    color: { principal: "#b3123f", suave: "#f2b3c4", oscuro: "#170209" },
-    buenosDias: "Buenos días. Hoy desperté con un antojo que ningún desayuno va a poder resolver.",
+    color: { principal: "#a10e35", suave: "#f0aabd", oscuro: "#140208" },
+    buenosDias: "Buenos días. Anoche imaginé algo simple: los dos compartiendo un solo audífono, tan cerca que la música casi sobra.",
     poema: [
-      "Hay antojos que se calman con comida y hay otros que solo se calman con una persona específica cerca, sin sustitutos posibles.",
-      "Hoy es exactamente ese segundo tipo, y no tengo intención de disimularlo."
+      "Hay una cercanía distinta cuando dos personas escuchan lo mismo casi oído con oído, sin necesitar decir nada durante la canción entera.",
+      "Quiero esa escena contigo, pronto, real, sin pantallas de por medio."
     ],
-    detalle: "Anótalo: te debo consentirte como corresponde, sin apuro, cuando estemos cerca.",
-    buenasNoches: "Buenas noches, con el antojo todavía sin resolver.",
+    detalle: "Trae tus audífonos la próxima vez. Ya tengo la canción elegida.",
+    buenasNoches: "Buenas noches, todavía imaginando esa cercanía tan simple.",
     notaImagen: "[PARA TI] a tu criterio.",
     notaCancion: "[PARA TI] automática, catálogo 'hot'."
   },
 
   {
-    dia: 58,
+    dia: 70,
     categoria: "Unplugged",
     icono: "🎼",
     tono: "amor",
@@ -1018,7 +1222,41 @@ const CALENDARIO = [
   },
 
   {
-    dia: 59,
+    dia: 71,
+    categoria: "Antojo",
+    icono: "🍓",
+    tono: "hot",
+    color: { principal: "#b3123f", suave: "#f2b3c4", oscuro: "#170209" },
+    buenosDias: "Buenos días. Hoy desperté con un antojo que ningún desayuno va a poder resolver.",
+    poema: [
+      "Hay antojos que se calman con comida y hay otros que solo se calman con una persona específica cerca, sin sustitutos posibles.",
+      "Hoy es exactamente ese segundo tipo, y no tengo intención de disimularlo."
+    ],
+    detalle: "Anótalo: te debo consentirte como corresponde, sin apuro, cuando estemos cerca.",
+    buenasNoches: "Buenas noches, con el antojo todavía sin resolver.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 72,
+    categoria: "Veinte Poemas de Amor",
+    icono: "📕",
+    tono: "amor",
+    color: { principal: "#d81e3e", suave: "#ffc2ce", oscuro: "#2b0508" },
+    buenosDias: "Buenos días. Hoy quiero recomendarte un libro que seguramente ya conoces, pero que nunca sobra releer.",
+    poema: [
+      "Es una colección de poemas que hablan del amor desde todos los ángulos posibles: la distancia, el cuerpo, la melancolía, la costumbre.",
+      "Se llama 'Veinte poemas de amor y una canción desesperada', de Pablo Neruda. Un clásico que sigue pegando fuerte."
+    ],
+    detalle: "Si tienes un poema favorito de ahí, cuéntame cuál es. Tengo curiosidad.",
+    buenasNoches: "Buenas noches, con ganas de leer poesía contigo en voz alta algún día.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 73,
     categoria: "Bellacoso",
     icono: "🎶",
     tono: "hot",
@@ -1036,7 +1274,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 60,
+    dia: 74,
     categoria: "Mañana contigo",
     icono: "🧣",
     tono: "amor",
@@ -1053,7 +1291,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 61,
+    dia: 75,
     categoria: "Die For You",
     icono: "🎵",
     tono: "hot",
@@ -1071,7 +1309,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 62,
+    dia: 76,
     categoria: "La Reina",
     icono: "👑",
     tono: "amor",
@@ -1088,7 +1326,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 63,
+    dia: 77,
+    categoria: "El Amor en los Tiempos del Cólera",
+    icono: "🌹",
+    tono: "amor",
+    color: { principal: "#b3123f", suave: "#f2b3c4", oscuro: "#170209" },
+    buenosDias: "Buenos días. Hoy va una recomendación de un colombiano que sabía escribir sobre el amor mejor que casi nadie.",
+    poema: [
+      "Es la historia de un amor que espera más de cincuenta años para poder ser, contada con esa forma tan particular de escribir que tenía el autor.",
+      "Se llama 'El amor en los tiempos del cólera', de Gabriel García Márquez. Larga, pero vale cada página."
+    ],
+    detalle: "Uno de esos libros que hacen creer un poco más en la paciencia y en los tiempos correctos.",
+    buenasNoches: "Buenas noches, creyendo un poco más en los tiempos correctos, gracias a este libro.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 78,
     categoria: "Morado",
     icono: "💜",
     tono: "amor",
@@ -1105,7 +1360,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 64,
+    dia: 79,
     categoria: "Lo que no se dice",
     icono: "🏖️",
     tono: "filosofica",
@@ -1122,7 +1377,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 65,
+    dia: 80,
     categoria: "Siguiente canción",
     icono: "🎵",
     tono: "filosofica",
@@ -1139,7 +1394,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 66,
+    dia: 81,
     categoria: "Películas",
     icono: "🎬",
     tono: "amor",
@@ -1156,7 +1411,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 67,
+    dia: 82,
+    categoria: "Delta de Venus",
+    icono: "🖋️",
+    tono: "hot",
+    color: { principal: "#a10e35", suave: "#f0aabd", oscuro: "#140208" },
+    buenosDias: "Buenos días. Hoy va una recomendación un poco más atrevida, para esos días donde el ánimo pide algo distinto.",
+    poema: [
+      "Es una colección de relatos eróticos escritos con una prosa cuidada, nada vulgar, más bien sugerente y literaria.",
+      "Se llama 'Delta de Venus', de Anaïs Nin. De esos libros que se leen despacio, sin apuro."
+    ],
+    detalle: "No es para leer en el bus. O tal vez sí, tú decides qué tan atrevida te sientes hoy.",
+    buenasNoches: "Buenas noches, con ganas de una lectura así de sugerente pronto.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 83,
     categoria: "Gratitud",
     icono: "🙏",
     tono: "amor",
@@ -1173,7 +1445,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 68,
+    dia: 84,
     categoria: "Bis merecido",
     icono: "🍒",
     tono: "hot",
@@ -1190,7 +1462,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 69,
+    dia: 85,
     categoria: "Ligereza",
     icono: "🌞",
     tono: "amor",
@@ -1207,7 +1479,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 70,
+    dia: 86,
     categoria: "Mirada",
     icono: "👀",
     tono: "hot",
@@ -1224,7 +1496,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 71,
+    dia: 87,
     categoria: "Casa",
     icono: "🏚️",
     tono: "filosofica",
@@ -1241,7 +1513,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 72,
+    dia: 88,
+    categoria: "Poemas de Sabines",
+    icono: "🕯️",
+    tono: "filosofica",
+    color: { principal: "#6b2142", suave: "#e3b8c9", oscuro: "#180509" },
+    buenosDias: "Buenos días. Hoy quiero recomendarte a un poeta mexicano que escribía sobre el amor sin adornos innecesarios, directo al hueso.",
+    poema: [
+      "Sus poemas hablan de amor con una honestidad que a veces incomoda un poco, de esas que se sienten reales en vez de bonitas nada más.",
+      "Se llama Jaime Sabines. Busca 'Los amorosos' cuando tengas tiempo tranquilo."
+    ],
+    detalle: "No es poesía fácil de digerir rápido. Se disfruta mejor despacio.",
+    buenasNoches: "Buenas noches, con ganas de leer algo honesto y directo contigo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 89,
     categoria: "Futuro",
     icono: "🔭",
     tono: "amor",
@@ -1258,7 +1547,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 73,
+    dia: 90,
     categoria: "Introspección",
     icono: "🍃",
     tono: "filosofica",
@@ -1275,7 +1564,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 74,
+    dia: 91,
     categoria: "Vistas",
     icono: "🏞️",
     tono: "filosofica",
@@ -1292,7 +1581,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 75,
+    dia: 92,
     categoria: "Bajo volumen",
     icono: "🔥",
     tono: "hot",
@@ -1309,7 +1598,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 76,
+    dia: 93,
+    categoria: "Poemas de Benedetti",
+    icono: "📗",
+    tono: "amor",
+    color: { principal: "#4fa66b", suave: "#c8ecd4", oscuro: "#0a2013" },
+    buenosDias: "Buenos días. Hoy va un poeta uruguayo que escribía sobre el amor cotidiano, el de todos los días, no solo el de las grandes ocasiones.",
+    poema: [
+      "Sus poemas hablan de amores que se construyen despacio, con humor, con ternura, sin necesidad de grandes dramas.",
+      "Se llama Mario Benedetti. 'Táctica y estrategia' es un buen punto de partida."
+    ],
+    detalle: "De esos poetas que hacen sentir que el amor normal también es suficiente.",
+    buenasNoches: "Buenas noches, creyendo en el amor de todos los días, como el que tenemos.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 94,
     categoria: "Nuestro ritmo",
     icono: "🐚",
     tono: "filosofica",
@@ -1326,7 +1632,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 77,
+    dia: 95,
     categoria: "Compás lento",
     icono: "🎧",
     tono: "filosofica",
@@ -1343,7 +1649,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 78,
+    dia: 96,
     categoria: "Abrazo",
     icono: "🌼",
     tono: "amor",
@@ -1360,7 +1666,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 79,
+    dia: 97,
     categoria: "Tazas compartidas",
     icono: "📖",
     tono: "filosofica",
@@ -1377,7 +1683,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 80,
+    dia: 98,
+    categoria: "Las Edades de Lulú",
+    icono: "🔥",
+    tono: "hot",
+    color: { principal: "#c81d4a", suave: "#f7c0d0", oscuro: "#1a0308" },
+    buenosDias: "Buenos días. Otra recomendación con más temperatura, de una escritora española que no le tenía miedo a lo explícito bien escrito.",
+    poema: [
+      "Es la historia de un despertar sexual contado sin pena, con una prosa que sorprende por lo bien construida que está incluso en las partes más atrevidas.",
+      "Se llama 'Las edades de Lulú', de Almudena Grandes."
+    ],
+    detalle: "Polémico en su momento, pero literariamente bien logrado. Juzga tú misma.",
+    buenasNoches: "Buenas noches, con curiosidad literaria y algo más despierta.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 99,
     categoria: "Naturaleza",
     icono: "🌿",
     tono: "filosofica",
@@ -1394,7 +1717,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 81,
+    dia: 100,
     categoria: "Propuesta Indecente",
     icono: "🥂",
     tono: "hot",
@@ -1411,7 +1734,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 82,
+    dia: 101,
     categoria: "Volví a Nacer",
     icono: "🌅",
     tono: "amor",
@@ -1428,7 +1751,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 83,
+    dia: 102,
     categoria: "Presente",
     icono: "🍬",
     tono: "amor",
@@ -1445,7 +1768,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 84,
+    dia: 103,
     categoria: "Todo de Ti",
     icono: "🌊",
     tono: "hot",
@@ -1462,7 +1785,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 85,
+    dia: 104,
+    categoria: "El Buen Hijo",
+    icono: "🗝️",
+    tono: "filosofica",
+    color: { principal: "#3a1f5c", suave: "#c9b8e6", oscuro: "#0c0716" },
+    buenosDias: "Buenos días. Hoy quiero recomendarte un libro bien distinto a los demás, de esos oscuros y perturbadores que sé que también disfrutas.",
+    poema: [
+      "Es un thriller psicológico coreano sobre un hombre con amnesia que despierta junto al cuerpo de su madre, sin poder confiar del todo en su propia memoria.",
+      "Se llama 'El buen hijo', de You-Jeong Jeong. Empieza lento y termina siendo imposible de soltar."
+    ],
+    detalle: "Un libro que no te va a dejar dormir tranquila, en el buen sentido de la frase.",
+    buenasNoches: "Buenas noches, con la mente todavía dándole vueltas a una buena historia oscura.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 105,
     categoria: "Caminar despacio",
     icono: "🖼️",
     tono: "filosofica",
@@ -1479,7 +1819,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 86,
+    dia: 106,
     categoria: "Gerbera",
     icono: "🌸",
     tono: "amor",
@@ -1496,7 +1836,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 87,
+    dia: 107,
     categoria: "Good News",
     icono: "💿",
     tono: "filosofica",
@@ -1513,7 +1853,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 88,
+    dia: 108,
     categoria: "Yellow",
     icono: "💛",
     tono: "filosofica",
@@ -1530,7 +1870,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 89,
+    dia: 109,
+    categoria: "American Pie",
+    icono: "🥧",
+    tono: "amor",
+    color: { principal: "#f2b705", suave: "#fff0b3", oscuro: "#251c02" },
+    buenosDias: "Buenos días. Hoy va una recomendación sin ninguna pretensión de arte: comedia adolescente absurda, de las que hacen reír sin pensar mucho.",
+    poema: [
+      "Es sobre un grupo de amigos torpes intentando sobrevivir las últimas semanas del colegio, con humor que no se toma en serio a sí mismo en ningún momento.",
+      "Se llama 'American Pie'. De esas películas vergonzosas que uno ve sin culpa."
+    ],
+    detalle: "Ideal para un día que solo pida reírse de tonterías, sin ningún mensaje profundo detrás.",
+    buenasNoches: "Buenas noches, con ganas de una risa tonta contigo pronto.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 110,
     categoria: "Canción del recuerdo",
     icono: "📻",
     tono: "amor",
@@ -1547,7 +1904,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 90,
+    dia: 111,
     categoria: "Libros",
     icono: "📖",
     tono: "filosofica",
@@ -1564,7 +1921,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 91,
+    dia: 112,
     categoria: "Después",
     icono: "🐶",
     tono: "amor",
@@ -1581,7 +1938,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 92,
+    dia: 113,
     categoria: "Cuenta regresiva",
     icono: "⏳",
     tono: "hot",
@@ -1598,7 +1955,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 93,
+    dia: 114,
+    categoria: "Ted",
+    icono: "🧸",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy va otra de humor absurdo, sobre un oso de peluche que cobra vida y no tiene ningún filtro para hablar.",
+    poema: [
+      "Es sobre un hombre que nunca creció del todo, acompañado de su mejor amigo de peluche con la boca más sucia del cine.",
+      "Se llama 'Ted'. Vulgar a propósito, pero con corazón de fondo, como casi todo lo bueno de humor absurdo."
+    ],
+    detalle: "No es para ver con la familia. Perfecta para una noche de risas sin filtro.",
+    buenasNoches: "Buenas noches, todavía riéndome de chistes de mal gusto contigo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 115,
     categoria: "Insomnio",
     icono: "🌙",
     tono: "filosofica",
@@ -1615,7 +1989,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 94,
+    dia: 116,
     categoria: "Often",
     icono: "🎸",
     tono: "hot",
@@ -1633,7 +2007,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 95,
+    dia: 117,
     categoria: "Letra bonita",
     icono: "🎧",
     tono: "filosofica",
@@ -1650,7 +2024,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 96,
+    dia: 118,
     categoria: "Volvamos a Ser Novios",
     icono: "🔥",
     tono: "hot",
@@ -1667,7 +2041,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 97,
+    dia: 119,
     categoria: "Interludio",
     icono: "🎤",
     tono: "amor",
@@ -1684,7 +2058,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 98,
+    dia: 120,
+    categoria: "Norwegian Wood",
+    icono: "📘",
+    tono: "filosofica",
+    color: { principal: "#6b8f9e", suave: "#c9e2ea", oscuro: "#0a1a20" },
+    buenosDias: "Buenos días. Hoy quiero recomendarte un autor japonés que escribe sobre el amor mezclado con melancolía, de una forma muy particular.",
+    poema: [
+      "Es una historia sobre la nostalgia, la pérdida y el amor juvenil, contada con esa calma tan característica del autor, donde no pasa casi nada y aun así pasa todo.",
+      "Se llama 'Tokio Blues (Norwegian Wood)', de Haruki Murakami."
+    ],
+    detalle: "De esos libros que se sienten como una conversación larga y honesta con alguien que ya no está.",
+    buenasNoches: "Buenas noches, con esa melancolía bonita todavía en la cabeza.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 121,
     categoria: "Química",
     icono: "⚡",
     tono: "hot",
@@ -1701,7 +2092,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 99,
+    dia: 122,
     categoria: "Playlist compartida",
     icono: "🎧",
     tono: "amor",
@@ -1718,7 +2109,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 100,
+    dia: 123,
     categoria: "Gustos compartidos",
     icono: "🌭",
     tono: "amor",
@@ -1735,7 +2126,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 101,
+    dia: 124,
     categoria: "Tulipán",
     icono: "🌷",
     tono: "amor",
@@ -1752,24 +2143,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 102,
-    categoria: "La Bachata",
-    icono: "💃",
+    dia: 125,
+    categoria: "Chocolate y Fresas al Champán",
+    icono: "🍓",
     tono: "hot",
     color: { principal: "#c81d4a", suave: "#f7c0d0", oscuro: "#1a0308" },
-    buenosDias: "Buenos días. Hoy quiero hablarte de una canción sobre ese flechazo inmediato que a veces pasa sin planearlo.",
+    buenosDias: "Buenos días. Hoy va una idea que combina dos de las cosas que más te gustan: el chocolate y algo con burbujas.",
     poema: [
-      "Hay una canción de Manuel Turizo sobre fijarse en alguien en medio de una fiesta y no poder dejar de pensar en esa persona el resto de la noche.",
-      "A mí me sigue pasando algo parecido contigo, aunque ya no seamos un flechazo nuevo."
+      "Fresas bañadas en chocolate derretido, con una copa de algo espumoso al lado. Simple, pero de esas combinaciones que se sienten como ocasión especial aunque sea un martes cualquiera.",
+      "Dicen que las fresas con chocolate tienen fama de despertar los sentidos. No sé qué tan cierto sea, pero no hace falta ciencia para disfrutarlo."
     ],
-    detalle: "Se llama 'La Bachata', de Manuel Turizo.",
-    buenasNoches: "Buenas noches, todavía con ese flechazo intacto.",
+    detalle: "Hagámoslo una noche cualquiera, sin esperar ocasión especial para consentirte.",
+    buenasNoches: "Buenas noches, con el antojo de esa combinación todavía presente.",
     notaImagen: "[PARA TI] a tu criterio.",
-    notaCancion: "[PARA TI] canción real: 'La Bachata' - Manuel Turizo."
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
   },
 
   {
-    dia: 103,
+    dia: 126,
     categoria: "Paciencia",
     icono: "🧁",
     tono: "amor",
@@ -1786,7 +2177,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 104,
+    dia: 127,
+    categoria: "La Bachata",
+    icono: "💃",
+    tono: "hot",
+    color: { principal: "#c81d4a", suave: "#f7c0d0", oscuro: "#1a0308" },
+    buenosDias: "Buenos días. Hoy quiero hablarte de una canción sobre ese flechazo inmediato que a veces pasa sin planearlo.",
+    poema: [
+      "Hay una canción de Manuel Turizo sobre fijarse en alguien en medio de una fiesta y no poder dejar de pensar en esa persona el resto de la noche.",
+      "A mí me sigue pasando algo parecido contigo, aunque ya no seamos un flechazo nuevo."
+    ],
+    detalle: "Se llama 'La Bachata', de Manuel Turizo.",
+    buenasNoches: "Buenas noches, todavía con ese flechazo intacto.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] canción real: 'La Bachata' - Manuel Turizo."
+  },
+
+  {
+    dia: 128,
     categoria: "At Last",
     icono: "✨",
     tono: "amor",
@@ -1803,7 +2211,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 105,
+    dia: 129,
     categoria: "Grabación",
     icono: "🎶",
     tono: "amor",
@@ -1820,7 +2228,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 106,
+    dia: 130,
+    categoria: "Té de Jengibre y Canela",
+    icono: "🍵",
+    tono: "amor",
+    color: { principal: "#a9713f", suave: "#ecd2ae", oscuro: "#20130a" },
+    buenosDias: "Buenos días. Hoy va una bebida calientita para esos días fríos de Bogotá, fácil de hacer en casa.",
+    poema: [
+      "Jengibre fresco, canela en rama, un poco de miel, y agua caliente. Nada complicado, pero calienta el cuerpo entero desde el primer sorbo.",
+      "Perfecto para tomar mientras hablamos de cualquier cosa, envueltos en una cobija."
+    ],
+    detalle: "Lo preparamos juntos, despacio, mientras afuera hace ese frío típico de la sabana.",
+    buenasNoches: "Buenas noches, con ese calorcito todavía en las manos.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 131,
     categoria: "Piel",
     icono: "🕯️",
     tono: "hot",
@@ -1837,7 +2262,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 107,
+    dia: 132,
     categoria: "Manos",
     icono: "📖",
     tono: "amor",
@@ -1854,7 +2279,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 108,
+    dia: 133,
     categoria: "Melodía nueva",
     icono: "💿",
     tono: "amor",
@@ -1871,7 +2296,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 109,
+    dia: 134,
     categoria: "Peonía",
     icono: "🌸",
     tono: "filosofica",
@@ -1888,7 +2313,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 110,
+    dia: 135,
     categoria: "Orgullo",
     icono: "👗",
     tono: "amor",
@@ -1905,7 +2330,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 111,
+    dia: 136,
+    categoria: "Sangría Casera",
+    icono: "🍷",
+    tono: "hot",
+    color: { principal: "#a10e35", suave: "#f0aabd", oscuro: "#140208" },
+    buenosDias: "Buenos días. Hoy va una idea para una tarde de esas que se alargan sin querer: sangría casera, hecha entre los dos.",
+    poema: [
+      "Vino tinto, fruta picada, un poco de licor y tiempo para que se mezcle todo bien. Se prepara con calma, y se disfruta con más calma todavía.",
+      "De esas bebidas que invitan a quedarse sentados hablando por horas."
+    ],
+    detalle: "Piquemos la fruta juntos, ese paso siempre termina siendo el más entretenido.",
+    buenasNoches: "Buenas noches, con ganas de esa tarde larga, sangría de por medio.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 137,
     categoria: "Compás rápido",
     icono: "📻",
     tono: "amor",
@@ -1922,7 +2364,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 112,
+    dia: 138,
     categoria: "Domingo cualquiera",
     icono: "🖤",
     tono: "filosofica",
@@ -1939,7 +2381,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 113,
+    dia: 139,
     categoria: "Bis",
     icono: "🎸",
     tono: "filosofica",
@@ -1956,7 +2398,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 114,
+    dia: 140,
     categoria: "Rutina",
     icono: "🐾",
     tono: "amor",
@@ -1973,7 +2415,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 115,
+    dia: 141,
+    categoria: "Noche de Manualidades",
+    icono: "✂️",
+    tono: "amor",
+    color: { principal: "#9e8fc9", suave: "#e2d9f7", oscuro: "#160f26" },
+    buenosDias: "Buenos días. Hoy quiero proponerte algo creativo y sin presión: una noche haciendo algo con las manos, sin buscar que quede perfecto.",
+    poema: [
+      "Puede ser pintar algo simple, armar un scrapbook con fotos nuestras, o cualquier cosa que se nos ocurra en el momento.",
+      "Lo importante no es el resultado, es el rato entretenido haciéndolo juntos."
+    ],
+    detalle: "Compremos materiales baratos y veamos qué sale, sin ninguna expectativa alta.",
+    buenasNoches: "Buenas noches, con ganas de crear algo torcido y bonito contigo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 142,
     categoria: "Segunda voz",
     icono: "😏",
     tono: "hot",
@@ -1990,7 +2449,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 116,
+    dia: 143,
     categoria: "Radio",
     icono: "🎵",
     tono: "amor",
@@ -2007,7 +2466,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 117,
+    dia: 144,
     categoria: "Juego",
     icono: "😏",
     tono: "hot",
@@ -2024,7 +2483,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 118,
+    dia: 145,
     categoria: "Salchipapa",
     icono: "🍟",
     tono: "amor",
@@ -2041,7 +2500,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 119,
+    dia: 146,
+    categoria: "Álbum de Fotos Casero",
+    icono: "📸",
+    tono: "amor",
+    color: { principal: "#c98f9e", suave: "#f7d9e2", oscuro: "#26101a" },
+    buenosDias: "Buenos días. Hoy quiero proponerte armar algo que dure: un álbum de fotos nuestro, hecho a mano.",
+    poema: [
+      "Imprimir fotos, pegarlas, escribir alguna nota chiquita al lado de cada una. Algo simple, pero que en unos años se va a sentir como un tesoro.",
+      "De esos proyectos que parecen pequeños pero terminan siendo de los recuerdos más bonitos."
+    ],
+    detalle: "Empecemos con las fotos que ya tenemos, y vamos sumando con el tiempo.",
+    buenasNoches: "Buenas noches, pensando en ese álbum que todavía nos falta empezar.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 147,
     categoria: "Flor de cerezo",
     icono: "🌸",
     tono: "amor",
@@ -2058,25 +2534,25 @@ const CALENDARIO = [
   },
 
   {
-    dia: 120,
+    dia: 148,
     categoria: "Nosotros",
     icono: "🎉",
     tono: "amor",
     color: { principal: "#ff5d8f", suave: "#ffd7e6", oscuro: "#2a0f1c" },
-    buenosDias: "Buenos días. Hoy llegamos al día 120, más de la mitad de este calendario de 241 días.",
+    buenosDias: "Buenos días. Hoy llegamos al día 148, más de la mitad de este calendario de 296 días.",
     poema: [
       "Empezamos con un Snoopy y una promesa de acompañarte cada día, y aquí seguimos, bien pasada la mitad del camino.",
       "Gracias por leer cada uno de estos mensajes, por darle clic a cada corazón, por dejarme contarte de mil formas distintas lo mismo: que te amo.",
       "Todavía falta un buen tramo, y pienso hacerlo tan bonito como lo que ya llevamos."
     ],
-    detalle: "Gracias por llegar hasta aquí. Vamos por 120 de 241, sigamos.",
+    detalle: "Gracias por llegar hasta aquí. Vamos por 148 de 296, sigamos.",
     buenasNoches: "Buenas noches, a mitad de camino y con muchas ganas de seguir.",
     notaImagen: "[PARA TI] una foto bonita de los dos, para celebrar este punto medio.",
     notaCancion: "[PARA TI] una canción que sientas que representa lo que llevan hasta aquí."
   },
 
   {
-    dia: 121,
+    dia: 149,
     categoria: "Día Tras Día",
     icono: "🎧",
     tono: "amor",
@@ -2093,7 +2569,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 122,
+    dia: 150,
     categoria: "Confesión atrevida",
     icono: "🖋️",
     tono: "hot",
@@ -2110,7 +2586,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 123,
+    dia: 151,
     categoria: "Vivir Sin Aire",
     icono: "🌬️",
     tono: "filosofica",
@@ -2127,7 +2603,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 124,
+    dia: 152,
     categoria: "Cola de reproducción",
     icono: "🎸",
     tono: "filosofica",
@@ -2144,7 +2620,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 125,
+    dia: 153,
+    categoria: "Pasta al Vino",
+    icono: "🍝",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy quiero proponerte algo distinto: cocinar juntos en vez de solo mandarte un mensaje.",
+    poema: [
+      "Una pasta simple con ajo, aceite de oliva y un chorrito de vino blanco no necesita más de veinte minutos ni mucha experiencia en la cocina.",
+      "Es de esas recetas donde lo importante no es la comida, es la excusa para estar juntos moviéndonos por la misma cocina pequeña."
+    ],
+    detalle: "Yo pico el ajo, tú eliges la música de fondo. Trato justo.",
+    buenasNoches: "Buenas noches, pensando en esa cocina compartida pendiente.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 154,
     categoria: "Secreto",
     icono: "🗝️",
     tono: "hot",
@@ -2161,7 +2654,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 126,
+    dia: 155,
     categoria: "Pausa musical",
     icono: "💿",
     tono: "amor",
@@ -2178,7 +2671,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 127,
+    dia: 156,
     categoria: "Just The Way You Are",
     icono: "🪞",
     tono: "amor",
@@ -2195,7 +2688,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 128,
+    dia: 157,
     categoria: "Elegirte",
     icono: "🩷",
     tono: "amor",
@@ -2212,7 +2705,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 129,
+    dia: 158,
+    categoria: "Fondue de Chocolate",
+    icono: "🍫",
+    tono: "amor",
+    color: { principal: "#a9713f", suave: "#ecd2ae", oscuro: "#20130a" },
+    buenosDias: "Buenos días. Hoy va una idea dulce: chocolate derretido, frutas cortadas, y una excusa perfecta para compartir del mismo plato.",
+    poema: [
+      "Un fondue de chocolate no necesita casi nada: chocolate de buena calidad, un poco de crema, y algo de fruta para mojar.",
+      "Es de esas recetas que se sienten más como un plan que como una comida."
+    ],
+    detalle: "Fresas, banano, y lo que se te ocurra. Tú decides el menú de mojadas.",
+    buenasNoches: "Buenas noches, con ganas de ese chocolate compartido pronto.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 159,
     categoria: "Escucha",
     icono: "📚",
     tono: "filosofica",
@@ -2229,7 +2739,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 130,
+    dia: 160,
     categoria: "Hecha Pa' Mí",
     icono: "📻",
     tono: "amor",
@@ -2247,7 +2757,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 131,
+    dia: 161,
     categoria: "Última vez",
     icono: "🕰️",
     tono: "hot",
@@ -2264,7 +2774,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 132,
+    dia: 162,
     categoria: "Estrofa nueva",
     icono: "🎵",
     tono: "amor",
@@ -2281,7 +2791,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 133,
+    dia: 163,
+    categoria: "Arepas Rellenas",
+    icono: "🫓",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy va algo bien nuestro: arepas rellenas, hechas en casa, sin prisa.",
+    poema: [
+      "Cada quien puede rellenar la suya como quiera: queso, hogao, carne desmechada, lo que se antoje ese día.",
+      "Es de esas comidas simples que terminan siendo una excusa perfecta para pasar la tarde en la cocina."
+    ],
+    detalle: "Hagamos un domingo de esto, con música de fondo y sin afán.",
+    buenasNoches: "Buenas noches, con antojo de arepas caseras contigo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 164,
     categoria: "Canción de lunes",
     icono: "🎼",
     tono: "amor",
@@ -2298,7 +2825,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 134,
+    dia: 165,
     categoria: "Gravedad",
     icono: "🌌",
     tono: "filosofica",
@@ -2315,7 +2842,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 135,
+    dia: 166,
     categoria: "Confianza",
     icono: "☀️",
     tono: "amor",
@@ -2332,7 +2859,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 136,
+    dia: 167,
     categoria: "505",
     icono: "🚗",
     tono: "filosofica",
@@ -2349,7 +2876,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 137,
+    dia: 168,
     categoria: "Lirio",
     icono: "🤍",
     tono: "filosofica",
@@ -2366,7 +2893,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 138,
+    dia: 169,
+    categoria: "Noche de Tacos",
+    icono: "🌮",
+    tono: "hot",
+    color: { principal: "#e0632f", suave: "#ffcfa8", oscuro: "#2b1103" },
+    buenosDias: "Buenos días. Hoy va una idea divertida: armar tacos cada quien a su gusto, con las manos, sin tanta formalidad.",
+    poema: [
+      "Tortillas calientes, varias proteínas, salsas de distinto picor, y que cada quien arme el suyo como quiera.",
+      "Hay algo entretenido en comer así, cerca, compartiendo salsas y riéndose de quién eligió mal el picante."
+    ],
+    detalle: "Prepárate, voy a exagerar con la salsa picante solo para ver tu reacción.",
+    buenasNoches: "Buenas noches, con antojo de esa noche de tacos desordenada.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 170,
     categoria: "Canción prestada",
     icono: "🎤",
     tono: "amor",
@@ -2383,7 +2927,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 139,
+    dia: 171,
     categoria: "Canción a solas",
     icono: "🌙",
     tono: "hot",
@@ -2400,7 +2944,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 140,
+    dia: 172,
     categoria: "Obsesión bonita",
     icono: "🖤",
     tono: "filosofica",
@@ -2417,7 +2961,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 141,
+    dia: 173,
     categoria: "Jazmín",
     icono: "🪷",
     tono: "filosofica",
@@ -2434,7 +2978,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 142,
+    dia: 174,
+    categoria: "Panqueques Domingueros",
+    icono: "🥞",
+    tono: "amor",
+    color: { principal: "#f2e94e", suave: "#faf6cf", oscuro: "#141a08" },
+    buenosDias: "Buenos días. Hoy va una idea para una mañana lenta: panqueques hechos en pijama, sin apuro por nada.",
+    poema: [
+      "No hace falta receta complicada, solo harina, huevo, leche, y ganas de quedarse en casa toda la mañana.",
+      "Es de esos planes que se sienten más como un abrazo que como un desayuno."
+    ],
+    detalle: "Yo hago los panqueques, tú eliges qué le ponemos encima. Miel, fruta, lo que sea.",
+    buenasNoches: "Buenas noches, soñando con ese desayuno lento de domingo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 175,
     categoria: "A Thousand Years",
     icono: "⏳",
     tono: "amor",
@@ -2451,7 +3012,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 143,
+    dia: 176,
     categoria: "Eres",
     icono: "🌻",
     tono: "amor",
@@ -2468,7 +3029,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 144,
+    dia: 177,
     categoria: "Peluches",
     icono: "🧸",
     tono: "amor",
@@ -2485,7 +3046,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 145,
+    dia: 178,
     categoria: "Pensando en Ti",
     icono: "🎶",
     tono: "filosofica",
@@ -2502,7 +3063,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 146,
+    dia: 179,
+    categoria: "Pan de Ajo Casero",
+    icono: "🥖",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy va algo simple pero rico: pan de ajo casero, de esos que llenan la casa de un olor buenísimo.",
+    poema: [
+      "Mantequilla, ajo picado, un poco de perejil, y horno. Nada complicado, pero el resultado siempre sorprende.",
+      "Combina perfecto con una copa de vino y una conversación larga."
+    ],
+    detalle: "Hagámoslo para acompañar cualquier otra cosa que cocinemos ese día.",
+    buenasNoches: "Buenas noches, con el antojo de ese olor a pan recién hecho.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 180,
     categoria: "Something",
     icono: "🎸",
     tono: "amor",
@@ -2519,7 +3097,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 147,
+    dia: 181,
     categoria: "Ritual",
     icono: "🔥",
     tono: "hot",
@@ -2536,7 +3114,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 148,
+    dia: 182,
     categoria: "Dedicatoria",
     icono: "🎼",
     tono: "amor",
@@ -2553,7 +3131,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 149,
+    dia: 183,
     categoria: "Descontrol",
     icono: "💥",
     tono: "hot",
@@ -2570,7 +3148,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 150,
+    dia: 184,
     categoria: "Mar",
     icono: "🌊",
     tono: "filosofica",
@@ -2587,7 +3165,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 151,
+    dia: 185,
+    categoria: "Monserrate",
+    icono: "⛰️",
+    tono: "filosofica",
+    color: { principal: "#5c7d99", suave: "#d4e3ee", oscuro: "#0d1a24" },
+    buenosDias: "Buenos días. Hoy pensé en un plan clásico pero que nunca falla: subir a Monserrate a ver caer el sol sobre toda la ciudad.",
+    poema: [
+      "Desde arriba, Bogotá se ve distinta: más pequeña, más tranquila, como si todo lo que preocupa allá abajo perdiera un poco de peso.",
+      "Podemos subir caminando o en el teleférico, y bajar a comer algo caliente después, con el frío ya metido en los huesos."
+    ],
+    detalle: "El santuario arriba también vale la pena verlo, aunque sea solo por la arquitectura.",
+    buenasNoches: "Buenas noches, con la ciudad entera todavía en la cabeza, vista desde arriba.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 186,
     categoria: "Electricidad",
     icono: "⚡",
     tono: "hot",
@@ -2604,7 +3199,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 152,
+    dia: 187,
     categoria: "Certezas",
     icono: "🔮",
     tono: "amor",
@@ -2621,7 +3216,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 153,
+    dia: 188,
     categoria: "Vibración",
     icono: "🎧",
     tono: "filosofica",
@@ -2638,7 +3233,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 154,
+    dia: 189,
     categoria: "Lo Que en Ti Veo",
     icono: "📻",
     tono: "amor",
@@ -2655,7 +3250,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 155,
+    dia: 190,
+    categoria: "La Candelaria",
+    icono: "🏘️",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy quiero proponerte perdernos un rato por las calles de La Candelaria, sin ruta fija.",
+    poema: [
+      "Casas coloniales de colores, grafitis enormes en cada esquina, y el Chorro de Quevedo al final del recorrido, con sus historias de cuenteros callejeros.",
+      "Ahí cerca hay canelazo caliente, perfecto para el frío del centro."
+    ],
+    detalle: "Vamos sin apuro, deteniéndonos en cada mural que nos guste.",
+    buenasNoches: "Buenas noches, con ganas de perdernos por esas calles contigo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 191,
     categoria: "Calor",
     icono: "🌙",
     tono: "hot",
@@ -2672,7 +3284,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 156,
+    dia: 192,
     categoria: "Herida bonita",
     icono: "🥀",
     tono: "filosofica",
@@ -2689,7 +3301,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 157,
+    dia: 193,
     categoria: "Madrugada",
     icono: "🌃",
     tono: "hot",
@@ -2706,7 +3318,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 158,
+    dia: 194,
     categoria: "Amor Libre",
     icono: "🎼",
     tono: "amor",
@@ -2723,7 +3335,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 159,
+    dia: 195,
+    categoria: "Torre Colpatria",
+    icono: "🌃",
+    tono: "amor",
+    color: { principal: "#6b8f9e", suave: "#c9e2ea", oscuro: "#0a1a20" },
+    buenosDias: "Buenos días. Hoy pensé en un plan de noche: subir a un mirador y ver Bogotá encendida, completa.",
+    poema: [
+      "Desde arriba, la ciudad se ve como un mapa de luces sin fin, y siempre queda ese momento de silencio donde ninguno de los dos dice nada, solo mira.",
+      "Vale la pena verla así al menos una vez."
+    ],
+    detalle: "Llevemos algo caliente para tomar, el viento allá arriba pega fuerte.",
+    buenasNoches: "Buenas noches, pensando en esa ciudad llena de luces, contigo cerca.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 196,
     categoria: "Fuego",
     icono: "🔥",
     tono: "hot",
@@ -2740,7 +3369,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 160,
+    dia: 197,
     categoria: "Canción compartida",
     icono: "💿",
     tono: "amor",
@@ -2757,7 +3386,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 161,
+    dia: 198,
     categoria: "Susurro",
     icono: "🌹",
     tono: "hot",
@@ -2774,7 +3403,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 162,
+    dia: 199,
     categoria: "Te Mando Flores",
     icono: "🌷",
     tono: "amor",
@@ -2791,7 +3420,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 163,
+    dia: 200,
     categoria: "Compañía",
     icono: "🕸️",
     tono: "amor",
@@ -2808,7 +3437,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 164,
+    dia: 201,
+    categoria: "Cerro de Guadalupe",
+    icono: "🗻",
+    tono: "amor",
+    color: { principal: "#4fa66b", suave: "#c8ecd4", oscuro: "#0a2013" },
+    buenosDias: "Buenos días. Hoy quiero proponerte una alternativa menos conocida a Monserrate, con vistas igual de buenas.",
+    poema: [
+      "El Cerro de Guadalupe queda un poco más lejos y menos gente lo visita, así que se siente más tranquilo, casi como si fuera solo nuestro.",
+      "La vista desde arriba compite perfectamente con la del cerro más famoso."
+    ],
+    detalle: "Un plan menos turístico, más para nosotros dos solos.",
+    buenasNoches: "Buenas noches, pensando en vistas tranquilas, lejos del ruido.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 202,
     categoria: "Arte",
     icono: "🎨",
     tono: "filosofica",
@@ -2825,7 +3471,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 165,
+    dia: 203,
     categoria: "Orquídea",
     icono: "🌺",
     tono: "filosofica",
@@ -2842,7 +3488,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 166,
+    dia: 204,
     categoria: "Deseo",
     icono: "🔥",
     tono: "hot",
@@ -2859,7 +3505,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 167,
+    dia: 205,
     categoria: "Querer Querernos",
     icono: "🎵",
     tono: "amor",
@@ -2876,7 +3522,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 168,
+    dia: 206,
+    categoria: "Museo del Oro",
+    icono: "🏛️",
+    tono: "filosofica",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy quiero proponerte un plan cultural: perdernos por horas entre piezas de oro precolombino.",
+    poema: [
+      "El Museo del Oro guarda miles de piezas hechas por manos de hace siglos, cada una con una historia que nadie terminó de contar del todo.",
+      "Después podemos caminar hasta alguna cafetería cercana y hablar de cuál pieza nos gustó más."
+    ],
+    detalle: "Cerca hay varias cafeterías perfectas para cerrar la tarde con un buen café.",
+    buenasNoches: "Buenas noches, todavía pensando en piezas de oro con siglos de historia.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 207,
     categoria: "Hogar compartido",
     icono: "🥀",
     tono: "amor",
@@ -2893,7 +3556,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 169,
+    dia: 208,
     categoria: "Rosa",
     icono: "🌹",
     tono: "amor",
@@ -2910,7 +3573,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 170,
+    dia: 209,
     categoria: "Aprender de ti",
     icono: "🏆",
     tono: "amor",
@@ -2927,7 +3590,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 171,
+    dia: 210,
     categoria: "Azucena",
     icono: "🤍",
     tono: "filosofica",
@@ -2944,7 +3607,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 172,
+    dia: 211,
+    categoria: "Jardín Botánico",
+    icono: "🌿",
+    tono: "amor",
+    color: { principal: "#4fa66b", suave: "#c8ecd4", oscuro: "#0a2013" },
+    buenosDias: "Buenos días. Hoy pensé en un plan tranquilo: perdernos entre plantas y flores un rato, sin afán de nada.",
+    poema: [
+      "El Jardín Botánico tiene rincones con flores de todos los colores, invernaderos, y suficiente verde para olvidar que estamos en medio de una ciudad tan grande.",
+      "Un buen lugar para caminar despacio, sin destino fijo."
+    ],
+    detalle: "Llevemos algo para picar y busquemos un rincón bonito para sentarnos un rato.",
+    buenasNoches: "Buenas noches, entre flores imaginarias, pensando en ti.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 212,
     categoria: "Lavanda",
     icono: "💐",
     tono: "amor",
@@ -2961,7 +3641,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 173,
+    dia: 213,
     categoria: "Espera",
     icono: "🕊️",
     tono: "filosofica",
@@ -2978,7 +3658,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 174,
+    dia: 214,
     categoria: "Calma compartida",
     icono: "🦸‍♀️",
     tono: "amor",
@@ -2995,7 +3675,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 175,
+    dia: 215,
     categoria: "Créditos finales",
     icono: "🎤",
     tono: "amor",
@@ -3012,7 +3692,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 176,
+    dia: 216,
     categoria: "Impaciencia",
     icono: "⏱️",
     tono: "hot",
@@ -3029,7 +3709,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 177,
+    dia: 217,
+    categoria: "Campo de Girasoles",
+    icono: "🌻",
+    tono: "amor",
+    color: { principal: "#f2b705", suave: "#fff0b3", oscuro: "#251c02" },
+    buenosDias: "Buenos días. Hoy quiero proponerte una escapada corta: hay un campo de girasoles cerca de Bogotá, en Subachoque, que solo florece en ciertas épocas.",
+    poema: [
+      "Un mar amarillo hasta donde alcanza la vista, con montañas de fondo. Vale la pena revisar cuándo está en floración antes de ir.",
+      "Las fotos ahí siempre quedan bonitas, aunque lo mejor es simplemente estar ahí, caminando entre las flores."
+    ],
+    detalle: "Averigüemos las fechas exactas de floración antes de planearlo, para no ir en época equivocada.",
+    buenasNoches: "Buenas noches, imaginando ese mar amarillo contigo caminando en medio.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 218,
     categoria: "Destino",
     icono: "🔑",
     tono: "filosofica",
@@ -3046,7 +3743,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 178,
+    dia: 219,
     categoria: "Café",
     icono: "☕",
     tono: "amor",
@@ -3063,7 +3760,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 179,
+    dia: 220,
     categoria: "Roce",
     icono: "🌶️",
     tono: "hot",
@@ -3080,7 +3777,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 180,
+    dia: 221,
     categoria: "Lo cotidiano",
     icono: "🌼",
     tono: "amor",
@@ -3097,7 +3794,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 181,
+    dia: 222,
+    categoria: "Ciclovía Dominical",
+    icono: "🚲",
+    tono: "amor",
+    color: { principal: "#6b8f9e", suave: "#c9e2ea", oscuro: "#0a1a20" },
+    buenosDias: "Buenos días. Hoy quiero proponerte un plan activo: recorrer la ciclovía un domingo, sin afán, parando donde nos provoque.",
+    poema: [
+      "Los domingos, varias calles de Bogotá se cierran a los carros y se llenan de bicicletas, gente corriendo, familias caminando.",
+      "Podemos terminar en alguna cafetería del camino, con las piernas cansadas y buena conversación."
+    ],
+    detalle: "Yo llevo el agua, tú eliges la ruta. O al revés, como prefieras.",
+    buenasNoches: "Buenas noches, con las piernas cansadas de imaginar ese paseo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 223,
     categoria: "Improvisación",
     icono: "🎸",
     tono: "amor",
@@ -3114,7 +3828,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 182,
+    dia: 224,
     categoria: "There's Nothing Holdin' Me Back",
     icono: "🔓",
     tono: "hot",
@@ -3131,7 +3845,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 183,
+    dia: 225,
     categoria: "Canción de domingo",
     icono: "🎶",
     tono: "amor",
@@ -3148,7 +3862,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 184,
+    dia: 226,
     categoria: "Piel de gallina",
     icono: "🌡️",
     tono: "hot",
@@ -3165,7 +3879,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 185,
+    dia: 227,
     categoria: "Comodidad",
     icono: "🧶",
     tono: "amor",
@@ -3182,24 +3896,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 186,
-    categoria: "Manía",
-    icono: "🖤",
+    dia: 228,
+    categoria: "Spa en Pareja",
+    icono: "🧖",
     tono: "hot",
-    color: { principal: "#a10e35", suave: "#f0aabd", oscuro: "#140208" },
-    buenosDias: "Buenos días. Tengo una manía nueva: pensarte en momentos que definitivamente no debería, como en medio de una reunión aburrida.",
+    color: { principal: "#c98f9e", suave: "#f7d9e2", oscuro: "#26101a" },
+    buenosDias: "Buenos días. Hoy quiero proponerte algo relajado: un día de spa, solo para desconectarnos un rato de todo.",
     poema: [
-      "No es normal pensar tanto en alguien en momentos tan al azar, y aun así no logro evitarlo contigo, ni lo intento en serio.",
-      "Considérate oficialmente mi manía favorita de este año."
+      "Masajes, jacuzzi, algo de calma después de semanas ocupadas. A veces hace falta parar del todo, sin celular, sin pendientes, solo nosotros.",
+      "Hay varios lugares en la ciudad con planes en pareja que valen completamente la pena."
     ],
-    detalle: "Si me ves distraído algún día de estos, ya sabes exactamente por qué.",
-    buenasNoches: "Buenas noches, todavía con la manía completamente activa.",
+    detalle: "Busquemos fecha para este plan, lo necesitamos más de lo que creemos.",
+    buenasNoches: "Buenas noches, ya relajándome solo de imaginar ese plan.",
     notaImagen: "[PARA TI] a tu criterio.",
     notaCancion: "[PARA TI] automática, catálogo 'hot'."
   },
 
   {
-    dia: 187,
+    dia: 229,
     categoria: "Promesas pequeñas",
     icono: "🕷️",
     tono: "amor",
@@ -3216,24 +3930,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 188,
-    categoria: "Besos en Guerra",
-    icono: "🎸",
+    dia: 230,
+    categoria: "Manía",
+    icono: "🖤",
     tono: "hot",
-    color: { principal: "#c98f9e", suave: "#f7d9e2", oscuro: "#26101a" },
-    buenosDias: "Buenos días. Hoy quiero hablarte de una canción que compara el amor con una pelea bonita, de esas que no se quieren terminar.",
+    color: { principal: "#a10e35", suave: "#f0aabd", oscuro: "#140208" },
+    buenosDias: "Buenos días. Tengo una manía nueva: pensarte en momentos que definitivamente no debería, como en medio de una reunión aburrida.",
     poema: [
-      "Hay una canción de Morat que habla de un amor intenso, casi como una batalla, pero de las que se disfrutan, no de las que duelen.",
-      "Contigo también hay chispa así a veces, y no me quejo para nada."
+      "No es normal pensar tanto en alguien en momentos tan al azar, y aun así no logro evitarlo contigo, ni lo intento en serio.",
+      "Considérate oficialmente mi manía favorita de este año."
     ],
-    detalle: "Se llama 'Besos en Guerra', de Morat.",
-    buenasNoches: "Buenas noches, con la chispa todavía encendida.",
-    notaImagen: "[MÚSICA] Canción: The Scientist",
-    notaCancion: "[PARA TI] canción real: 'Besos en Guerra' - Morat."
+    detalle: "Si me ves distraído algún día de estos, ya sabes exactamente por qué.",
+    buenasNoches: "Buenas noches, todavía con la manía completamente activa.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
   },
 
   {
-    dia: 189,
+    dia: 231,
     categoria: "Casete",
     icono: "🎵",
     tono: "amor",
@@ -3250,7 +3964,41 @@ const CALENDARIO = [
   },
 
   {
-    dia: 190,
+    dia: 232,
+    categoria: "Besos en Guerra",
+    icono: "🎸",
+    tono: "hot",
+    color: { principal: "#c98f9e", suave: "#f7d9e2", oscuro: "#26101a" },
+    buenosDias: "Buenos días. Hoy quiero hablarte de una canción que compara el amor con una pelea bonita, de esas que no se quieren terminar.",
+    poema: [
+      "Hay una canción de Morat que habla de un amor intenso, casi como una batalla, pero de las que se disfrutan, no de las que duelen.",
+      "Contigo también hay chispa así a veces, y no me quejo para nada."
+    ],
+    detalle: "Se llama 'Besos en Guerra', de Morat.",
+    buenasNoches: "Buenas noches, con la chispa todavía encendida.",
+    notaImagen: "[MÚSICA] Canción: The Scientist",
+    notaCancion: "[PARA TI] canción real: 'Besos en Guerra' - Morat."
+  },
+
+  {
+    dia: 233,
+    categoria: "Clase de Cerámica",
+    icono: "🏺",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy quiero proponerte algo creativo: una clase de pintura o cerámica, con copa de vino incluida.",
+    poema: [
+      "Hacer algo con las manos, sin ser expertos en nada, riéndonos de lo torcido que nos queda, puede ser un plan mejor de lo que suena.",
+      "Al final nos llevamos algo hecho por nosotros mismos, imperfecto pero nuestro."
+    ],
+    detalle: "Busquemos un taller cerca y probemos, aunque nos quede horrible el resultado.",
+    buenasNoches: "Buenas noches, con ganas de hacer algo torcido y perfecto contigo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 234,
     categoria: "Cercanía",
     icono: "💫",
     tono: "hot",
@@ -3267,7 +4015,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 191,
+    dia: 235,
     categoria: "Spider-Man",
     icono: "🕷️",
     tono: "amor",
@@ -3284,7 +4032,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 192,
+    dia: 236,
     categoria: "Sin filtro",
     icono: "🔥",
     tono: "hot",
@@ -3301,7 +4049,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 193,
+    dia: 237,
     categoria: "Horizonte",
     icono: "🌄",
     tono: "filosofica",
@@ -3318,7 +4066,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 194,
+    dia: 238,
+    categoria: "Islas del Rosario",
+    icono: "🏝️",
+    tono: "amor",
+    color: { principal: "#2ea3a3", suave: "#c3f0ee", oscuro: "#062020" },
+    buenosDias: "Buenos días. Hoy quiero hablarte de un plan pendiente en la costa: un día completo en las Islas del Rosario.",
+    poema: [
+      "Agua turquesa, arena blanca, y un rato lejos de todo lo que pesa en la rutina normal.",
+      "Ya conocemos parte de la costa, pero este plan específico todavía está pendiente entre nosotros."
+    ],
+    detalle: "Cuando podamos organizarlo bien, ese día se lo debemos a nosotros mismos.",
+    buenasNoches: "Buenas noches, con los pies imaginarios todavía en esa arena blanca.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 239,
     categoria: "Margarita",
     icono: "🌼",
     tono: "amor",
@@ -3335,7 +4100,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 195,
+    dia: 240,
     categoria: "Preguntas sin miedo",
     icono: "🌱",
     tono: "filosofica",
@@ -3352,7 +4117,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 196,
+    dia: 241,
     categoria: "Puerto seguro",
     icono: "🎧",
     tono: "amor",
@@ -3369,7 +4134,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 197,
+    dia: 242,
     categoria: "Darte un Beso",
     icono: "💋",
     tono: "amor",
@@ -3386,7 +4151,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 198,
+    dia: 243,
+    categoria: "Atardecer en la Muralla",
+    icono: "🌅",
+    tono: "amor",
+    color: { principal: "#e0632f", suave: "#ffcfa8", oscuro: "#2b1103" },
+    buenosDias: "Buenos días. Hoy pensé en un momento específico de Cartagena: el atardecer visto desde la muralla, con el cielo entero cambiando de color.",
+    poema: [
+      "El sol cayendo sobre el mar, la ciudad amurallada iluminándose poco a poco, y ese calor de la costa que ya conocemos bien los dos.",
+      "De los mejores momentos del día para estar ahí, sin apuro, solo mirando."
+    ],
+    detalle: "Busquemos ese rato tranquilo la próxima vez que estemos por allá.",
+    buenasNoches: "Buenas noches, con ese cielo cartagenero todavía en la memoria.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 244,
     categoria: "Confesión",
     icono: "🕯️",
     tono: "filosofica",
@@ -3403,7 +4185,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 199,
+    dia: 245,
     categoria: "Chocolate",
     icono: "🍫",
     tono: "amor",
@@ -3420,7 +4202,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 200,
+    dia: 246,
     categoria: "All of Me",
     icono: "🎹",
     tono: "amor",
@@ -3438,7 +4220,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 201,
+    dia: 247,
     categoria: "Certeza tranquila",
     icono: "🕊️",
     tono: "filosofica",
@@ -3455,7 +4237,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 202,
+    dia: 248,
     categoria: "Just Like Heaven",
     icono: "☁️",
     tono: "filosofica",
@@ -3472,7 +4254,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 203,
+    dia: 249,
+    categoria: "Castillo San Felipe",
+    icono: "🏰",
+    tono: "filosofica",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy quiero hablarte de un lugar con historia de verdad, de esos que hacen pensar en todo lo que pasó ahí antes que nosotros.",
+    poema: [
+      "El Castillo San Felipe de Barajas tiene túneles, historias de batallas, y una vista de la ciudad que compensa la caminata para llegar arriba.",
+      "Da gusto recorrer lugares así tomados de la mano, imaginando cómo era todo hace siglos."
+    ],
+    detalle: "Vale la pena ir temprano, antes de que apriete el calor de la costa.",
+    buenasNoches: "Buenas noches, pensando en historias de siglos atrás, contigo cerca.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 250,
     categoria: "Eco",
     icono: "🎼",
     tono: "amor",
@@ -3489,7 +4288,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 204,
+    dia: 251,
     categoria: "Perfect",
     icono: "💍",
     tono: "amor",
@@ -3507,7 +4306,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 205,
+    dia: 252,
     categoria: "Ternura diaria",
     icono: "🌟",
     tono: "amor",
@@ -3524,7 +4323,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 206,
+    dia: 253,
     categoria: "Armonía",
     icono: "🎶",
     tono: "filosofica",
@@ -3541,7 +4340,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 207,
+    dia: 254,
+    categoria: "Getsemaní",
+    icono: "🎨",
+    tono: "amor",
+    color: { principal: "#c98f9e", suave: "#f7d9e2", oscuro: "#26101a" },
+    buenosDias: "Buenos días. Hoy quiero hablarte de un barrio de Cartagena con una energía distinta a la zona amurallada más turística.",
+    poema: [
+      "Getsemaní tiene arte callejero enorme en cada pared, ambiente bohemio, y menos gente tomando fotos con el celular en alto todo el tiempo.",
+      "De esos lugares donde se siente más la ciudad real, no solo la postal."
+    ],
+    detalle: "Caminemos ahí una tarde entera, sin ruta fija, solo mirando murales.",
+    buenasNoches: "Buenas noches, entre murales imaginarios de colores, pensando en ese plan.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 255,
     categoria: "Carretera con música",
     icono: "🎼",
     tono: "amor",
@@ -3558,7 +4374,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 208,
+    dia: 256,
     categoria: "Detalles",
     icono: "💃",
     tono: "amor",
@@ -3575,7 +4391,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 209,
+    dia: 257,
     categoria: "Tarareo",
     icono: "🎤",
     tono: "amor",
@@ -3592,7 +4408,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 210,
+    dia: 258,
     categoria: "Clavel",
     icono: "🌸",
     tono: "filosofica",
@@ -3609,7 +4425,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 211,
+    dia: 259,
+    categoria: "Gran Malecón",
+    icono: "🌊",
+    tono: "amor",
+    color: { principal: "#2ea3a3", suave: "#c3f0ee", oscuro: "#062020" },
+    buenosDias: "Buenos días. Hoy quiero hablarte de un plan en Barranquilla: caminar por el Gran Malecón del Río, con el Magdalena al lado.",
+    poema: [
+      "Un espacio largo junto al río, con zonas verdes, lugares para comer, y suficiente espacio para caminar de la mano sin apuro.",
+      "De noche se pone bonito con las luces reflejadas en el agua."
+    ],
+    detalle: "Terminemos ahí una tarde con algo de comer típico de la zona.",
+    buenasNoches: "Buenas noches, con el río Magdalena imaginario todavía sonando de fondo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 260,
     categoria: "Lo simple",
     icono: "🐻",
     tono: "amor",
@@ -3626,7 +4459,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 212,
+    dia: 261,
     categoria: "Pedido especial",
     icono: "🎧",
     tono: "filosofica",
@@ -3643,7 +4476,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 213,
+    dia: 262,
     categoria: "Canción vieja",
     icono: "🎸",
     tono: "filosofica",
@@ -3660,7 +4493,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 214,
+    dia: 263,
     categoria: "Intensidad",
     icono: "🖤",
     tono: "filosofica",
@@ -3677,7 +4510,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 215,
+    dia: 264,
     categoria: "Verdad",
     icono: "🗝️",
     tono: "filosofica",
@@ -3694,7 +4527,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 216,
+    dia: 265,
+    categoria: "Playas de Puerto Colombia",
+    icono: "🏖️",
+    tono: "amor",
+    color: { principal: "#2ea3a3", suave: "#c3f0ee", oscuro: "#062020" },
+    buenosDias: "Buenos días. Hoy pensé en salir un poco de la ciudad: las playas cerca de Puerto Colombia, más tranquilas que las típicas de postal.",
+    poema: [
+      "Un ratito fuera de Barranquilla, con mar, arena, y menos multitudes que en otros destinos más conocidos de la costa.",
+      "De esos planes cortos que rinden mucho más de lo que cuestan en tiempo."
+    ],
+    detalle: "Un fin de semana cualquiera, sin mucho plan más que llegar y quedarnos.",
+    buenasNoches: "Buenas noches, con arena imaginaria todavía entre los dedos.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 266,
     categoria: "Compás cercano",
     icono: "💋",
     tono: "hot",
@@ -3711,7 +4561,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 217,
+    dia: 267,
     categoria: "Concierto propio",
     icono: "🎶",
     tono: "amor",
@@ -3728,7 +4578,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 218,
+    dia: 268,
     categoria: "Tentación",
     icono: "🍷",
     tono: "hot",
@@ -3745,7 +4595,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 219,
+    dia: 269,
     categoria: "Antes de ti",
     icono: "🐱",
     tono: "amor",
@@ -3762,7 +4612,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 220,
+    dia: 270,
+    categoria: "Barrio El Prado",
+    icono: "🏡",
+    tono: "amor",
+    color: { principal: "#c9a267", suave: "#f2e0bd", oscuro: "#221805" },
+    buenosDias: "Buenos días. Hoy quiero hablarte de un rincón de Barranquilla con arquitectura bonita y menos ruido que el centro.",
+    poema: [
+      "El barrio El Prado tiene casas antiguas, árboles grandes, y una calma que contrasta con el resto de la ciudad tan movida.",
+      "Perfecto para caminar despacio una tarde, sin destino fijo, solo mirando fachadas."
+    ],
+    detalle: "Busquemos algún restaurante bueno por ahí cerca para cerrar la caminata.",
+    buenasNoches: "Buenas noches, caminando calles tranquilas en la imaginación, contigo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 271,
     categoria: "Canción prohibida",
     icono: "🚫",
     tono: "hot",
@@ -3779,7 +4646,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 221,
+    dia: 272,
     categoria: "Disco rayado",
     icono: "🎸",
     tono: "filosofica",
@@ -3796,7 +4663,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 222,
+    dia: 273,
     categoria: "Burbujas de Amor",
     icono: "🫧",
     tono: "amor",
@@ -3813,7 +4680,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 223,
+    dia: 274,
     categoria: "Balada",
     icono: "🎵",
     tono: "amor",
@@ -3830,7 +4697,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 224,
+    dia: 275,
+    categoria: "Domingo de Pijama",
+    icono: "🛋️",
+    tono: "amor",
+    color: { principal: "#9e8fc9", suave: "#e2d9f7", oscuro: "#160f26" },
+    buenosDias: "Buenos días. Hoy quiero proponerte el plan más simple de todos: no salir de pijama en todo el día.",
+    poema: [
+      "A veces el mejor plan es no tener ningún plan: quedarse en cama hasta tarde, ver algo en la tele, no arreglarse para nadie.",
+      "De esos domingos que después se recuerdan con más cariño que los planes elaborados."
+    ],
+    detalle: "Cero afán, cero agenda. Solo estar.",
+    buenasNoches: "Buenas noches, todavía en modo pijama, sin ganas de que se acabe el día.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 276,
     categoria: "Cicatriz",
     icono: "🩹",
     tono: "filosofica",
@@ -3847,7 +4731,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 225,
+    dia: 277,
     categoria: "Cali Pachanguero",
     icono: "🎤",
     tono: "amor",
@@ -3865,7 +4749,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 226,
+    dia: 278,
     categoria: "Simpleza",
     icono: "🎀",
     tono: "amor",
@@ -3882,7 +4766,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 227,
+    dia: 279,
     categoria: "Volver",
     icono: "🧸",
     tono: "amor",
@@ -3899,7 +4783,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 228,
+    dia: 280,
     categoria: "Pequeñas victorias",
     icono: "🍇",
     tono: "amor",
@@ -3916,7 +4800,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 229,
+    dia: 281,
+    categoria: "Noche de Juegos de Mesa",
+    icono: "🎲",
+    tono: "hot",
+    color: { principal: "#d1163f", suave: "#f7bccb", oscuro: "#1c0409" },
+    buenosDias: "Buenos días. Hoy quiero proponerte algo competitivo: una noche de juegos de mesa, con apuestas de por medio.",
+    poema: [
+      "No hablo de dinero. Hablo de apuestas más interesantes, de esas que se cobran en persona, con calma.",
+      "Prepárate para perder, porque no pienso dejarte ganar fácil."
+    ],
+    detalle: "Elige el juego. Yo elijo qué se apuesta.",
+    buenasNoches: "Buenas noches, pensando en esa apuesta pendiente todavía sin cobrar.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 282,
     categoria: "Sintonía",
     icono: "📻",
     tono: "amor",
@@ -3933,7 +4834,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 230,
+    dia: 283,
     categoria: "Cielo nocturno",
     icono: "🌌",
     tono: "filosofica",
@@ -3950,7 +4851,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 231,
+    dia: 284,
     categoria: "Contratiempo",
     icono: "🎶",
     tono: "amor",
@@ -3967,7 +4868,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 232,
+    dia: 285,
     categoria: "Violeta",
     icono: "🪻",
     tono: "filosofica",
@@ -3984,7 +4885,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 233,
+    dia: 286,
+    categoria: "Maratón Bajo las Cobijas",
+    icono: "🧣",
+    tono: "amor",
+    color: { principal: "#6b8f9e", suave: "#c9e2ea", oscuro: "#0a1a20" },
+    buenosDias: "Buenos días. Hoy quiero proponerte un plan de esos que no necesitan salir de casa: maratón de series completo, bajo las cobijas.",
+    poema: [
+      "Snacks a la mano, luces bajitas, y ningún compromiso más que terminar la temporada completa si el cuerpo aguanta.",
+      "De esos planes que se sienten mejor entre más flojos y sin culpa sean."
+    ],
+    detalle: "Elige tú la serie esta vez. Yo pongo los snacks.",
+    buenasNoches: "Buenas noches, todavía envuelto en cobijas imaginarias, pensando en ese plan.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'amor'."
+  },
+
+  {
+    dia: 287,
     categoria: "Anticipación",
     icono: "💋",
     tono: "hot",
@@ -4001,7 +4919,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 234,
+    dia: 288,
     categoria: "Segunda oportunidad",
     icono: "🌅",
     tono: "filosofica",
@@ -4018,7 +4936,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 235,
+    dia: 289,
     categoria: "Ritmo lento",
     icono: "🕯️",
     tono: "hot",
@@ -4035,7 +4953,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 236,
+    dia: 290,
     categoria: "Silencio entre canciones",
     icono: "💿",
     tono: "amor",
@@ -4052,7 +4970,24 @@ const CALENDARIO = [
   },
 
   {
-    dia: 237,
+    dia: 291,
+    categoria: "Lluvia y Té Caliente",
+    icono: "☔",
+    tono: "filosofica",
+    color: { principal: "#5c7d99", suave: "#d4e3ee", oscuro: "#0d1a24" },
+    buenosDias: "Buenos días. Hoy pensé en esos días de lluvia que invitan a quedarse adentro, con algo caliente en las manos y conversaciones largas.",
+    poema: [
+      "No hay mucho que planear en un día así: solo el sonido de la lluvia afuera, algo caliente para tomar, y tiempo de sobra para hablar de cualquier cosa.",
+      "De esos días simples que terminan siendo de los más recordados, sin razón aparente."
+    ],
+    detalle: "Cuando llueva fuerte algún día, aprovechemos para este plan sin agenda.",
+    buenasNoches: "Buenas noches, con el sonido de lluvia imaginaria todavía de fondo.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'filosófica'."
+  },
+
+  {
+    dia: 292,
     categoria: "Noche",
     icono: "🌃",
     tono: "hot",
@@ -4069,42 +5004,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 238,
-    categoria: "Nosotros",
-    icono: "🎉",
-    tono: "amor",
-    color: { principal: "#ff5d8f", suave: "#ffd7e6", oscuro: "#2a0f1c" },
-    buenosDias: "Buenos días. Hoy es el día 241, el último de este primer calendario.",
-    poema: [
-      "Empezamos con un Snoopy y una promesa de acompañarte todos los días que pudiera, y aquí seguimos, muchos días después.",
-      "Gracias por darle clic a cada corazón, por leer cada poema, por dejarme decirte de mil formas distintas siempre lo mismo: que te amo, que pienso en ti, que quiero estar.",
-      "Esto no se termina aquí. Este es solo el primer capítulo de algo que planeo seguir construyendo contigo, un día a la vez."
-    ],
-    detalle: "Gracias por estos 241 días. Esto lo hice completo, pensando solo en ti.",
-    buenasNoches: "Buenas noches, mi persona favorita. Fin del primer capítulo, no de la historia.",
-    notaImagen: "[PARA TI] tu foto favorita de los dos, para cerrar este primer tramo con algo especial.",
-    notaCancion: "[PARA TI] la canción que sientas que representa esta etapa de ustedes."
-  },
-
-  {
-    dia: 239,
-    categoria: "Track secreto",
-    icono: "🔓",
-    tono: "hot",
-    color: { principal: "#d1163f", suave: "#f7bccb", oscuro: "#1c0409" },
-    buenosDias: "Buenos días. Anoche encontré, sin buscarla, una canción que ahora asocio completamente contigo, y no es precisamente para escuchar en el bus.",
-    poema: [
-      "Hay músicas que uno guarda para momentos muy específicos, y esta se ganó ese lugar apenas la escuché una vez.",
-      "No te digo cuál es todavía. Prefiero que la descubras conmigo, en el momento correcto."
-    ],
-    detalle: "Cuando estemos cerca, te la pongo. Ahí vas a entender por qué la guardé.",
-    buenasNoches: "Buenas noches, con esa canción todavía sonando en mi cabeza.",
-    notaImagen: "[PARA TI] a tu criterio.",
-    notaCancion: "[PARA TI] automática, catálogo 'hot'."
-  },
-
-  {
-    dia: 240,
+    dia: 293,
     categoria: "Bis pendiente",
     icono: "🔥",
     tono: "hot",
@@ -4121,7 +5021,7 @@ const CALENDARIO = [
   },
 
   {
-    dia: 241,
+    dia: 294,
     categoria: "Frecuencia",
     icono: "📻",
     tono: "hot",
@@ -4135,6 +5035,41 @@ const CALENDARIO = [
     buenasNoches: "Buenas noches, buscando buena señal contigo, como siempre.",
     notaImagen: "[PARA TI] a tu criterio.",
     notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 295,
+    categoria: "Track secreto",
+    icono: "🔓",
+    tono: "hot",
+    color: { principal: "#d1163f", suave: "#f7bccb", oscuro: "#1c0409" },
+    buenosDias: "Buenos días. Anoche encontré, sin buscarla, una canción que ahora asocio completamente contigo, y no es precisamente para escuchar en el bus.",
+    poema: [
+      "Hay músicas que uno guarda para momentos muy específicos, y esta se ganó ese lugar apenas la escuché una vez.",
+      "No te digo cuál es todavía. Prefiero que la descubras conmigo, en el momento correcto."
+    ],
+    detalle: "Cuando estemos cerca, te la pongo. Ahí vas a entender por qué la guardé.",
+    buenasNoches: "Buenas noches, con esa canción todavía sonando en mi cabeza.",
+    notaImagen: "[PARA TI] a tu criterio.",
+    notaCancion: "[PARA TI] automática, catálogo 'hot'."
+  },
+
+  {
+    dia: 296,
+    categoria: "Nosotros",
+    icono: "🎉",
+    tono: "amor",
+    color: { principal: "#ff5d8f", suave: "#ffd7e6", oscuro: "#2a0f1c" },
+    buenosDias: "Buenos días. Hoy es el día 296, el último de este primer calendario.",
+    poema: [
+      "Empezamos con un Snoopy y una promesa de acompañarte todos los días que pudiera, y aquí seguimos, muchos días después.",
+      "Gracias por darle clic a cada corazón, por leer cada poema, por dejarme decirte de mil formas distintas siempre lo mismo: que te amo, que pienso en ti, que quiero estar.",
+      "Esto no se termina aquí. Este es solo el primer capítulo de algo que planeo seguir construyendo contigo, un día a la vez."
+    ],
+    detalle: "Gracias por estos 296 días. Esto lo hice completo, pensando solo en ti.",
+    buenasNoches: "Buenas noches, mi persona favorita. Fin del primer capítulo, no de la historia.",
+    notaImagen: "[PARA TI] tu foto favorita de los dos, para cerrar este primer tramo con algo especial.",
+    notaCancion: "[PARA TI] la canción que sientas que representa esta etapa de ustedes."
   }
 
 ];
