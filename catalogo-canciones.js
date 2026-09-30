@@ -1,18 +1,26 @@
 /* =======================================================================
-   CATALOGO-CANCIONES.JS
+   CATALOGO-CANCIONES.JS — CATALOGO REPRODUCIBLE 365 DIAS
    -----------------------------------------------------------------------
-   Catálogo musical ampliado para el calendario de 365 días.
+   IMPORTANTE: este archivo contiene SOLO canciones con youtubeId valido.
+   No hay placeholders ni entradas con ID vacio dentro de las categorias.
 
-   "tono" decide de qué familia se toma música automáticamente.
-   Si un día tiene "cancionUrl", esa canción queda fijada para ese día.
+   COMO AÑADIR UNA CANCION
+   1) Busca el video correcto en YouTube.
+   2) Copia el ID de 11 caracteres de la URL, por ejemplo:
+      https://www.youtube.com/watch?v=XXXXXXXXXXX
+      -> youtubeId: "XXXXXXXXXXX"
+   3) Añade el objeto a la categoria que corresponda.
+   4) No hace falta modificar reproductor.js.
 
-   Las canciones se usan como acompañamiento e inspiración temática. No se
-   almacenan letras de canciones en este archivo. Los youtubeId que no han
-   sido verificados se dejan vacíos deliberadamente para no inventar enlaces.
+   Si una cancion es especifica de un dia, puedes fijarla en
+   contenido-calendario.js usando cancionUrl:
+      cancionUrl: "https://www.youtube.com/watch?v=XXXXXXXXXXX"
+
+   El reproductor mantiene un historial por categoria para no repetir la
+   misma cancion hasta haber recorrido las disponibles.
    ======================================================================= */
 
 const CATALOGO_CANCIONES = {
-
   amor: [
     { titulo: "Hecha Pa' Mí", artista: "Grupo Frontera", youtubeId: "IbE7peGTpmc", nota: "ya se la han compartido antes 💛" },
     { titulo: "Pero No Te Enamores", artista: "Fuerza Regida", youtubeId: "qGTBrBTFKOM", nota: "otra que ya se han compartido" },
@@ -20,139 +28,78 @@ const CATALOGO_CANCIONES = {
     { titulo: "Favorito", artista: "Camilo", youtubeId: "2mY7AFTtYwQ" },
     { titulo: "Vivir Mi Vida", artista: "Marc Anthony", youtubeId: "YXnjy5YlDwk", nota: "salsa, para los días más alegres" },
     { titulo: "Cali Pachanguero", artista: "Grupo Niche", youtubeId: "7KxkMLAZlzw", nota: "salsa clásica, para bailar" },
-    { titulo: "Bésame Mucho", artista: "Consuelo Velázquez (clásico)", youtubeId: "" },
-    { titulo: "Eres Tú", artista: "Mocedades", youtubeId: "" },
-    { titulo: "Amor Eterno", artista: "Juan Gabriel", youtubeId: "" },
-    { titulo: "Contigo", artista: "", youtubeId: "" },
-    { titulo: "Querer Querernos", artista: "Canserbero", youtubeId: "" },
-    { titulo: "Amor Libre", artista: "Nach (feat. Shuga Wuga)", youtubeId: "" },
-    { titulo: "Día Tras Día", artista: "Andrés Cepeda", youtubeId: "" },
-    { titulo: "Lo Que en Ti Veo", artista: "Andrés Cepeda", youtubeId: "" },
     { titulo: "Cómo Te Atreves", artista: "Morat", youtubeId: "_gm5piKnrS4" },
     { titulo: "pa quererte", artista: "Rels B", youtubeId: "XQeBTVeWkDo" },
     { titulo: "Lo que hay x aquí", artista: "Rels B", youtubeId: "qWCup_EZSWE" },
     { titulo: "Te Quiero Tanto", artista: "Kevin Kaarl", youtubeId: "q07Gd6Q-7dY" },
     { titulo: "Como Me Encanta", artista: "Kevin Kaarl", youtubeId: "OgzNyN2bWac" },
-    { titulo: "Creo en Ti", artista: "Reik", youtubeId: "" },
-    { titulo: "Del Mar", artista: "Ozuna", youtubeId: "" },
-    { titulo: "Make You Feel My Love", artista: "Adele", youtubeId: "" },
-    { titulo: "Ojitos Lindos", artista: "Bad Bunny & Bomba Estéreo", youtubeId: "" },
-    { titulo: "La Reina", artista: "Maluma", youtubeId: "" },
-    { titulo: "Volví a Nacer", artista: "Carlos Vives", youtubeId: "" },
     { titulo: "Die For You", artista: "The Weeknd", youtubeId: "gSo0YiGPgHk" },
-    { titulo: "Volvamos a Ser Novios", artista: "Silvestre Dangond", youtubeId: "" },
-    { titulo: "La Bachata", artista: "Manuel Turizo", youtubeId: "" },
     { titulo: "At Last", artista: "Etta James", youtubeId: "1qJU8G7gR_g" },
-    { titulo: "Just The Way You Are", artista: "Bruno Mars", youtubeId: "" },
-    { titulo: "A Thousand Years", artista: "Christina Perri", youtubeId: "" },
-    { titulo: "Eres", artista: "Café Tacvba", youtubeId: "98Akpf1ph2o" },
-    { titulo: "Something", artista: "The Beatles", youtubeId: "" },
-    { titulo: "Te Mando Flores", artista: "Fonseca", youtubeId: "" },
-    { titulo: "There's Nothing Holdin' Me Back", artista: "Shawn Mendes", youtubeId: "" },
-    { titulo: "Besos en Guerra", artista: "Morat", youtubeId: "" },
-    { titulo: "Darte un Beso", artista: "Prince Royce", youtubeId: "" },
+    { titulo: "Eres", artista: "Café Tacvba", youtubeId: "A9XxwAkpdV8" },
     { titulo: "All of Me", artista: "John Legend", youtubeId: "450p7goxZqg" },
     { titulo: "Perfect", artista: "Ed Sheeran", youtubeId: "2Vv-BfVoq4g" },
-    { titulo: "Burbujas de Amor", artista: "Juan Luis Guerra", youtubeId: "" },
-    { titulo: "Tú Sí Sabes Quererme", artista: "Natalia Lafourcade", youtubeId: "" },
-    { titulo: "Disfruto", artista: "Carla Morrison", youtubeId: "" },
-    { titulo: "Bendita Tu Luz", artista: "Maná & Juan Luis Guerra", youtubeId: "" },
-    { titulo: "Mi Persona Favorita", artista: "Alejandro Sanz & Camila Cabello", youtubeId: "" },
-    { titulo: "Sabor a Mí", artista: "Los Panchos", youtubeId: "" },
-    { titulo: "Somos Novios", artista: "Armando Manzanero", youtubeId: "" },
-    { titulo: "Brillas", artista: "León Larregui", youtubeId: "" },
-    { titulo: "Kiss Me", artista: "Sixpence None the Richer", youtubeId: "" },
-    { titulo: "Adore You", artista: "Harry Styles", youtubeId: "" },
-    { titulo: "Lover", artista: "Taylor Swift", youtubeId: "" },
-    { titulo: "Until I Found You", artista: "Stephen Sanchez", youtubeId: "" },
-    { titulo: "Glue Song", artista: "beabadoobee", youtubeId: "" },
-    { titulo: "Best Part", artista: "Daniel Caesar feat. H.E.R.", youtubeId: "" },
-    { titulo: "Love Again", artista: "Dua Lipa", youtubeId: "" },
-    { titulo: "Tú", artista: "MAYE", youtubeId: "" },
-    { titulo: "Normal", artista: "Feid", youtubeId: "" },
-    { titulo: "Mi Suerte", artista: "Morat", youtubeId: "" },
-    { titulo: "Robarte un Beso", artista: "Carlos Vives & Sebastián Yatra", youtubeId: "" },
-    { titulo: "Bachata en Fukuoka", artista: "Juan Luis Guerra", youtubeId: "" },
-    { titulo: "Amor Completo", artista: "Mon Laferte", youtubeId: "" },
-    { titulo: "Solamente Tú", artista: "Pablo Alborán", youtubeId: "" },
-    { titulo: "Por Primera Vez", artista: "Camilo & Evaluna Montaner", youtubeId: "" },
-    { titulo: "Llegaste Tú", artista: "Luis Fonsi & Juan Luis Guerra", youtubeId: "" }
+    { titulo: "Glue Song", artista: "beabadoobee", youtubeId: "y1cBhJLNNXU" },
+    { titulo: "Best Part", artista: "Daniel Caesar feat. H.E.R.", youtubeId: "vBy7FaapGRo" },
+    { titulo: "Until I Found You", artista: "Stephen Sanchez", youtubeId: "GxldQ9eX2wo" },
+    { titulo: "Disfruto", artista: "Carla Morrison", youtubeId: "_ruEj-XK1lA" },
+    { titulo: "Te Mando Flores", artista: "Fonseca", youtubeId: "qTLd6u0ZW6c" },
+    { titulo: "Bendita Tu Luz", artista: "Maná & Juan Luis Guerra", youtubeId: "44kityInDvM" },
+    { titulo: "Darte un Beso", artista: "Prince Royce", youtubeId: "bdOXnTbyk0g" },
+    { titulo: "Robarte un Beso", artista: "Carlos Vives & Sebastián Yatra", youtubeId: "mtau4v6foha" },
+    { titulo: "Bachata en Fukuoka", artista: "Juan Luis Guerra", youtubeId: "_4NBD3SqBwg" },
+    { titulo: "Mi Persona Favorita", artista: "Alejandro Sanz & Camila Cabello", youtubeId: "W4AiOKlOO0Q" },
+    { titulo: "Besos en Guerra", artista: "Morat", youtubeId: "1oeD2m2UQAI" },
+    { titulo: "There's Nothing Holdin' Me Back", artista: "Shawn Mendes", youtubeId: "dT2owtxkU8k" },
+    { titulo: "Something", artista: "The Beatles", youtubeId: "qCY80SdwBVI" },
+    { titulo: "A Thousand Years", artista: "Christina Perri", youtubeId: "rtOvBOTyX00" },
+    { titulo: "Just The Way You Are", artista: "Bruno Mars", youtubeId: "LjhCEhWiKXk" },
+    { titulo: "Ojitos Lindos", artista: "Bad Bunny & Bomba Estéreo", youtubeId: "7GDp7S1HgSk" },
+    { titulo: "Make You Feel My Love", artista: "Adele", youtubeId: "0put0_a--Ng" },
+    { titulo: "Día Tras Día", artista: "Andrés Cepeda", youtubeId: "g3ZzqseVv6Q" },
+    { titulo: "Amor Libre", artista: "Nach (feat. Shuga Wuga)", youtubeId: "tCo16l-X2QQ" },
+    { titulo: "Querer Querernos", artista: "Canserbero", youtubeId: "Ei7Hp_4FbGY" },
+    { titulo: "Eres Tú", artista: "Mocedades", youtubeId: "Tw69WAn2-_0" },
+    { titulo: "Volvamos a Ser Novios", artista: "Silvestre Dangond & Juancho De La Espriella", youtubeId: "gBOuViKzj1Y" },
+    { titulo: "La Flaca", artista: "Jarabe de Palo", youtubeId: "R2rP8ZU52gU", nota: "rock latino romántico" },
+    { titulo: "Bonito", artista: "Jarabe de Palo", youtubeId: "VE3h9du3hK4", nota: "para días luminosos" },
+    { titulo: "La Bachata", artista: "Manuel Turizo", youtubeId: "TiM_TFpT_DE" },
+    { titulo: "Todo de Ti", artista: "Rauw Alejandro", youtubeId: "CFPLIaMpGrY" },
+    { titulo: "Lo Que en Ti Veo", artista: "Kany García & Nahuel Pennisi", youtubeId: "CrTGrpnlsFI" },
+    { titulo: "Volví a Nacer", artista: "Carlos Vives", youtubeId: "CJ_zRSv3Hr8" }
   ],
 
   filosofica: [
     { titulo: "River Flows in You", artista: "Yiruma", youtubeId: "fiBvOKmuWKg" },
-    { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "CQ8zglIXZi8" },
-    { titulo: "Comptine d'un autre été", artista: "Yann Tiersen", youtubeId: "" },
-    { titulo: "Clair de Lune", artista: "Debussy", youtubeId: "" },
-    { titulo: "Experience", artista: "Ludovico Einaudi", youtubeId: "" },
-    { titulo: "Pensando en Ti", artista: "Canserbero", youtubeId: "" },
-    { titulo: "Good News", artista: "Mac Miller", youtubeId: "" },
+    { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "sR2W2scFS4Y" },
     { titulo: "Rayando el Sol", artista: "Maná", youtubeId: "8lbsQyMhMT8" },
-    { titulo: "Yellow", artista: "Coldplay", youtubeId: "" },
     { titulo: "Vivir Sin Aire", artista: "Maná", youtubeId: "Mr1pHZ2_xJU" },
-    { titulo: "505", artista: "Arctic Monkeys", youtubeId: "" },
-    { titulo: "Just Like Heaven", artista: "The Cure", youtubeId: "" },
-    { titulo: "Vienna", artista: "Billy Joel", youtubeId: "" },
-    { titulo: "Holocene", artista: "Bon Iver", youtubeId: "" },
-    { titulo: "The Night We Met", artista: "Lord Huron", youtubeId: "" },
-    { titulo: "To Build a Home", artista: "The Cinematic Orchestra", youtubeId: "" },
-    { titulo: "Fix You", artista: "Coldplay", youtubeId: "" },
-    { titulo: "Skinny Love", artista: "Bon Iver", youtubeId: "" },
-    { titulo: "Saturn", artista: "Sleeping At Last", youtubeId: "" },
-    { titulo: "Youth", artista: "Daughter", youtubeId: "" },
-    { titulo: "I Found", artista: "Amber Run", youtubeId: "" },
-    { titulo: "Anchor", artista: "Novo Amor", youtubeId: "" },
-    { titulo: "Mystery of Love", artista: "Sufjan Stevens", youtubeId: "" },
-    { titulo: "Bloom", artista: "The Paper Kites", youtubeId: "" },
-    { titulo: "Sea of Love", artista: "Cat Power", youtubeId: "" },
-    { titulo: "Cherry Wine", artista: "Hozier", youtubeId: "" },
-    { titulo: "First Day of My Life", artista: "Bright Eyes", youtubeId: "" },
-    { titulo: "Sweet Disposition", artista: "The Temper Trap", youtubeId: "" }
+    { titulo: "Mystery of Love", artista: "Sufjan Stevens", youtubeId: "KQT32vW61eI" },
+    { titulo: "Just Like Heaven", artista: "The Cure", youtubeId: "n3nPiBai66M" },
+    { titulo: "Sweet Disposition", artista: "The Temper Trap", youtubeId: "vN7HQrgakZU" },
+    { titulo: "Pensando en Ti", artista: "Canserbero", youtubeId: "kSk0kbHMGxw" },
+    { titulo: "Good News", artista: "Mac Miller", youtubeId: "dLWV58BhE7Q" },
+    { titulo: "Es Épico", artista: "Canserbero", youtubeId: "FEbBEAzqqtg", nota: "rap narrativo" },
+    { titulo: "Yellow", artista: "Coldplay", youtubeId: "yKNxeF4KMsY" },
+    { titulo: "505", artista: "Arctic Monkeys", youtubeId: "CKI8iQTgZKU" }
   ],
 
   hot: [
     { titulo: "Often", artista: "The Weeknd", youtubeId: "JPIhUaONiLU" },
     { titulo: "Wicked Games", artista: "The Weeknd", youtubeId: "O1OTWCd40bc" },
-    { titulo: "Party Monster", artista: "The Weeknd", youtubeId: "" },
-    { titulo: "The Hills", artista: "The Weeknd", youtubeId: "" },
-    { titulo: "Priscilla", artista: "The Weeknd", youtubeId: "" },
     { titulo: "Bellacoso", artista: "Residente & Bad Bunny", youtubeId: "46rJ4y2kdow" },
     { titulo: "Propuesta Indecente", artista: "Romeo Santos", youtubeId: "QFs3PIZb3js" },
-    { titulo: "Todo de Ti", artista: "Rauw Alejandro", youtubeId: "" },
-    { titulo: "Earned It", artista: "The Weeknd", youtubeId: "" },
-    { titulo: "Versace on the Floor", artista: "Bruno Mars", youtubeId: "" },
-    { titulo: "Adorn", artista: "Miguel", youtubeId: "" },
-    { titulo: "Kiss It Better", artista: "Rihanna", youtubeId: "" },
-    { titulo: "Streets", artista: "Doja Cat", youtubeId: "" },
-    { titulo: "Often (Remix)", artista: "The Weeknd", youtubeId: "" },
-    { titulo: "Naughty Girl", artista: "Beyoncé", youtubeId: "" },
-    { titulo: "Rocket", artista: "Beyoncé", youtubeId: "" },
-    { titulo: "Love to Love You Baby", artista: "Donna Summer", youtubeId: "" },
-    { titulo: "Slow Hands", artista: "Niall Horan", youtubeId: "" },
-    { titulo: "Into You", artista: "Ariana Grande", youtubeId: "" },
-    { titulo: "Dangerous Woman", artista: "Ariana Grande", youtubeId: "" },
-    { titulo: "Dress", artista: "Taylor Swift", youtubeId: "" },
-    { titulo: "I Wanna Be Yours", artista: "Arctic Monkeys", youtubeId: "" },
-    { titulo: "Do I Wanna Know?", artista: "Arctic Monkeys", youtubeId: "" },
-    { titulo: "Pillowtalk", artista: "ZAYN", youtubeId: "" },
-    { titulo: "Come Through", artista: "H.E.R. feat. Chris Brown", youtubeId: "" },
-    { titulo: "Thinkin Bout You", artista: "Frank Ocean", youtubeId: "" },
-    { titulo: "Redbone", artista: "Childish Gambino", youtubeId: "" },
-    { titulo: "Sure Thing", artista: "Miguel", youtubeId: "" }
+    { titulo: "Versace on the Floor", artista: "Bruno Mars", youtubeId: "-FyjEnoIgTM" },
+    { titulo: "Earned It", artista: "The Weeknd", youtubeId: "waU75jdUnYw" },
+    { titulo: "Pillowtalk", artista: "ZAYN", youtubeId: "C_3d6GntKbk" },
+    { titulo: "Streets", artista: "Doja Cat", youtubeId: "oqv35UZepIM" },
+    { titulo: "Adorn", artista: "Miguel", youtubeId: "8dM5QYdTo08" },
+    { titulo: "Agua", artista: "Jarabe de Palo", youtubeId: "2GhF2mPKnDg", nota: "clásico latino" }
   ],
 
   ambiente: [
-    { titulo: "Selección de ambiente", artista: "", youtubeId: "uTBfN9KMfPk" },
     { titulo: "River Flows in You", artista: "Yiruma", youtubeId: "fiBvOKmuWKg" },
-    { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "CQ8zglIXZi8" },
-    { titulo: "Kiss the Rain", artista: "Yiruma", youtubeId: "" },
-    { titulo: "Una Mattina", artista: "Ludovico Einaudi", youtubeId: "" },
-    { titulo: "Comptine d'un autre été", artista: "Yann Tiersen", youtubeId: "" },
-    { titulo: "Gymnopédie No. 1", artista: "Erik Satie", youtubeId: "" },
-    { titulo: "Clair de Lune", artista: "Claude Debussy", youtubeId: "" },
-    { titulo: "Experience", artista: "Ludovico Einaudi", youtubeId: "" },
-    { titulo: "On the Nature of Daylight", artista: "Max Richter", youtubeId: "" },
-    { titulo: "Arrival of the Birds", artista: "The Cinematic Orchestra", youtubeId: "" }
-  ],
-
+    { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "sR2W2scFS4Y" },
+    { titulo: "Experience", artista: "Ludovico Einaudi", youtubeId: "l6E8QbsAAJ8" },
+    { titulo: "Comptine d'un autre été", artista: "Yann Tiersen", youtubeId: "znfYwABeSZ0" }
+  ]
 };

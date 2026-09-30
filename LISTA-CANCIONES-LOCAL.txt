@@ -1,0 +1,255 @@
+LISTA DE MÚSICA — CALENDARIO 365
+================================
+
+OBJETIVO
+Esta lista es para construir la biblioteca LOCAL del reproductor. El nombre de archivo indicado en cada línea es el nombre exacto que el reproductor espera dentro de la carpeta musica/.
+
+IMPORTANTE SOBRE YOUTUBE
+- Un enlace de YouTube puede funcionar hoy y dejar de permitir inserción mañana.
+- Un video puede ser corto, privado, eliminado, restringido por región o tener la inserción desactivada.
+- Por eso la copia LOCAL es el respaldo estable.
+- Los enlaces marcados como exactos fueron contrastados durante esta revisión; no constituyen una garantía futura de reproducción incrustada.
+
+IMPORTANTE SOBRE ARCHIVOS LOCALES
+- Descarga/obtén los archivos únicamente de fuentes en las que tengas derecho a usarlos y alojarlos.
+- El proyecto NO necesita que descargues las 200+ canciones. Empieza por las que quieras.
+- Guarda cada archivo exactamente con el nombre indicado.
+- Formato recomendado: MP3 de 128–192 kbps para mantener el sitio liviano. Evita WAV/FLAC para GitHub Pages salvo que tengas una razón concreta.
+
+=== BLOQUE A — YOUTUBE ACTUAL DEL PROYECTO ===
+Estas son las 70 entradas que actualmente siguen en catalogo-canciones.js.
+Formato: CATEGORÍA | CANCIÓN | ARTISTA | NOMBRE LOCAL EXACTO | LINK YOUTUBE
+AMOR | Hecha Pa' Mí | Grupo Frontera | Hecha Pa' Mí - Grupo Frontera.mp3 | https://www.youtube.com/watch?v=IbE7peGTpmc
+AMOR | Pero No Te Enamores | Fuerza Regida | Pero No Te Enamores - Fuerza Regida.mp3 | https://www.youtube.com/watch?v=qGTBrBTFKOM
+AMOR | Perfecta | Camilo | Perfecta - Camilo.mp3 | https://www.youtube.com/watch?v=8BRXjKvWrtQ
+AMOR | Favorito | Camilo | Favorito - Camilo.mp3 | https://www.youtube.com/watch?v=2mY7AFTtYwQ
+AMOR | Vivir Mi Vida | Marc Anthony | Vivir Mi Vida - Marc Anthony.mp3 | https://www.youtube.com/watch?v=YXnjy5YlDwk
+AMOR | Cali Pachanguero | Grupo Niche | Cali Pachanguero - Grupo Niche.mp3 | https://www.youtube.com/watch?v=7KxkMLAZlzw
+AMOR | Cómo Te Atreves | Morat | Cómo Te Atreves - Morat.mp3 | https://www.youtube.com/watch?v=_gm5piKnrS4
+AMOR | pa quererte | Rels B | pa quererte - Rels B.mp3 | https://www.youtube.com/watch?v=XQeBTVeWkDo
+AMOR | Lo que hay x aquí | Rels B | Lo que hay x aquí - Rels B.mp3 | https://www.youtube.com/watch?v=qWCup_EZSWE
+AMOR | Te Quiero Tanto | Kevin Kaarl | Te Quiero Tanto - Kevin Kaarl.mp3 | https://www.youtube.com/watch?v=q07Gd6Q-7dY
+AMOR | Como Me Encanta | Kevin Kaarl | Como Me Encanta - Kevin Kaarl.mp3 | https://www.youtube.com/watch?v=OgzNyN2bWac
+AMOR | Die For You | The Weeknd | Die For You - The Weeknd.mp3 | https://www.youtube.com/watch?v=gSo0YiGPgHk
+AMOR | At Last | Etta James | At Last - Etta James.mp3 | https://www.youtube.com/watch?v=1qJU8G7gR_g
+AMOR | Eres | Café Tacvba | Eres - Café Tacvba.mp3 | https://www.youtube.com/watch?v=A9XxwAkpdV8
+AMOR | All of Me | John Legend | All of Me - John Legend.mp3 | https://www.youtube.com/watch?v=450p7goxZqg
+AMOR | Perfect | Ed Sheeran | Perfect - Ed Sheeran.mp3 | https://www.youtube.com/watch?v=2Vv-BfVoq4g
+AMOR | Glue Song | beabadoobee | Glue Song - beabadoobee.mp3 | https://www.youtube.com/watch?v=y1cBhJLNNXU
+AMOR | Best Part | Daniel Caesar feat. H.E.R. | Best Part - Daniel Caesar feat. H.E.R..mp3 | https://www.youtube.com/watch?v=vBy7FaapGRo
+AMOR | Until I Found You | Stephen Sanchez | Until I Found You - Stephen Sanchez.mp3 | https://www.youtube.com/watch?v=GxldQ9eX2wo
+AMOR | Disfruto | Carla Morrison | Disfruto - Carla Morrison.mp3 | https://www.youtube.com/watch?v=_ruEj-XK1lA
+AMOR | Te Mando Flores | Fonseca | Te Mando Flores - Fonseca.mp3 | https://www.youtube.com/watch?v=qTLd6u0ZW6c
+AMOR | Bendita Tu Luz | Maná & Juan Luis Guerra | Bendita Tu Luz - Maná & Juan Luis Guerra.mp3 | https://www.youtube.com/watch?v=44kityInDvM
+AMOR | Darte un Beso | Prince Royce | Darte un Beso - Prince Royce.mp3 | https://www.youtube.com/watch?v=bdOXnTbyk0g
+AMOR | Robarte un Beso | Carlos Vives & Sebastián Yatra | Robarte un Beso - Carlos Vives & Sebastián Yatra.mp3 | https://www.youtube.com/watch?v=mtau4v6foha
+AMOR | Bachata en Fukuoka | Juan Luis Guerra | Bachata en Fukuoka - Juan Luis Guerra.mp3 | https://www.youtube.com/watch?v=_4NBD3SqBwg
+AMOR | Mi Persona Favorita | Alejandro Sanz & Camila Cabello | Mi Persona Favorita - Alejandro Sanz & Camila Cabello.mp3 | https://www.youtube.com/watch?v=W4AiOKlOO0Q
+AMOR | Besos en Guerra | Morat | Besos en Guerra - Morat.mp3 | https://www.youtube.com/watch?v=1oeD2m2UQAI
+AMOR | There's Nothing Holdin' Me Back | Shawn Mendes | There's Nothing Holdin' Me Back - Shawn Mendes.mp3 | https://www.youtube.com/watch?v=dT2owtxkU8k
+AMOR | Something | The Beatles | Something - The Beatles.mp3 | https://www.youtube.com/watch?v=qCY80SdwBVI
+AMOR | A Thousand Years | Christina Perri | A Thousand Years - Christina Perri.mp3 | https://www.youtube.com/watch?v=rtOvBOTyX00
+AMOR | Just The Way You Are | Bruno Mars | Just The Way You Are - Bruno Mars.mp3 | https://www.youtube.com/watch?v=LjhCEhWiKXk
+AMOR | Ojitos Lindos | Bad Bunny & Bomba Estéreo | Ojitos Lindos - Bad Bunny & Bomba Estéreo.mp3 | https://www.youtube.com/watch?v=7GDp7S1HgSk
+AMOR | Make You Feel My Love | Adele | Make You Feel My Love - Adele.mp3 | https://www.youtube.com/watch?v=0put0_a--Ng
+AMOR | Día Tras Día | Andrés Cepeda | Día Tras Día - Andrés Cepeda.mp3 | https://www.youtube.com/watch?v=g3ZzqseVv6Q
+AMOR | Amor Libre | Nach (feat. Shuga Wuga) | Amor Libre - Nach (feat. Shuga Wuga).mp3 | https://www.youtube.com/watch?v=tCo16l-X2QQ
+AMOR | Querer Querernos | Canserbero | Querer Querernos - Canserbero.mp3 | https://www.youtube.com/watch?v=Ei7Hp_4FbGY
+AMOR | Eres Tú | Mocedades | Eres Tú - Mocedades.mp3 | https://www.youtube.com/watch?v=Tw69WAn2-_0
+AMOR | Volvamos a Ser Novios | Silvestre Dangond & Juancho De La Espriella | Volvamos a Ser Novios - Silvestre Dangond & Juancho De La Espriella.mp3 | https://www.youtube.com/watch?v=gBOuViKzj1Y
+AMOR | La Flaca | Jarabe de Palo | La Flaca - Jarabe de Palo.mp3 | https://www.youtube.com/watch?v=R2rP8ZU52gU
+AMOR | Bonito | Jarabe de Palo | Bonito - Jarabe de Palo.mp3 | https://www.youtube.com/watch?v=VE3h9du3hK4
+AMOR | La Bachata | Manuel Turizo | La Bachata - Manuel Turizo.mp3 | https://www.youtube.com/watch?v=TiM_TFpT_DE
+AMOR | Todo de Ti | Rauw Alejandro | Todo de Ti - Rauw Alejandro.mp3 | https://www.youtube.com/watch?v=CFPLIaMpGrY
+AMOR | Lo Que en Ti Veo | Kany García & Nahuel Pennisi | Lo Que en Ti Veo - Kany García & Nahuel Pennisi.mp3 | https://www.youtube.com/watch?v=CrTGrpnlsFI
+AMOR | Volví a Nacer | Carlos Vives | Volví a Nacer - Carlos Vives.mp3 | https://www.youtube.com/watch?v=CJ_zRSv3Hr8
+FILOSOFICA | River Flows in You | Yiruma | River Flows in You - Yiruma.mp3 | https://www.youtube.com/watch?v=fiBvOKmuWKg
+FILOSOFICA | Nuvole Bianche | Ludovico Einaudi | Nuvole Bianche - Ludovico Einaudi.mp3 | https://www.youtube.com/watch?v=sR2W2scFS4Y
+FILOSOFICA | Rayando el Sol | Maná | Rayando el Sol - Maná.mp3 | https://www.youtube.com/watch?v=8lbsQyMhMT8
+FILOSOFICA | Vivir Sin Aire | Maná | Vivir Sin Aire - Maná.mp3 | https://www.youtube.com/watch?v=Mr1pHZ2_xJU
+FILOSOFICA | Mystery of Love | Sufjan Stevens | Mystery of Love - Sufjan Stevens.mp3 | https://www.youtube.com/watch?v=KQT32vW61eI
+FILOSOFICA | Just Like Heaven | The Cure | Just Like Heaven - The Cure.mp3 | https://www.youtube.com/watch?v=n3nPiBai66M
+FILOSOFICA | Sweet Disposition | The Temper Trap | Sweet Disposition - The Temper Trap.mp3 | https://www.youtube.com/watch?v=vN7HQrgakZU
+FILOSOFICA | Pensando en Ti | Canserbero | Pensando en Ti - Canserbero.mp3 | https://www.youtube.com/watch?v=kSk0kbHMGxw
+FILOSOFICA | Good News | Mac Miller | Good News - Mac Miller.mp3 | https://www.youtube.com/watch?v=dLWV58BhE7Q
+FILOSOFICA | Es Épico | Canserbero | Es Épico - Canserbero.mp3 | https://www.youtube.com/watch?v=FEbBEAzqqtg
+FILOSOFICA | Yellow | Coldplay | Yellow - Coldplay.mp3 | https://www.youtube.com/watch?v=yKNxeF4KMsY
+FILOSOFICA | 505 | Arctic Monkeys | 505 - Arctic Monkeys.mp3 | https://www.youtube.com/watch?v=CKI8iQTgZKU
+HOT | Often | The Weeknd | Often - The Weeknd.mp3 | https://www.youtube.com/watch?v=JPIhUaONiLU
+HOT | Wicked Games | The Weeknd | Wicked Games - The Weeknd.mp3 | https://www.youtube.com/watch?v=O1OTWCd40bc
+HOT | Bellacoso | Residente & Bad Bunny | Bellacoso - Residente & Bad Bunny.mp3 | https://www.youtube.com/watch?v=46rJ4y2kdow
+HOT | Propuesta Indecente | Romeo Santos | Propuesta Indecente - Romeo Santos.mp3 | https://www.youtube.com/watch?v=QFs3PIZb3js
+HOT | Versace on the Floor | Bruno Mars | Versace on the Floor - Bruno Mars.mp3 | https://www.youtube.com/watch?v=-FyjEnoIgTM
+HOT | Earned It | The Weeknd | Earned It - The Weeknd.mp3 | https://www.youtube.com/watch?v=waU75jdUnYw
+HOT | Pillowtalk | ZAYN | Pillowtalk - ZAYN.mp3 | https://www.youtube.com/watch?v=C_3d6GntKbk
+HOT | Streets | Doja Cat | Streets - Doja Cat.mp3 | https://www.youtube.com/watch?v=oqv35UZepIM
+HOT | Adorn | Miguel | Adorn - Miguel.mp3 | https://www.youtube.com/watch?v=8dM5QYdTo08
+HOT | Agua | Jarabe de Palo | Agua - Jarabe de Palo.mp3 | https://www.youtube.com/watch?v=2GhF2mPKnDg
+AMBIENTE | Experience | Ludovico Einaudi | Experience - Ludovico Einaudi.mp3 | https://www.youtube.com/watch?v=l6E8QbsAAJ8
+AMBIENTE | Comptine d'un autre été | Yann Tiersen | Comptine d'un autre été - Yann Tiersen.mp3 | https://www.youtube.com/watch?v=znfYwABeSZ0
+
+=== BLOQUE B — CANDIDATAS LOCALES / PARA BUSCAR ===
+No les asigno un ID de YouTube sin verificar el video concreto. Busca el título exacto + artista. El nombre local ya está definido.
+Formato: GÉNERO | CANCIÓN | ARTISTA | NOMBRE LOCAL EXACTO | YOUTUBE
+AMOR | Vivo en el Limbo | Kaleth Morales | Vivo en el Limbo - Kaleth Morales.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Selección de ambiente |  | Selección de ambiente.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Eres Mía | Romeo Santos | Eres Mía - Romeo Santos.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Corazón Sin Cara | Prince Royce | Corazón Sin Cara - Prince Royce.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Mi Corazoncito | Aventura | Mi Corazoncito - Aventura.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Promise | Romeo Santos | Promise - Romeo Santos.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | La Diabla | Romeo Santos | La Diabla - Romeo Santos.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Sobredosis | Romeo Santos ft. Ozuna | Sobredosis - Romeo Santos ft. Ozuna.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Inmortal | Aventura | Inmortal - Aventura.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Dile al Amor | Aventura | Dile al Amor - Aventura.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Un Beso | Aventura | Un Beso - Aventura.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Estrellitas y Duendes | Juan Luis Guerra | Estrellitas y Duendes - Juan Luis Guerra.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Como Yo Nadie Te Ha Amado | Bon Jovi | Como Yo Nadie Te Ha Amado - Bon Jovi.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Bed of Roses | Bon Jovi | Bed of Roses - Bon Jovi.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Always | Bon Jovi | Always - Bon Jovi.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Nothing Else Matters | Metallica | Nothing Else Matters - Metallica.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | The Reason | Hoobastank | The Reason - Hoobastank.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Iris | Goo Goo Dolls | Iris - Goo Goo Dolls.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Chasing Cars | Snow Patrol | Chasing Cars - Snow Patrol.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | The Night We Met | Lord Huron | The Night We Met - Lord Huron.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Apocalypse | Cigarettes After Sex | Apocalypse - Cigarettes After Sex.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | K. | Cigarettes After Sex | K. - Cigarettes After Sex.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Sweet | Cigarettes After Sex | Sweet - Cigarettes After Sex.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Sunsetz | Cigarettes After Sex | Sunsetz - Cigarettes After Sex.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Call Out My Name | The Weeknd | Call Out My Name - The Weeknd.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Sure Thing | Miguel | Sure Thing - Miguel.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Coffee | Miguel | Coffee - Miguel.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Like I Want You | Giveon | Like I Want You - Giveon.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Heartbreak Anniversary | Giveon | Heartbreak Anniversary - Giveon.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Get You | Daniel Caesar feat. Kali Uchis | Get You - Daniel Caesar feat. Kali Uchis.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Japanese Denim | Daniel Caesar | Japanese Denim - Daniel Caesar.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Love Galore | SZA feat. Travis Scott | Love Galore - SZA feat. Travis Scott.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Snooze | SZA | Snooze - SZA.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Good Days | SZA | Good Days - SZA.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | pov | Ariana Grande | pov - Ariana Grande.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | we can’t be friends (wait for your love) | Ariana Grande | we can’t be friends (wait for your love) - Ariana Grande.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Into You | Ariana Grande | Into You - Ariana Grande.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Positions | Ariana Grande | Positions - Ariana Grande.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Love Me Harder | Ariana Grande & The Weeknd | Love Me Harder - Ariana Grande & The Weeknd.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Talking to the Moon | Bruno Mars | Talking to the Moon - Bruno Mars.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Treasure | Bruno Mars | Treasure - Bruno Mars.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Adore You | Harry Styles | Adore You - Harry Styles.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Sign of the Times | Harry Styles | Sign of the Times - Harry Styles.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Only Love Can Hurt Like This | Paloma Faith | Only Love Can Hurt Like This - Paloma Faith.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | You Are The Reason | Calum Scott | You Are The Reason - Calum Scott.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Dancing With Your Ghost | Sasha Alex Sloan | Dancing With Your Ghost - Sasha Alex Sloan.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Heather | Conan Gray | Heather - Conan Gray.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Sparks | Coldplay | Sparks - Coldplay.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Fix You | Coldplay | Fix You - Coldplay.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Do I Wanna Know? | Arctic Monkeys | Do I Wanna Know? - Arctic Monkeys.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Why’d You Only Call Me When You’re High? | Arctic Monkeys | Why’d You Only Call Me When You’re High? - Arctic Monkeys.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Sweater Weather | The Neighbourhood | Sweater Weather - The Neighbourhood.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Daddy Issues | The Neighbourhood | Daddy Issues - The Neighbourhood.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Lovefool | The Cardigans | Lovefool - The Cardigans.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Linger | The Cranberries | Linger - The Cranberries.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Dreams | The Cranberries | Dreams - The Cranberries.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | El Cantante | Héctor Lavoe | El Cantante - Héctor Lavoe.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Mi Gente | Héctor Lavoe | Mi Gente - Héctor Lavoe.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Periódico de Ayer | Héctor Lavoe | Periódico de Ayer - Héctor Lavoe.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Aguanilé | Héctor Lavoe | Aguanilé - Héctor Lavoe.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Juanito Alimaña | Héctor Lavoe | Juanito Alimaña - Héctor Lavoe.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Desnúdate Mujer | Frankie Ruiz | Desnúdate Mujer - Frankie Ruiz.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Tú Con Él | Frankie Ruiz | Tú Con Él - Frankie Ruiz.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | La Cura | Frankie Ruiz | La Cura - Frankie Ruiz.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Qué Hay de Malo | Jerry Rivera | Qué Hay de Malo - Jerry Rivera.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Amores Como el Nuestro | Jerry Rivera | Amores Como el Nuestro - Jerry Rivera.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Algo Que Se Quede | Grupo Niche | Algo Que Se Quede - Grupo Niche.mp3 | https://www.youtube.com/watch?v=MJrLlJTcCaw
+SALSA | Una Aventura | Grupo Niche | Una Aventura - Grupo Niche.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Nuestro Sueño | Grupo Niche | Nuestro Sueño - Grupo Niche.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Sin Sentimiento | Grupo Niche | Sin Sentimiento - Grupo Niche.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Gotas de Lluvia | Grupo Niche | Gotas de Lluvia - Grupo Niche.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Idilio | Willie Colón | Idilio - Willie Colón.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Gitana | Willie Colón | Gitana - Willie Colón.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Amores de Mis Amores | Willie Colón | Amores de Mis Amores - Willie Colón.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Vivir Lo Nuestro | Marc Anthony & La India | Vivir Lo Nuestro - Marc Anthony & La India.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Tu Amor Me Hace Bien | Marc Anthony | Tu Amor Me Hace Bien - Marc Anthony.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Contra la Corriente | Marc Anthony | Contra la Corriente - Marc Anthony.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Y Hubo Alguien | Marc Anthony | Y Hubo Alguien - Marc Anthony.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | A Puro Dolor | Son by Four | A Puro Dolor - Son by Four.mp3 | BUSCAR POR EL NOMBRE EXACTO
+SALSA | Me Liberé | El Gran Combo de Puerto Rico | Me Liberé - El Gran Combo de Puerto Rico.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Olvídala | Binomio de Oro de América | Olvídala - Binomio de Oro de América.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Me Ilusioné | Binomio de Oro de América | Me Ilusioné - Binomio de Oro de América.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Cómo Te Olvido | Binomio de Oro de América | Cómo Te Olvido - Binomio de Oro de América.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Nido de Amor | Jorge Oñate | Nido de Amor - Jorge Oñate.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Sin Medir Distancias | Diomedes Díaz | Sin Medir Distancias - Diomedes Díaz.mp3 | https://www.youtube.com/watch?v=uHI-rBAdlv4
+VALLENATO | Amarte Más No Pude | Diomedes Díaz | Amarte Más No Pude - Diomedes Díaz.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Tú Eres la Reina | Diomedes Díaz | Tú Eres la Reina - Diomedes Díaz.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Bonita | Diomedes Díaz | Bonita - Diomedes Díaz.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Cuatro Rosas | Jorge Celedón | Cuatro Rosas - Jorge Celedón.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Esta Vida | Jorge Celedón | Esta Vida - Jorge Celedón.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Ay Hombe | Jorge Celedón | Ay Hombe - Jorge Celedón.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | La Invitación | Jorge Celedón | La Invitación - Jorge Celedón.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Carito | Carlos Vives | Carito - Carlos Vives.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Fruta Fresca | Carlos Vives | Fruta Fresca - Carlos Vives.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Déjame Entrar | Carlos Vives | Déjame Entrar - Carlos Vives.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Las Locuras Mías | Silvestre Dangond | Las Locuras Mías - Silvestre Dangond.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Materialista | Silvestre Dangond | Materialista - Silvestre Dangond.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Cásate Conmigo | Silvestre Dangond | Cásate Conmigo - Silvestre Dangond.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Cómo Te Atreves | Silvestre Dangond | Cómo Te Atreves - Silvestre Dangond.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Los Caminos de la Vida | Los Diablitos | Los Caminos de la Vida - Los Diablitos.mp3 | BUSCAR POR EL NOMBRE EXACTO
+VALLENATO | Busca un Confidente | Los Diablitos | Busca un Confidente - Los Diablitos.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Nadie es Eterno | Darío Gómez | Nadie es Eterno - Darío Gómez.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Sobreviviré | Darío Gómez | Sobreviviré - Darío Gómez.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Entre Comillas | Jhonny Rivera | Entre Comillas - Jhonny Rivera.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Te Extraño, Te Olvido, Te Amo | Jhonny Rivera | Te Extraño, Te Olvido, Te Amo - Jhonny Rivera.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Me Bebí Tu Recuerdo | Galy Galiano | Me Bebí Tu Recuerdo - Galy Galiano.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | La Cita | Galy Galiano | La Cita - Galy Galiano.mp3 | BUSCAR POR EL NOMBRE EXACTO
+BOLERO | Nuestro Juramento | Julio Jaramillo | Nuestro Juramento - Julio Jaramillo.mp3 | BUSCAR POR EL NOMBRE EXACTO
+BOLERO | Fatalidad | Julio Jaramillo | Fatalidad - Julio Jaramillo.mp3 | BUSCAR POR EL NOMBRE EXACTO
+BOLERO | Ódiame | Julio Jaramillo | Ódiame - Julio Jaramillo.mp3 | BUSCAR POR EL NOMBRE EXACTO
+BOLERO | Sabor a Mí | Los Panchos | Sabor a Mí - Los Panchos.mp3 | BUSCAR POR EL NOMBRE EXACTO
+BOLERO | Sin Ti | Los Panchos | Sin Ti - Los Panchos.mp3 | BUSCAR POR EL NOMBRE EXACTO
+BOLERO | Contigo Aprendí | Armando Manzanero | Contigo Aprendí - Armando Manzanero.mp3 | BUSCAR POR EL NOMBRE EXACTO
+BOLERO | Somos Novios | Armando Manzanero | Somos Novios - Armando Manzanero.mp3 | BUSCAR POR EL NOMBRE EXACTO
+BOLERO | Adoro | Armando Manzanero | Adoro - Armando Manzanero.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | La Media Vuelta | José Alfredo Jiménez | La Media Vuelta - José Alfredo Jiménez.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | El Rey | Vicente Fernández | El Rey - Vicente Fernández.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Estos Celos | Vicente Fernández | Estos Celos - Vicente Fernández.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Mujeres Divinas | Vicente Fernández | Mujeres Divinas - Vicente Fernández.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Hermoso Cariño | Vicente Fernández | Hermoso Cariño - Vicente Fernández.mp3 | BUSCAR POR EL NOMBRE EXACTO
+CANTINA | Volver Volver | Vicente Fernández | Volver Volver - Vicente Fernández.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Stargazing | Travis Scott | Stargazing - Travis Scott.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Goosebumps | Travis Scott | Goosebumps - Travis Scott.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Self Control | Frank Ocean | Self Control - Frank Ocean.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Pink + White | Frank Ocean | Pink + White - Frank Ocean.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Ivy | Frank Ocean | Ivy - Frank Ocean.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Come Back to Earth | Mac Miller | Come Back to Earth - Mac Miller.mp3 | BUSCAR POR EL NOMBRE EXACTO
+FILOSOFICA | Objects in the Mirror | Mac Miller | Objects in the Mirror - Mac Miller.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Dang! | Mac Miller feat. Anderson .Paak | Dang! - Mac Miller feat. Anderson .Paak.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Love Lost | Mac Miller | Love Lost - Mac Miller.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | My Love | Welle | My Love - Welle.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Walk this Road | Welle | Walk this Road - Welle.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Summer Escape | Welle | Summer Escape - Welle.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Mwenyewe | Welle | Mwenyewe - Welle.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Mpole | Welle | Mpole - Welle.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Comptine d’un autre été | Yann Tiersen | Comptine d’un autre été - Yann Tiersen.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Una Mattina | Ludovico Einaudi | Una Mattina - Ludovico Einaudi.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Kiss the Rain | Yiruma | Kiss the Rain - Yiruma.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Merry Go Round of Life | Joe Hisaishi | Merry Go Round of Life - Joe Hisaishi.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | One Summer’s Day | Joe Hisaishi | One Summer’s Day - Joe Hisaishi.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Gymnopédie No. 1 | Erik Satie | Gymnopédie No. 1 - Erik Satie.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMBIENTE | Clair de Lune | Claude Debussy | Clair de Lune - Claude Debussy.mp3 | BUSCAR POR EL NOMBRE EXACTO
+AMOR | Burbujas de Amor | Juan Luis Guerra | Burbujas de Amor - Juan Luis Guerra.mp3 | BUSCAR POR EL NOMBRE EXACTO
+MERENGUE | La Guagua | Juan Luis Guerra | La Guagua - Juan Luis Guerra.mp3 | BUSCAR POR EL NOMBRE EXACTO
+MERENGUE | Visa Para un Sueño | Juan Luis Guerra | Visa Para un Sueño - Juan Luis Guerra.mp3 | BUSCAR POR EL NOMBRE EXACTO
+MERENGUE | Ojalá Que Llueva Café | Juan Luis Guerra | Ojalá Que Llueva Café - Juan Luis Guerra.mp3 | BUSCAR POR EL NOMBRE EXACTO
+MERENGUE | Suavemente | Elvis Crespo | Suavemente - Elvis Crespo.mp3 | BUSCAR POR EL NOMBRE EXACTO
+MERENGUE | Tu Sonrisa | Elvis Crespo | Tu Sonrisa - Elvis Crespo.mp3 | BUSCAR POR EL NOMBRE EXACTO
+MERENGUE | Píntame | Elvis Crespo | Píntame - Elvis Crespo.mp3 | BUSCAR POR EL NOMBRE EXACTO
+HOT | Dile | Don Omar | Dile - Don Omar.mp3 | BUSCAR POR EL NOMBRE EXACTO
+
+=== BLOQUE C — RECOMENDACIONES DE PRIORIDAD ===
+1. Empieza descargando las del Bloque A que más te gusten.
+2. Luego agrega 20–30 del Bloque B por género, para que el calendario no quede repetitivo.
+3. Si quieres una biblioteca amplia, llega progresivamente a 100–150 archivos; no hace falta tenerlos todos desde el primer día.
+4. Si una canción local tiene otro nombre de archivo, cambia el objeto correspondiente en catalogo-musica-local.js o renombra el archivo para que coincida.
+
+=== GÉNEROS QUE SE PRIORIZARON ===
+Romántica / amor · hot / R&B · ambiente / instrumental · rap / hip-hop · salsa · bachata · merengue · vallenato · música cantinera / ranchera · bolero · cumbia · rock latino · pop latino · jazz.
+
+NOTA SOBRE WELLE
+Incluí Welle como bloque de descubrimiento ambiental. Si te referías a otro artista llamado Welle, conviene confirmarlo antes de fijar sus canciones en el catálogo de YouTube.

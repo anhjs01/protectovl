@@ -20,19 +20,37 @@
   if (typeof CALENDARIO === "undefined" || !Array.isArray(CALENDARIO) || CALENDARIO.length === 0) {
     mostrarErrorCarga(
       "No se pudo leer el contenido del calendario.",
-      "Revisa que el archivo <code>contenido-calendario.js</code> esté en la misma carpeta que <code>calendario.html</code>, que no lo hayas renombrado, y que se haya copiado completo (son 50 bloques, el archivo es largo)."
+      "Revisa que el archivo <code>contenido-calendario.js</code> esté en la misma carpeta que <code>calendario.html</code>, que no lo hayas renombrado, y que se haya copiado completo (son 365 bloques, el archivo es largo)."
     );
     return;
   }
 
+  const numeros = CALENDARIO.map((d) => d && d.dia);
+  const repetidos = numeros.filter((n, i) => numeros.indexOf(n) !== i);
   const diasInvalidos = CALENDARIO
-    .map((d, i) => (!d || typeof d.dia !== "number" || !d.color || !Array.isArray(d.poema) ? i + 1 : null))
+    .map((d, i) => {
+      const valido = d &&
+        Number.isInteger(d.dia) &&
+        d.dia >= 1 &&
+        d.dia <= CALENDARIO.length &&
+        typeof d.categoria === "string" &&
+        typeof d.icono === "string" &&
+        typeof d.tono === "string" &&
+        d.color &&
+        typeof d.buenosDias === "string" &&
+        Array.isArray(d.poema) &&
+        d.poema.length > 0 &&
+        typeof d.buenasNoches === "string";
+      return valido ? null : i + 1;
+    })
     .filter((v) => v !== null);
 
-  if (diasInvalidos.length > 0) {
+  if (diasInvalidos.length > 0 || repetidos.length > 0 || numeros.length !== new Set(numeros).size) {
     mostrarErrorCarga(
-      "Algunos días del calendario no se cargaron completos.",
-      "Revisa el archivo <code>contenido-calendario.js</code> cerca de las posiciones: " + diasInvalidos.join(", ") + " (puede faltar una coma, una llave <code>}</code>, o el bloque quedó cortado a la mitad)."
+      "El contenido del calendario necesita revisión.",
+      "Días con estructura incompleta: " + (diasInvalidos.length ? diasInvalidos.join(", ") : "ninguno") +
+      ". Días repetidos: " + (repetidos.length ? [...new Set(repetidos)].join(", ") : "ninguno") +
+      ". El calendario debe contener una secuencia única de 1 a " + CALENDARIO.length + "."
     );
     return;
   }
@@ -161,7 +179,11 @@
     }
 
     if (window.SorpresaReproductor) {
-      window.SorpresaReproductor.reproducirCategoria(diaAbierto.tono || "amor");
+      if (typeof window.SorpresaReproductor.reproducirDia === "function") {
+        window.SorpresaReproductor.reproducirDia(diaAbierto);
+      } else {
+        window.SorpresaReproductor.reproducirCategoria(diaAbierto.tono || "amor");
+      }
     }
 
     card.style.setProperty("--card-principal", diaAbierto.color.principal);
@@ -286,23 +308,13 @@
   });
 
   /* -----------------------------------------------------------------
-     5) MÚSICA DESDE EL PRIMER TOQUE
-     -----------------------------------------------------------------
-     Si lo primero que toca no es un día (por ejemplo, solo entra a
-     mirar la cuadrícula), igual empieza a sonar algo de ambiente
-     desde el primer toque en cualquier parte de la página. Si lo
-     primero que toca SÍ es un día, ese día ya elige su propia
-     música (ver abrirDia), así que este disparador no hace nada raro.
+     5) ACCESIBILIDAD Y CIERRE DEL MODAL
      ----------------------------------------------------------------- */
-  document.addEventListener(
-    "click",
-    () => {
-      if (window.SorpresaReproductor && !window.SorpresaReproductor.haIniciado()) {
-        window.SorpresaReproductor.reproducirCategoria("amor");
-      }
-    },
-    { once: true }
-  );
+  overlay.addEventListener("transitionend", () => {
+    if (overlay.classList.contains("is-open")) {
+      btnSiguiente.focus({ preventScroll: true });
+    }
+  });
 
   /* -----------------------------------------------------------------
      6) INICIO

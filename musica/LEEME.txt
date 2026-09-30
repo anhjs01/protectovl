@@ -1,0 +1,4 @@
+Coloca aquí los archivos de audio que hayas obtenido legalmente.
+
+El nombre debe coincidir exactamente con catalogo-musica-local.js.
+No se incluyen canciones con copyright en este proyecto.
