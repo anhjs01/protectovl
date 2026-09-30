@@ -5308,7 +5308,7 @@ const CALENDARIO = [
     detalle: "Reto: cada uno debe decir cinco cosas del otro que no tengan nada que ver con apariencia física.",
     buenasNoches: "Buenas noches. Hoy te miro con una gratitud distinta: no solamente por ser mi pareja, sino por la persona que eres cuando nadie está intentando impresionarme.",
     notaImagen: "[PARA TI] retrato natural, sin posar demasiado.",
-    notaCancion: "[MÚSICA] Lo Que en Ti Veo — Kany García & Nahuel Pennisi."
+    notaCancion: "[MÚSICA] Lo Que en Ti Veo — Andrés Cepeda."
   },
 
   {

@@ -1,483 +1,199 @@
 /* =======================================================================
-   REPRODUCTOR.JS — música contextual del calendario
+   REPRODUCTOR.JS — música de fondo real, usando el reproductor oficial
+   de YouTube (embebido, sin descargar nada — 100% dentro de las reglas
+   de YouTube, igual que insertar un video en cualquier página web).
    -----------------------------------------------------------------------
-   Regla simple:
-   - CATALOGO_CANCIONES contiene únicamente entradas reproducibles.
-   - Al primer gesto del usuario se activa el audio.
-   - Un día con canción fija tiene prioridad sobre el tono automático.
-   - Si no hay canción fija, se elige una canción de su categoría.
-   - La selección evita repetir una canción hasta agotar la categoría.
-   - La interfaz solo muestra "pausa" cuando YouTube confirma PLAYING.
+   No necesitas editar este archivo. El contenido de las canciones vive
+   en catalogo-canciones.js.
 
-   Para añadir canciones en el futuro, solo agrega un objeto al catálogo con
-   un youtubeId real de 11 caracteres. No hace falta tocar este archivo.
+   Por las reglas de los navegadores, la música solo puede empezar a
+   SONAR (con volumen) después de un clic. Para que arranque lo más
+   rápido posible apenas hay ese primer clic, el reproductor deja una
+   canción "precargada" en silencio desde que la página abre (los
+   navegadores sí permiten reproducir en silencio sin necesidad de
+   clic) — así, cuando llega el primer clic real, casi siempre solo
+   hace falta quitarle el silencio en vez de cargar la canción desde
+   cero, y suena casi al instante.
    ======================================================================= */
 
 (function () {
   "use strict";
 
-  const HISTORIAL_KEY = "sorpresa_musica_historial_v2";
-  const INTRO_CATEGORIA = "ambiente";
-  const CATEGORIAS_VALIDAS = ["amor", "filosofica", "hot", "ambiente"];
-
   let player = null;
   let apiLista = false;
-  let apiCargando = false;
-  let precargada = null;
+  let pendiente = null; // videoId en espera si se pidió reproducir antes de tiempo
+  let precargada = null; // cancion cargada en silencio de antemano, lista para sonar
   let cancionActual = null;
   let sonando = false;
-  let usuarioInteractuo = false;
-  let solicitudPendiente = null;
-  let elBarra = null;
-  let elHost = null;
-  let errorPlayer = false;
-  const idsFallidosSesion = new Set();
 
-  function catalogoValido() {
-    return typeof CATALOGO_CANCIONES !== "undefined" && CATALOGO_CANCIONES;
-  }
-
-  function tieneIdValido(cancion) {
-    return !!cancion && /^[-_A-Za-z0-9]{11}$/.test(String(cancion.youtubeId || ""));
-  }
-
-  function listaCategoria(categoria) {
-    if (!catalogoValido()) return [];
-    const lista = Array.isArray(CATALOGO_CANCIONES[categoria]) ? CATALOGO_CANCIONES[categoria] : [];
-    return lista.filter((c) => tieneIdValido(c) && !idsFallidosSesion.has(c.youtubeId));
-  }
-
-  function leerHistorial() {
-    try {
-      const raw = localStorage.getItem(HISTORIAL_KEY);
-      const data = raw ? JSON.parse(raw) : {};
-      return data && typeof data === "object" ? data : {};
-    } catch (_) {
-      return {};
-    }
-  }
-
-  function guardarHistorial(data) {
-    try { localStorage.setItem(HISTORIAL_KEY, JSON.stringify(data)); } catch (_) {}
-  }
-
-  function elegirCancion(categoria) {
-    if (!CATEGORIAS_VALIDAS.includes(categoria)) categoria = "amor";
-    const lista = listaCategoria(categoria);
-    if (!lista.length) return null;
-
-    const historial = leerHistorial();
-    const usados = Array.isArray(historial[categoria]) ? historial[categoria] : [];
-    let disponibles = lista.filter((c) => !usados.includes(c.youtubeId));
-
-    // Cuando se consumió toda la categoría, empezamos una vuelta nueva.
-    if (!disponibles.length) {
-      historial[categoria] = [];
-      disponibles = lista.slice();
-    }
-
-    // Evita repetir inmediatamente aunque la categoría tenga pocas canciones.
-    if (cancionActual && disponibles.length > 1) {
-      const otras = disponibles.filter((c) => c.youtubeId !== cancionActual.youtubeId);
-      if (otras.length) disponibles = otras;
-    }
-
-    const elegida = disponibles[Math.floor(Math.random() * disponibles.length)];
-    historial[categoria] = [...(historial[categoria] || []), elegida.youtubeId];
-    guardarHistorial(historial);
-    return { ...elegida, categoria };
-  }
-
-  function crearUI() {
-    if (elBarra) return;
-
-    elBarra = document.createElement("div");
-    elBarra.className = "reproductor-barra";
-    elBarra.innerHTML =
-      '<button type="button" class="reproductor-btn" id="reproductorPlayPausa" aria-label="Pausar o reanudar">▶</button>' +
-      '<span class="reproductor-info" id="reproductorInfo">Música lista</span>' +
-      '<button type="button" class="reproductor-btn" id="reproductorSiguiente" aria-label="Cambiar canción">⟳</button>';
-    document.body.appendChild(elBarra);
-
-    elBarra.querySelector("#reproductorPlayPausa").addEventListener("click", function () {
-      activarSonido(true);
-      pausarOReanudar();
-    });
-    elBarra.querySelector("#reproductorSiguiente").addEventListener("click", function () {
-      activarSonido(true);
-      siguienteDeLaMisma();
-    });
-  }
-
-  function actualizarUI() {
-    crearUI();
-    if (!cancionActual) return;
-
-    elBarra.classList.add("is-visible");
-    const info = elBarra.querySelector("#reproductorInfo");
-    const nombre = cancionActual.artista
-      ? cancionActual.titulo + " · " + cancionActual.artista
-      : cancionActual.titulo;
-
-    info.textContent = "🎵 " + nombre;
-    elBarra.querySelector("#reproductorPlayPausa").textContent = sonando ? "⏸" : "▶";
-    elBarra.setAttribute("data-playing", sonando ? "true" : "false");
-  }
-
-  function mostrarEstadoError(mensaje) {
-    crearUI();
-    elBarra.classList.add("is-visible", "is-error");
-    elBarra.querySelector("#reproductorInfo").textContent = "⚠ " + mensaje;
-    elBarra.querySelector("#reproductorPlayPausa").textContent = "▶";
-  }
-
+  /* -----------------------------------------------------------------
+     1) CARGAR LA API DE YOUTUBE (una sola vez, lo antes posible)
+     ----------------------------------------------------------------- */
   function cargarAPI() {
-    if (window.YT && typeof window.YT.Player === "function") {
-      crearPlayer();
-      return;
-    }
-    if (apiCargando) return;
+    if (window.__ytApiCargando) return;
+    window.__ytApiCargando = true;
 
-    apiCargando = true;
     const script = document.createElement("script");
     script.src = "https://www.youtube.com/iframe_api";
-    script.async = true;
-    script.onload = function () {
-      // La API llama a onYouTubeIframeAPIReady cuando termina de inicializar.
-    };
-    script.onerror = function () {
-      errorPlayer = true;
-      mostrarEstadoError("No se pudo cargar YouTube");
-    };
     document.head.appendChild(script);
 
-    const anterior = window.onYouTubeIframeAPIReady;
     window.onYouTubeIframeAPIReady = function () {
-      if (typeof anterior === "function") anterior();
       crearPlayer();
     };
   }
 
   function crearPlayer() {
-    if (player || !(window.YT && typeof window.YT.Player === "function")) return;
+    const host = document.createElement("div");
+    host.id = "yt-reproductor-host";
+    host.style.position = "fixed";
+    host.style.width = "1px";
+    host.style.height = "1px";
+    host.style.opacity = "0";
+    host.style.pointerEvents = "none";
+    host.style.bottom = "0";
+    host.style.left = "0";
+    document.body.appendChild(host);
 
-    crearUI();
-
-    elHost = document.createElement("div");
-    elHost.id = "yt-reproductor-host";
-    elHost.className = "yt-reproductor-host";
-    document.body.appendChild(elHost);
-
-    player = new YT.Player(elHost.id, {
-      width: "200",
-      height: "200",
-      playerVars: {
-        autoplay: 0,
-        controls: 1,
-        playsinline: 1,
-        rel: 0,
-        modestbranding: 1,
-      },
+    player = new YT.Player(host.id, {
+      height: "1",
+      width: "1",
+      playerVars: { autoplay: 0, controls: 0, playsinline: 1 },
       events: {
         onReady: function () {
           apiLista = true;
           player.mute();
-          precargarIntro();
-          ejecutarSolicitudPendiente();
-        },
-        onStateChange: function (event) {
-          if (event.data === 1) {
-            sonando = true;
-            actualizarUI();
-          } else if (event.data === 0) {
-            sonando = false;
-            actualizarUI();
-            const categoria = cancionActual && cancionActual.categoria ? cancionActual.categoria : "amor";
-            siguienteDeCategoria(categoria);
-          } else if (event.data === 2 || event.data === 5) {
-            sonando = false;
-            actualizarUI();
+          if (pendiente) {
+            reproducirId(pendiente, true);
+            pendiente = null;
+          } else {
+            precargarPorAdelantado();
           }
         },
-        onError: function () {
-          const fallida = cancionActual;
-          sonando = false;
-          actualizarUI();
-          solicitudPendiente = null;
-          siguienteTrasFallo((fallida && fallida.categoria) || "amor", fallida);
-        },
-        onAutoplayBlocked: function () {
-          sonando = false;
+        onStateChange: function (e) {
+          if (!cancionActual) return; // ignora eventos de la precarga silenciosa
+          sonando = e.data === 1; // 1 = YT.PlayerState.PLAYING
           actualizarUI();
         },
       },
     });
   }
 
-  function marcarFallo(cancion) {
-    if (cancion && cancion.youtubeId) idsFallidosSesion.add(cancion.youtubeId);
-  }
-
-  function siguienteTrasFallo(categoria, fallida) {
-    marcarFallo(fallida);
-    const alternativa = elegirCancion(categoria);
-    if (alternativa) {
-      reproducirCancion(alternativa, true);
-      return true;
-    }
-    // Si toda la categoría quedó temporalmente fuera, intenta cualquier otra.
-    for (const otra of CATEGORIAS_VALIDAS) {
-      if (otra === categoria) continue;
-      const respaldo = elegirCancion(otra);
-      if (respaldo) {
-        reproducirCancion(respaldo, true);
-        return true;
-      }
-    }
-    mostrarEstadoError("No hay otra canción disponible");
-    return false;
-  }
-
-  function precargarIntro() {
-    const elegida = elegirCancion(INTRO_CATEGORIA);
-    if (!elegida || !player || !apiLista) return;
-
-    precargada = elegida;
+  /* -----------------------------------------------------------------
+     2) PRECARGA SILENCIOSA (apenas la página abre, sin esperar clic)
+     ----------------------------------------------------------------- */
+  function precargarPorAdelantado() {
+    if (typeof CATALOGO_CANCIONES === "undefined" || !player || !player.loadVideoById) return;
+    // en la portada lo primero que suena es "ambiente"; en el calendario,
+    // la mayoria de los dias son "amor" — precargamos la que mas
+    // probablemente coincida con el primer toque real de cada página
+    const esPortada = !!document.getElementById("heartBtn");
+    const categoriaPreferida = esPortada ? "ambiente" : "amor";
+    const lista = (CATALOGO_CANCIONES[categoriaPreferida] || []).filter((c) => c.youtubeId);
+    if (lista.length === 0) return;
+    const elegida = lista[Math.floor(Math.random() * lista.length)];
+    precargada = { titulo: elegida.titulo, artista: elegida.artista, youtubeId: elegida.youtubeId, categoria: categoriaPreferida };
     player.mute();
-    player.cueVideoById(elegida.youtubeId);
+    player.loadVideoById(elegida.youtubeId);
+    player.pauseVideo();
   }
 
-  function reproducirVideo(videoId) {
-    if (!player || !apiLista || !videoId) return false;
-    try {
-      player.loadVideoById(videoId);
-      player.unMute();
-      player.setVolume(100);
-      player.playVideo();
-      return true;
-    } catch (_) {
-      return false;
-    }
-  }
-
-  function reproducirCancion(cancion, reemplazarPendiente) {
-    if (!tieneIdValido(cancion)) return;
-
-    cancionActual = { ...cancion };
-    precargada = null;
-    crearUI();
-
-    if (!apiLista || !player) {
-      solicitudPendiente = { ...cancion };
-      sonando = false;
-      actualizarUI();
+  /* -----------------------------------------------------------------
+     3) REPRODUCIR
+     ----------------------------------------------------------------- */
+  function reproducirId(videoId, silencioso) {
+    if (!videoId || !player) return;
+    if (!apiLista || !player.loadVideoById) {
+      pendiente = videoId;
       return;
     }
-
-    if (!usuarioInteractuo && !reemplazarPendiente) {
-      solicitudPendiente = { ...cancion };
-      sonando = false;
-      actualizarUI();
-      return;
-    }
-
-    player.unMute();
-    player.setVolume(100);
-    player.loadVideoById(cancion.youtubeId);
+    player.loadVideoById(videoId);
+    if (!silencioso) player.unMute();
     player.playVideo();
-    sonando = false; // Solo pasa a true cuando YouTube emite PLAYING.
-    actualizarUI();
   }
 
   function reproducirCategoria(categoria) {
-    const elegida = elegirCancion(categoria || "amor");
-    if (!elegida) {
-      mostrarEstadoError("No hay canciones verificadas en esta categoría");
-      return;
-    }
-    reproducirCancion(elegida, false);
-  }
+    if (typeof CATALOGO_CANCIONES === "undefined") return;
+    const lista = (CATALOGO_CANCIONES[categoria] || []).filter((c) => c.youtubeId);
+    if (lista.length === 0) return;
 
-  function extraerId(url) {
-    if (!url) return "";
-    const match = String(url).match(/[?&]v=([-_A-Za-z0-9]{11})/);
-    if (match) return match[1];
-    const corto = String(url).match(/youtu\.be\/([-_A-Za-z0-9]{11})/);
-    return corto ? corto[1] : "";
-  }
-
-  function buscarPorTitulo(titulo) {
-    if (!titulo || !catalogoValido()) return null;
-    const objetivo = String(titulo).trim().toLowerCase();
-    for (const categoria of CATEGORIAS_VALIDAS) {
-      const encontrada = listaCategoria(categoria).find((c) => String(c.titulo).trim().toLowerCase() === objetivo);
-      if (encontrada) return { ...encontrada, categoria };
-    }
-    return null;
-  }
-
-  function reproducirDia(dia) {
-    if (!dia) return;
-
-    const idFijo = extraerId(dia.cancionUrl);
-    if (idFijo) {
-      const encontrada = buscarPorId(idFijo) || {
-        titulo: "Canción del día",
-        artista: "",
-        youtubeId: idFijo,
-        categoria: dia.tono || "amor",
-      };
-      reproducirCancion(encontrada, false);
-      return;
+    // evita repetir la misma si hay más de una opción
+    let opciones = lista;
+    if (cancionActual) {
+      const otras = lista.filter((c) => c.youtubeId !== cancionActual.youtubeId);
+      if (otras.length > 0) opciones = otras;
     }
 
-    // Algunos días antiguos guardan la canción en notaCancion o notaImagen.
-    const texto = [dia.notaCancion, dia.notaImagen, dia.detalle].filter(Boolean).join(" ");
-    const encontrada = buscarPorTexto(texto);
-    if (encontrada) {
-      reproducirCancion(encontrada, false);
-      return;
-    }
+    const elegida = opciones[Math.floor(Math.random() * opciones.length)];
+    cancionActual = elegida;
+    cancionActual.categoria = categoria;
 
-    reproducirCategoria(dia.tono || "amor");
-  }
-
-  function buscarPorId(id) {
-    for (const categoria of CATEGORIAS_VALIDAS) {
-      const encontrada = listaCategoria(categoria).find((c) => c.youtubeId === id);
-      if (encontrada) return { ...encontrada, categoria };
-    }
-    return null;
-  }
-
-  function normalizarTextoMusical(valor) {
-    return String(valor || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .replace(/[’‘´`]/g, "'")
-      .replace(/[^a-z0-9' ]+/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function buscarPorTexto(texto) {
-    const normalizado = normalizarTextoMusical(texto);
-    let mejor = null;
-    let mejorLongitud = 0;
-    for (const categoria of CATEGORIAS_VALIDAS) {
-      for (const cancion of listaCategoria(categoria)) {
-        const titulo = normalizarTextoMusical(cancion.titulo);
-        const tituloCortoExplicito = titulo.length >= 3 && (
-          normalizado.includes(`cancion ${titulo}`) ||
-          normalizado.includes(`musica ${titulo}`) ||
-          normalizado.startsWith(`${titulo} `) ||
-          normalizado === titulo
-        );
-        const coincide = (titulo.length >= 5 && normalizado.includes(titulo)) || tituloCortoExplicito;
-        if (coincide && titulo.length > mejorLongitud) {
-          mejor = { ...cancion, categoria };
-          mejorLongitud = titulo.length;
-        }
-      }
-    }
-    return mejor;
-  }
-
-  function activarSonido(forzar) {
-    usuarioInteractuo = true;
-    if (!apiLista || !player) return;
-
-    if (solicitudPendiente) {
-      const pendiente = solicitudPendiente;
-      solicitudPendiente = null;
-      reproducirCancion(pendiente, true);
-      return;
-    }
-
-    if (forzar && cancionActual && !sonando) {
+    // si la precarga silenciosa ya es justo esta cancion, solo hay
+    // que quitarle el silencio: suena casi instantaneo, sin recargar
+    if (precargada && player && precargada.youtubeId === elegida.youtubeId) {
       player.unMute();
-      player.setVolume(100);
       player.playVideo();
-      return;
+    } else {
+      reproducirId(elegida.youtubeId, false);
     }
-
-    if (!cancionActual) {
-      const intro = precargada || elegirCancion(INTRO_CATEGORIA);
-      if (intro) reproducirCancion(intro, true);
-    }
+    precargada = null;
+    sonando = true;
+    actualizarUI();
   }
 
   function pausarOReanudar() {
-    if (!player || !apiLista || !cancionActual) return;
+    if (!player) return;
     if (sonando) {
       player.pauseVideo();
-    } else {
-      player.unMute();
-      player.setVolume(100);
+    } else if (cancionActual) {
       player.playVideo();
     }
   }
 
-  function siguienteDeCategoria(categoria) {
-    const siguiente = elegirCancion(categoria);
-    if (siguiente) {
-      reproducirCancion(siguiente, true);
-      return true;
-    }
-    for (const otra of CATEGORIAS_VALIDAS) {
-      if (otra === categoria) continue;
-      const respaldo = elegirCancion(otra);
-      if (respaldo) {
-        reproducirCancion(respaldo, true);
-        return true;
-      }
-    }
-    return false;
-  }
-
   function siguienteDeLaMisma() {
-    return siguienteDeCategoria((cancionActual && cancionActual.categoria) || "amor");
+    if (cancionActual && cancionActual.categoria) {
+      reproducirCategoria(cancionActual.categoria);
+    }
   }
 
-  // El primer gesto puede ocurrir antes de que YouTube termine de cargar.
-  // Guardamos ese gesto y ejecutamos la solicitud cuando la API esté lista.
-  function gestoInicial() {
-    activarSonido(false);
+  /* -----------------------------------------------------------------
+     4) UI MÍNIMA — barra flotante "sonando ahora"
+     ----------------------------------------------------------------- */
+  let elBarra = null;
+
+  function crearUI() {
+    if (elBarra) return;
+    elBarra = document.createElement("div");
+    elBarra.className = "reproductor-barra";
+    elBarra.innerHTML =
+      '<button type="button" class="reproductor-btn" id="reproductorPlayPausa" aria-label="Pausar o reanudar">⏸</button>' +
+      '<span class="reproductor-info" id="reproductorInfo">Elegiendo música…</span>' +
+      '<button type="button" class="reproductor-btn" id="reproductorSiguiente" aria-label="Cambiar canción">⟳</button>';
+    document.body.appendChild(elBarra);
+
+    elBarra.querySelector("#reproductorPlayPausa").addEventListener("click", pausarOReanudar);
+    elBarra.querySelector("#reproductorSiguiente").addEventListener("click", siguienteDeLaMisma);
   }
 
-  function ejecutarSolicitudPendiente() {
-    if (!usuarioInteractuo || !solicitudPendiente) return;
-    const pendiente = solicitudPendiente;
-    solicitudPendiente = null;
-    reproducirCancion(pendiente, true);
+  function actualizarUI() {
+    if (!elBarra) crearUI();
+    if (!cancionActual) return;
+    elBarra.classList.add("is-visible");
+    const info = elBarra.querySelector("#reproductorInfo");
+    const nombre = cancionActual.artista
+      ? cancionActual.titulo + " · " + cancionActual.artista
+      : cancionActual.titulo;
+    info.textContent = "🎵 " + nombre;
+    elBarra.querySelector("#reproductorPlayPausa").textContent = sonando ? "⏸" : "▶";
   }
 
-  document.addEventListener("pointerdown", gestoInicial, { capture: true, passive: true });
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Enter" || event.key === " ") gestoInicial();
-  }, { capture: true });
-
-  crearUI();
+  /* -----------------------------------------------------------------
+     5) INICIO
+     ----------------------------------------------------------------- */
   cargarAPI();
 
   window.SorpresaReproductor = {
-    reproducirCategoria,
-    reproducirDia,
-    reproducirId: function (id, datos) {
-      if (!/^[-_A-Za-z0-9]{11}$/.test(String(id || ""))) return;
-      reproducirCancion({
-        titulo: datos && datos.titulo ? datos.titulo : "Canción",
-        artista: datos && datos.artista ? datos.artista : "",
-        youtubeId: id,
-        categoria: datos && datos.categoria ? datos.categoria : "amor",
-      }, false);
-    },
-    activarSonido,
-    pausarOReanudar,
+    reproducirCategoria: reproducirCategoria,
     estaSonando: function () { return sonando; },
     haIniciado: function () { return !!cancionActual; },
-    cancionActual: function () { return cancionActual ? { ...cancionActual } : null; },
-    limpiarHistorialMusical: function () { try { localStorage.removeItem(HISTORIAL_KEY); } catch (_) {} },
   };
 })();

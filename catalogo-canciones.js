@@ -84,6 +84,23 @@ const CATALOGO_CANCIONES = {
     { titulo: "Sigo Extrañándote", artista: "J Balvin", youtubeId: "nZ0zbsZOdwg", nota: "video oficial completo; sugerida en varias cartas" },
     { titulo: "Tú Sí Sabes Quererme", artista: "Natalia Lafourcade", youtubeId: "qTd2P94Qhp8", nota: "video oficial completo; sugerida en varias cartas" },
     { titulo: "La Mitad", artista: "Camilo", youtubeId: "yz7oP-JqaXk", nota: "versión completa oficial; sugerida en varias cartas" },
+    { titulo: "A Dios Le Pido", artista: "Juanes", youtubeId: "kMIaYXxLnUA", nota: "video oficial completo; canal oficial de Juanes" },
+    { titulo: "Me Enamora", artista: "Juanes", youtubeId: "voxgN3Dhjuo", nota: "video oficial completo; canal oficial de Juanes" },
+    { titulo: "Entra En Mi Vida", artista: "Sin Bandera", youtubeId: "-hoZpSoKAYE", nota: "video oficial completo; canal oficial de Sin Bandera" },
+    { titulo: "Kilómetros", artista: "Sin Bandera", youtubeId: "oR5rpFzaBaA", nota: "video oficial completo; canal oficial de Sin Bandera" },
+    { titulo: "Sirena", artista: "Sin Bandera", youtubeId: "QYH8tKRdTzE", nota: "video completo; canal oficial de Sin Bandera" },
+    { titulo: "Será", artista: "Sin Bandera", youtubeId: "pqvI-6NRN_A", nota: "video oficial completo; canal oficial de Sin Bandera" },
+    { titulo: "Que Lloro", artista: "Sin Bandera", youtubeId: "Fk5oL0mgI08", nota: "video oficial completo; canal oficial de Sin Bandera" },
+    { titulo: "Mientes Tan Bien", artista: "Sin Bandera", youtubeId: "tg7QRlINFgQ", nota: "video oficial completo; canal oficial de Sin Bandera" },
+    { titulo: "Que Me Alcance La Vida", artista: "Sin Bandera", youtubeId: "fbqXGMXVgB8", nota: "video oficial completo; canal oficial de Sin Bandera" },
+    { titulo: "Todo Cambió", artista: "Camila", youtubeId: "gO8-9OWzPOQ", nota: "video oficial completo; canal oficial de Camila" },
+    { titulo: "Incondicional", artista: "Prince Royce", youtubeId: "h_fXySfFmM8", nota: "video oficial completo; canal oficial/label verificado" },
+    { titulo: "Espacio Sideral", artista: "Jesse & Joy", youtubeId: "BuY7HYSDoTM", nota: "video oficial completo; canal oficial de Jesse & Joy" },
+    { titulo: "¡Corre!", artista: "Jesse & Joy", youtubeId: "P2hM9CLAMu4", nota: "video oficial completo; canal oficial de Jesse & Joy" },
+    { titulo: "Por Amarte Tanto", artista: "Melendi", youtubeId: "z7Uwv5QuOys", nota: "videoclip oficial completo; canal oficial de Melendi" },
+    { titulo: "Prometo", artista: "Pablo Alborán", youtubeId: "lW32zvWW4R4", nota: "audio oficial completo; canal oficial de Pablo Alborán" },
+    { titulo: "La Distancia", artista: "Manuel Medrano", youtubeId: "dH7_By3Y2i0", nota: "video oficial completo; canal oficial de Manuel Medrano" },
+    { titulo: "Creo en Ti", artista: "Reik", youtubeId: "cqGyeFvhm8U", nota: "video oficial completo; verificación previa" },
   ],
 
   filosofica: [
@@ -114,6 +131,7 @@ const CATALOGO_CANCIONES = {
     { titulo: "Creep", artista: "Radiohead", youtubeId: "zFYEYRcjK2g", nota: "audio completo del canal oficial; sugerida en las cartas" },
     { titulo: "The Scientist", artista: "Coldplay", youtubeId: "RB-RcX5DS5A", nota: "video oficial completo; sugerida en varias cartas" },
     { titulo: "I Wanna Be Yours", artista: "Arctic Monkeys", youtubeId: "nyuo9-OjNNg", nota: "audio completo del álbum AM; sugerida en varias cartas" },
+    { titulo: "Me Muero", artista: "La Quinta Estación", youtubeId: "k5k2XVKxznc", nota: "video oficial completo; canal oficial de La Quinta Estación" },
   ],
 
   hot: [
