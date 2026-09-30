@@ -1,51 +1,34 @@
-AUDITORÍA FINAL — CALENDARIO 365 + YOUTUBE + AUDIO LOCAL
-Fecha: 30 septiembre 2026
+AUDITORÍA MUSICAL — ACTUALIZACIÓN YOUTUBE
 
-ESTADO
-- Calendario: 365 días.
-- Catálogo YouTube: 70 entradas reproducibles con ID de 11 caracteres; 69 IDs únicos porque algunas canciones se reutilizan en más de una categoría.
-- Catálogo local: biblioteca ampliada para 397 canciones de referencia.
-- Archivos de audio locales incluidos: ninguno; el usuario añade los archivos que tenga derecho a alojar.
-- Carpeta musica/: preparada para recibir los MP3.
+Catálogo actual: 111 entradas / 109 IDs únicos.
+Categorías: amor 62, filosófica 27, hot 14, ambiente 8.
 
-CAMBIOS DE ESTA ITERACIÓN
-1. Se eliminó el video de Kaleth Morales que estaba identificado en el catálogo como Vivo en el Limbo, porque el usuario detectó que esa referencia era un clip demasiado corto y no representaba la canción completa.
-2. Se eliminó la entrada genérica “Selección de ambiente” del catálogo YouTube porque no era una canción suficientemente identificable.
-3. Se amplió catalogo-musica-local.js para que el usuario pueda construir progresivamente una biblioteca amplia, sin tener que modificar el reproductor cada vez.
-4. Se añadió el botón 💿 en la barra del reproductor para intentar manualmente la versión local de la canción actual.
-5. Cuando una canción termina, el reproductor encadena automáticamente otra canción.
-6. Si YouTube falla, el reproductor intenta primero la versión local correspondiente cuando existe; después puede pasar a otra canción válida.
-7. Se mantuvo el reproductor YouTube semitransparente.
-8. Se actualizó la versión de caché de los scripts en index.html y calendario.html.
-9. Se eliminó ABRIR-CALENDARIO.bat, porque el usuario indicó que no le estaba aportando una diferencia útil.
-10. Se añadió LISTA-CANCIONES-LOCAL.txt con nombres exactos para los archivos locales y enlaces de YouTube cuando se pudieron verificar.
-11. Se actualizó GUIA-ACTUALIZACION.md con el flujo YouTube/local y las recomendaciones de GitHub Pages.
+Añadidas en esta revisión por aparecer en cartas o por formar parte de la expansión prevista:
+- Amor Completo — Mon Laferte
+- Burbujas de Amor — Juan Luis Guerra 4.40
+- Del Mar — Ozuna, Doja Cat & Sia
+- La Reina — Maluma
+- Sigo Extrañándote — J Balvin
+- Tú Sí Sabes Quererme — Natalia Lafourcade
+- La Mitad — Camilo
+- Colapso — Kevin Kaarl
+- Creep — Radiohead
+- The Scientist — Coldplay
+- I Wanna Be Yours — Arctic Monkeys
+- Clair de Lune — Claude Debussy
 
-YOUTUBE
-- Los IDs actuales se validaron sintácticamente con el patrón [-_A-Za-z0-9]{11}.
-- La presencia de un ID válido no garantiza que YouTube permita la inserción: un video puede ser privado, eliminado, restringido o tener la inserción desactivada.
-- Los enlaces concretos de la lista se contrastaron con resultados web disponibles durante esta revisión cuando fue posible.
-- No se afirma que un video de YouTube permanecerá disponible indefinidamente.
+Correcciones de contenido:
+- Se corrigió “Tú Sí Sabes Querírmeme” a “Tú Sí Sabes Quererme”.
+- La sugerencia de “Lo Que en Ti Veo” se atribuye a Kany García & Nahuel Pennisi.
 
-AUDIO LOCAL
-- El nombre del archivo local es parte de la configuración del catálogo.
-- Ejemplo: “Perfect - Ed Sheeran.mp3” debe estar en musica/ con exactamente ese nombre.
-- El reproductor busca coincidencia por título y artista y usa el archivo local como respaldo.
-- Los archivos deben obtenerse de fuentes donde el usuario tenga derecho a usarlos y alojarlos.
+Reproductor:
+- Mantiene prioridad de `cancionUrl`.
+- Después intenta reconocer la canción sugerida en la carta.
+- La búsqueda ahora normaliza tildes, signos y apóstrofes.
+- Los títulos cortos explícitos, como “505” y “Eres”, pueden reconocerse sin provocar coincidencias genéricas en cualquier texto.
+- Al terminar una canción sigue saltando a otra de la categoría y los errores de YouTube mantienen fallback.
 
-GITHUB PAGES
-- GitHub Pages publica sitios de hasta 1 GB y tiene un límite flexible de ancho de banda de 100 GB/mes según la documentación vigente.
-- GitHub bloquea archivos individuales de más de 100 MiB en repositorios Git normales.
-- Git LFS no se puede usar con sitios GitHub Pages.
-- Por eso se recomienda mantener los MP3 comprimidos y controlar el tamaño total del sitio.
-
-VALIDACIÓN TÉCNICA
-- node --check reproductor.js: OK.
-- node --check catalogo-canciones.js: OK.
-- node --check catalogo-musica-local.js: OK.
-- IDs YouTube actuales con longitud/formato inválido: 0.
-- Duplicados exactos en el catálogo local: revisados al generar la biblioteca.
-- Se generará un ZIP nuevo después de esta auditoría.
-
-LIMITACIÓN DE PRUEBA
-No es posible simular desde este entorno una reproducción real de cada archivo MP3 que el usuario todavía no ha añadido ni garantizar el comportamiento futuro de todos los videos de YouTube. La arquitectura está preparada para detectar fallos de YouTube y usar el respaldo local.
+Pendientes deliberados:
+- “Contigo” no se fijó porque las cartas antiguas no indican qué artista/version querían.
+- “Dámelo Todo” no se fijó por la misma ambigüedad.
+- Las recomendaciones libres (playlist de ambos, canción favorita de ella, etc.) se conservan como elecciones abiertas.

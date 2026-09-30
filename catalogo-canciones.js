@@ -64,12 +64,26 @@ const CATALOGO_CANCIONES = {
     { titulo: "Todo de Ti", artista: "Rauw Alejandro", youtubeId: "CFPLIaMpGrY" },
     { titulo: "Lo Que en Ti Veo", artista: "Kany García & Nahuel Pennisi", youtubeId: "CrTGrpnlsFI" },
     { titulo: "Volví a Nacer", artista: "Carlos Vives", youtubeId: "CJ_zRSv3Hr8" },
+    { titulo: "From The Start", artista: "Laufey", youtubeId: "lSD_L-xic9o", nota: "video oficial completo" },
+    { titulo: "Line Without a Hook", artista: "Ricky Montgomery feat. mxmtoon", youtubeId: "TM-LcROZaFs", nota: "lyric video oficial completo" },
+    { titulo: "Get You", artista: "Daniel Caesar feat. Kali Uchis", youtubeId: "WFLGrpGemLg", nota: "audio oficial de YouTube" },
     { titulo: "Mi Corazoncito", artista: "Aventura", youtubeId: "z2pt4CN4rhc", nota: "bachata romántica; video oficial completo" },
     { titulo: "Inmortal", artista: "Aventura", youtubeId: "XlmaJ-yU46U", nota: "bachata; video oficial completo" },
     { titulo: "Dile al Amor", artista: "Aventura", youtubeId: "ebakGrBkTog", nota: "bachata; video completo" },
     { titulo: "Una Aventura", artista: "Grupo Niche", youtubeId: "JBUMs9Sil1s", nota: "salsa romántica; audio oficial" },
     { titulo: "Gotas de Lluvia", artista: "Grupo Niche", youtubeId: "Kg15fQkXR98", nota: "salsa romántica; audio oficial" },
     { titulo: "Cásate Conmigo", artista: "Silvestre Dangond & Nicky Jam", youtubeId: "cpN78ZjnCZY", nota: "vallenato/pop; video oficial completo" },
+    { titulo: "Las Locuras Mías", artista: "Silvestre Dangond", youtubeId: "LqKscPDW8Y0", nota: "vallenato romántico; video oficial completo" },
+    { titulo: "Déjame Entrar", artista: "Carlos Vives", youtubeId: "DqPMV_hpitA", nota: "video oficial completo" },
+    { titulo: "Los Caminos de la Vida", artista: "Los Diablitos", youtubeId: "I-cOD2x-qBs", nota: "vallenato; video completo" },
+    { titulo: "Me Ilusioné", artista: "Binomio de Oro de América", youtubeId: "wDeZiEZGS3Q", nota: "vallenato; video oficial completo" },
+    { titulo: "Amor Completo", artista: "Mon Laferte", youtubeId: "PQlG1gznMBE", nota: "video oficial completo; sugerida en las cartas" },
+    { titulo: "Burbujas de Amor", artista: "Juan Luis Guerra 4.40", youtubeId: "PWGwF_B0bxk", nota: "video completo; sugerida en las cartas" },
+    { titulo: "Del Mar", artista: "Ozuna, Doja Cat & Sia", youtubeId: "K2kUyHgadQo", nota: "video oficial completo; sugerida en el día 4" },
+    { titulo: "La Reina", artista: "Maluma", youtubeId: "VFKu6QBbOa4", nota: "video oficial completo; sugerida en el día 76" },
+    { titulo: "Sigo Extrañándote", artista: "J Balvin", youtubeId: "nZ0zbsZOdwg", nota: "video oficial completo; sugerida en varias cartas" },
+    { titulo: "Tú Sí Sabes Quererme", artista: "Natalia Lafourcade", youtubeId: "qTd2P94Qhp8", nota: "video oficial completo; sugerida en varias cartas" },
+    { titulo: "La Mitad", artista: "Camilo", youtubeId: "yz7oP-JqaXk", nota: "versión completa oficial; sugerida en varias cartas" },
   ],
 
   filosofica: [
@@ -90,6 +104,16 @@ const CATALOGO_CANCIONES = {
     { titulo: "Nuestro Juramento", artista: "Julio Jaramillo", youtubeId: "IkrHakpw02w", nota: "versión completa" },
     { titulo: "Depende", artista: "Jarabe de Palo", youtubeId: "GtujUCURgtM", nota: "video oficial completo" },
     { titulo: "Iris", artista: "Goo Goo Dolls", youtubeId: "Dy_eP-mqWow", nota: "audio completo" },
+    { titulo: "Amarte Más No Pude", artista: "Diomedes Díaz", youtubeId: "OVfQD-A2RiY", nota: "audio del canal oficial de Diomedes Díaz" },
+    { titulo: "A Puro Dolor", artista: "Son By Four", youtubeId: "kAKVT1HWNsg", nota: "video oficial completo" },
+    { titulo: "Sin Sentimiento", artista: "Grupo Niche", youtubeId: "EJdbZIgaSHg", nota: "video completo de Codiscos" },
+    { titulo: "Periódico de Ayer", artista: "Héctor Lavoe", youtubeId: "LMIrkCL8Zg0", nota: "visualizador oficial de Héctor Lavoe" },
+    { titulo: "Qué Hay de Malo", artista: "Jerry Rivera", youtubeId: "SUgQHe902yQ", nota: "video oficial completo" },
+    { titulo: "Me Bebí Tu Recuerdo", artista: "Galy Galiano", youtubeId: "dmG4Y3652T4", nota: "audio oficial del canal de Galy Galiano" },
+    { titulo: "Colapso", artista: "Kevin Kaarl", youtubeId: "Mz8n2prxhg8", nota: "audio completo del canal oficial; sugerida en las cartas" },
+    { titulo: "Creep", artista: "Radiohead", youtubeId: "zFYEYRcjK2g", nota: "audio completo del canal oficial; sugerida en las cartas" },
+    { titulo: "The Scientist", artista: "Coldplay", youtubeId: "RB-RcX5DS5A", nota: "video oficial completo; sugerida en varias cartas" },
+    { titulo: "I Wanna Be Yours", artista: "Arctic Monkeys", youtubeId: "nyuo9-OjNNg", nota: "audio completo del álbum AM; sugerida en varias cartas" },
   ],
 
   hot: [
@@ -114,6 +138,9 @@ const CATALOGO_CANCIONES = {
     { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "sR2W2scFS4Y" },
     { titulo: "Experience", artista: "Ludovico Einaudi", youtubeId: "l6E8QbsAAJ8" },
     { titulo: "Comptine d'un autre été", artista: "Yann Tiersen", youtubeId: "znfYwABeSZ0" },
-    { titulo: "Talking to the Moon", artista: "Bruno Mars", youtubeId: "fXw0jcYbqdo", nota: "video oficial de letra" }
+    { titulo: "Una Mattina", artista: "Ludovico Einaudi", youtubeId: "94-PAIMDhaQ", nota: "audio oficial distribuido por Universal Music" },
+    { titulo: "One Summer's Day", artista: "Joe Hisaishi", youtubeId: "TK1Ij_-mank", nota: "video oficial de Joe Hisaishi" },
+    { titulo: "Talking to the Moon", artista: "Bruno Mars", youtubeId: "fXw0jcYbqdo", nota: "video oficial de letra" },
+    { titulo: "Clair de Lune", artista: "Claude Debussy", youtubeId: "ZlM2EB9aE3A", nota: "pieza completa; sugerida en el día 317" }
   ]
 };

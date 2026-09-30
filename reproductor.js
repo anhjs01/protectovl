@@ -350,14 +350,32 @@
     return null;
   }
 
+  function normalizarTextoMusical(valor) {
+    return String(valor || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[’‘´`]/g, "'")
+      .replace(/[^a-z0-9' ]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function buscarPorTexto(texto) {
-    const normalizado = String(texto || "").toLowerCase();
+    const normalizado = normalizarTextoMusical(texto);
     let mejor = null;
     let mejorLongitud = 0;
     for (const categoria of CATEGORIAS_VALIDAS) {
       for (const cancion of listaCategoria(categoria)) {
-        const titulo = String(cancion.titulo || "").toLowerCase();
-        if (titulo.length >= 5 && normalizado.includes(titulo) && titulo.length > mejorLongitud) {
+        const titulo = normalizarTextoMusical(cancion.titulo);
+        const tituloCortoExplicito = titulo.length >= 3 && (
+          normalizado.includes(`cancion ${titulo}`) ||
+          normalizado.includes(`musica ${titulo}`) ||
+          normalizado.startsWith(`${titulo} `) ||
+          normalizado === titulo
+        );
+        const coincide = (titulo.length >= 5 && normalizado.includes(titulo)) || tituloCortoExplicito;
+        if (coincide && titulo.length > mejorLongitud) {
           mejor = { ...cancion, categoria };
           mejorLongitud = titulo.length;
         }

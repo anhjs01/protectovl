@@ -1,3 +1,8 @@
+
+## Estado actual del catálogo
+
+El proyecto parte actualmente de **111 entradas de YouTube verificadas a nivel de título/artista/ID**, con 109 IDs únicos. La prueba definitiva de reproducción se debe hacer en GitHub Pages, que es el entorno real del proyecto.
+
 # GUÍA — ACTUALIZACIÓN DEL REPRODUCTOR DE YOUTUBE
 
 ## Arquitectura actual
@@ -43,3 +48,7 @@ Que un video exista en YouTube no garantiza que siempre permita reproducción in
 ## Listas
 - `LISTA-CANCIONES-YOUTUBE.md`: canciones que sí están actualmente dentro del catálogo.
 - `LISTA-CANCIONES-PENDIENTES-YOUTUBE.txt`: canciones de la antigua biblioteca local que todavía no se meten porque no se verificó una versión completa de YouTube.
+
+
+## Coincidencia con las cartas
+El reproductor normaliza mayúsculas, tildes y signos al buscar una canción mencionada en `notaCancion`, `notaImagen` o `detalle`. También reconoce títulos cortos cuando aparecen como una canción explícita. Así las recomendaciones musicales escritas dentro de cada carta tienen prioridad antes de la selección aleatoria por tono.

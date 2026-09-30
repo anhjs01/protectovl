@@ -859,7 +859,7 @@ const CALENDARIO = [
     ],
     detalle: "Escúchala hoy y déjate envolver por su vibra.",
     buenasNoches: "Hay una calma particular en las últimas horas del día que hace que todo se sienta más simple, más claro. Que la noche te abrace bonito.",
-    notaImagen: "[MÚSICA] Canción: Tú Sí Sabes Querírmeme",
+    notaImagen: "[MÚSICA] Canción: Tú Sí Sabes Quererme",
     notaCancion: "[PARA TI] la música de este día se elige sola del catálogo (no verifiqué el artista original que traía este bloque, así que no lo mantuve como referencia)."
   },
 
@@ -2461,7 +2461,7 @@ const CALENDARIO = [
     ],
     detalle: "Dedícale un momento a escuchar la instrumentación de este tema.",
     buenasNoches: "El día ya se apagó casi del todo, y antes de cerrar los ojos quería dejarte esto. Que descanses rico, nos leemos mañana.",
-    notaImagen: "[MÚSICA] Canción: Tú Sí Sabes Querírmeme",
+    notaImagen: "[MÚSICA] Canción: Tú Sí Sabes Quererme",
     notaCancion: "[PARA TI] la música de este día se elige sola del catálogo (no verifiqué el artista original que traía este bloque, así que no lo mantuve como referencia)."
   },
 
@@ -2820,7 +2820,7 @@ const CALENDARIO = [
     ],
     detalle: "Disfruta de tu bebida caliente y relájate un rato hoy.",
     buenasNoches: "Hay noches donde el cansancio gana rápido, y aun así encontré energía para pensarte un rato más. Que tengas una noche muy tranquila y reparadora.",
-    notaImagen: "[MÚSICA] Canción: Tú Sí Sabes Querírmeme",
+    notaImagen: "[MÚSICA] Canción: Tú Sí Sabes Quererme",
     notaCancion: "[PARA TI] la música de este día se elige sola del catálogo (no verifiqué el artista original que traía este bloque, así que no lo mantuve como referencia)."
   },
 
@@ -5308,7 +5308,7 @@ const CALENDARIO = [
     detalle: "Reto: cada uno debe decir cinco cosas del otro que no tengan nada que ver con apariencia física.",
     buenasNoches: "Buenas noches. Hoy te miro con una gratitud distinta: no solamente por ser mi pareja, sino por la persona que eres cuando nadie está intentando impresionarme.",
     notaImagen: "[PARA TI] retrato natural, sin posar demasiado.",
-    notaCancion: "[MÚSICA] Lo Que en Ti Veo — Andrés Cepeda."
+    notaCancion: "[MÚSICA] Lo Que en Ti Veo — Kany García & Nahuel Pennisi."
   },
 
   {
