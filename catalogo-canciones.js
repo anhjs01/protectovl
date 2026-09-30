@@ -35,7 +35,7 @@ const CATALOGO_CANCIONES = {
     { titulo: "Como Me Encanta", artista: "Kevin Kaarl", youtubeId: "OgzNyN2bWac" },
     { titulo: "Die For You", artista: "The Weeknd", youtubeId: "gSo0YiGPgHk" },
     { titulo: "At Last", artista: "Etta James", youtubeId: "1qJU8G7gR_g" },
-    { titulo: "Eres", artista: "Café Tacvba", youtubeId: "A9XxwAkpdV8" },
+    { titulo: "Eres", artista: "Café Tacvba", youtubeId: "98Akpf1ph2o" },
     { titulo: "All of Me", artista: "John Legend", youtubeId: "450p7goxZqg" },
     { titulo: "Perfect", artista: "Ed Sheeran", youtubeId: "2Vv-BfVoq4g" },
     { titulo: "Glue Song", artista: "beabadoobee", youtubeId: "y1cBhJLNNXU" },
@@ -60,12 +60,16 @@ const CATALOGO_CANCIONES = {
     { titulo: "Querer Querernos", artista: "Canserbero", youtubeId: "Ei7Hp_4FbGY" },
     { titulo: "Eres Tú", artista: "Mocedades", youtubeId: "Tw69WAn2-_0" },
     { titulo: "Volvamos a Ser Novios", artista: "Silvestre Dangond & Juancho De La Espriella", youtubeId: "gBOuViKzj1Y" },
-    { titulo: "La Flaca", artista: "Jarabe de Palo", youtubeId: "R2rP8ZU52gU", nota: "rock latino romántico" },
-    { titulo: "Bonito", artista: "Jarabe de Palo", youtubeId: "VE3h9du3hK4", nota: "para días luminosos" },
     { titulo: "La Bachata", artista: "Manuel Turizo", youtubeId: "TiM_TFpT_DE" },
     { titulo: "Todo de Ti", artista: "Rauw Alejandro", youtubeId: "CFPLIaMpGrY" },
     { titulo: "Lo Que en Ti Veo", artista: "Kany García & Nahuel Pennisi", youtubeId: "CrTGrpnlsFI" },
-    { titulo: "Volví a Nacer", artista: "Carlos Vives", youtubeId: "CJ_zRSv3Hr8" }
+    { titulo: "Volví a Nacer", artista: "Carlos Vives", youtubeId: "CJ_zRSv3Hr8" },
+    { titulo: "Mi Corazoncito", artista: "Aventura", youtubeId: "z2pt4CN4rhc", nota: "bachata romántica; video oficial completo" },
+    { titulo: "Inmortal", artista: "Aventura", youtubeId: "XlmaJ-yU46U", nota: "bachata; video oficial completo" },
+    { titulo: "Dile al Amor", artista: "Aventura", youtubeId: "ebakGrBkTog", nota: "bachata; video completo" },
+    { titulo: "Una Aventura", artista: "Grupo Niche", youtubeId: "JBUMs9Sil1s", nota: "salsa romántica; audio oficial" },
+    { titulo: "Gotas de Lluvia", artista: "Grupo Niche", youtubeId: "Kg15fQkXR98", nota: "salsa romántica; audio oficial" },
+    { titulo: "Cásate Conmigo", artista: "Silvestre Dangond & Nicky Jam", youtubeId: "cpN78ZjnCZY", nota: "vallenato/pop; video oficial completo" },
   ],
 
   filosofica: [
@@ -78,9 +82,14 @@ const CATALOGO_CANCIONES = {
     { titulo: "Sweet Disposition", artista: "The Temper Trap", youtubeId: "vN7HQrgakZU" },
     { titulo: "Pensando en Ti", artista: "Canserbero", youtubeId: "kSk0kbHMGxw" },
     { titulo: "Good News", artista: "Mac Miller", youtubeId: "dLWV58BhE7Q" },
-    { titulo: "Es Épico", artista: "Canserbero", youtubeId: "FEbBEAzqqtg", nota: "rap narrativo" },
     { titulo: "Yellow", artista: "Coldplay", youtubeId: "yKNxeF4KMsY" },
-    { titulo: "505", artista: "Arctic Monkeys", youtubeId: "CKI8iQTgZKU" }
+    { titulo: "505", artista: "Arctic Monkeys", youtubeId: "CKI8iQTgZKU" },
+    { titulo: "The Reason", artista: "Hoobastank", youtubeId: "qQ0zxuWFxrY", nota: "audio oficial de YouTube Music" },
+    { titulo: "Chasing Cars", artista: "Snow Patrol", youtubeId: "GemKqzILV4w", nota: "video oficial completo" },
+    { titulo: "Lamento Boliviano", artista: "Los Enanitos Verdes", youtubeId: "hReAuaAuJOE", nota: "video oficial completo" },
+    { titulo: "Nuestro Juramento", artista: "Julio Jaramillo", youtubeId: "IkrHakpw02w", nota: "versión completa" },
+    { titulo: "Depende", artista: "Jarabe de Palo", youtubeId: "GtujUCURgtM", nota: "video oficial completo" },
+    { titulo: "Iris", artista: "Goo Goo Dolls", youtubeId: "Dy_eP-mqWow", nota: "audio completo" },
   ],
 
   hot: [
@@ -93,13 +102,18 @@ const CATALOGO_CANCIONES = {
     { titulo: "Pillowtalk", artista: "ZAYN", youtubeId: "C_3d6GntKbk" },
     { titulo: "Streets", artista: "Doja Cat", youtubeId: "oqv35UZepIM" },
     { titulo: "Adorn", artista: "Miguel", youtubeId: "8dM5QYdTo08" },
-    { titulo: "Agua", artista: "Jarabe de Palo", youtubeId: "2GhF2mPKnDg", nota: "clásico latino" }
+    { titulo: "Call Out My Name", artista: "The Weeknd", youtubeId: "M4ZoCHID9GI", nota: "video oficial completo" },
+    { titulo: "Positions", artista: "Ariana Grande", youtubeId: "tcYodQoapMg", nota: "video oficial completo" },
+    { titulo: "Dile", artista: "Don Omar", youtubeId: "zODmu06pqvg", nota: "video oficial completo" },
+    { titulo: "Sweater Weather", artista: "The Neighbourhood", youtubeId: "GCdwKhTtNNw", nota: "video oficial completo" },
+    { titulo: "Do I Wanna Know?", artista: "Arctic Monkeys", youtubeId: "bpOSxM0rNPM", nota: "video oficial completo" }
   ],
 
   ambiente: [
     { titulo: "River Flows in You", artista: "Yiruma", youtubeId: "fiBvOKmuWKg" },
     { titulo: "Nuvole Bianche", artista: "Ludovico Einaudi", youtubeId: "sR2W2scFS4Y" },
     { titulo: "Experience", artista: "Ludovico Einaudi", youtubeId: "l6E8QbsAAJ8" },
-    { titulo: "Comptine d'un autre été", artista: "Yann Tiersen", youtubeId: "znfYwABeSZ0" }
+    { titulo: "Comptine d'un autre été", artista: "Yann Tiersen", youtubeId: "znfYwABeSZ0" },
+    { titulo: "Talking to the Moon", artista: "Bruno Mars", youtubeId: "fXw0jcYbqdo", nota: "video oficial de letra" }
   ]
 };

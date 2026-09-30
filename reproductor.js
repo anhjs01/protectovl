@@ -32,58 +32,6 @@
   let elHost = null;
   let errorPlayer = false;
   const idsFallidosSesion = new Set();
-  let audioLocal = null;
-  let fuenteActual = "youtube";
-  let colaLocalFallback = null;
-
-  // Archivos locales opcionales. Se leen desde musica-local.js si existe.
-  // Ejemplo: { titulo: "Perfect", artista: "Ed Sheeran", archivo: "Perfect - Ed Sheeran.mp3", categoria: "amor" }
-  function catalogoLocalValido() {
-    return typeof CATALOGO_MUSICA_LOCAL !== "undefined" && Array.isArray(CATALOGO_MUSICA_LOCAL);
-  }
-
-  function buscarLocalParaCancion(cancion) {
-    if (!catalogoLocalValido() || !cancion) return null;
-    const titulo = String(cancion.titulo || "").trim().toLowerCase();
-    const artista = String(cancion.artista || "").trim().toLowerCase();
-    return CATALOGO_MUSICA_LOCAL.find((item) => {
-      if (!item || !item.archivo) return false;
-      const it = String(item.titulo || "").trim().toLowerCase();
-      const ia = String(item.artista || "").trim().toLowerCase();
-      return (titulo && it === titulo && (!artista || !ia || ia === artista)) ||
-             (titulo && it === titulo);
-    }) || null;
-  }
-
-  function reproducirLocal(cancion, local) {
-    if (!local || !local.archivo) return false;
-    try {
-      if (!audioLocal) {
-        audioLocal = document.createElement("audio");
-        audioLocal.preload = "auto";
-        audioLocal.addEventListener("ended", siguienteAutomatico);
-        audioLocal.addEventListener("play", function () { sonando = true; actualizarUI(); });
-        audioLocal.addEventListener("pause", function () { if (fuenteActual === "local") { sonando = false; actualizarUI(); } });
-        audioLocal.addEventListener("error", function () {
-          if (fuenteActual === "local") {
-            sonando = false;
-            intentarAlternativaTrasError(cancionActual, "local");
-          }
-        });
-        document.body.appendChild(audioLocal);
-      }
-      fuenteActual = "local";
-      cancionActual = { ...cancion, localArchivo: local.archivo };
-      audioLocal.src = "musica/" + encodeURIComponent(local.archivo);
-      audioLocal.load();
-      const promesa = audioLocal.play();
-      if (promesa && typeof promesa.catch === "function") promesa.catch(() => { sonando = false; actualizarUI(); });
-      actualizarUI();
-      return true;
-    } catch (_) {
-      return false;
-    }
-  }
 
   function catalogoValido() {
     return typeof CATALOGO_CANCIONES !== "undefined" && CATALOGO_CANCIONES;
@@ -96,7 +44,7 @@
   function listaCategoria(categoria) {
     if (!catalogoValido()) return [];
     const lista = Array.isArray(CATALOGO_CANCIONES[categoria]) ? CATALOGO_CANCIONES[categoria] : [];
-    return lista.filter(tieneIdValido);
+    return lista.filter((c) => tieneIdValido(c) && !idsFallidosSesion.has(c.youtubeId));
   }
 
   function leerHistorial() {
@@ -113,30 +61,27 @@
     try { localStorage.setItem(HISTORIAL_KEY, JSON.stringify(data)); } catch (_) {}
   }
 
-  function elegirCancion(categoria, excluirIds) {
+  function elegirCancion(categoria) {
     if (!CATEGORIAS_VALIDAS.includes(categoria)) categoria = "amor";
     const lista = listaCategoria(categoria);
     if (!lista.length) return null;
 
-    const excluidos = excluirIds instanceof Set ? excluirIds : new Set();
     const historial = leerHistorial();
     const usados = Array.isArray(historial[categoria]) ? historial[categoria] : [];
-    let disponibles = lista.filter((c) => !usados.includes(c.youtubeId) && !excluidos.has(c.youtubeId));
+    let disponibles = lista.filter((c) => !usados.includes(c.youtubeId));
 
-    // Si ya se recorrió toda la categoría, empieza otra vuelta, pero conserva
-    // fuera los videos que acaban de fallar durante esta sesión.
+    // Cuando se consumió toda la categoría, empezamos una vuelta nueva.
     if (!disponibles.length) {
       historial[categoria] = [];
-      disponibles = lista.filter((c) => !excluidos.has(c.youtubeId));
+      disponibles = lista.slice();
     }
 
-    // Evita repetir inmediatamente cuando hay más de una alternativa.
+    // Evita repetir inmediatamente aunque la categoría tenga pocas canciones.
     if (cancionActual && disponibles.length > 1) {
       const otras = disponibles.filter((c) => c.youtubeId !== cancionActual.youtubeId);
       if (otras.length) disponibles = otras;
     }
 
-    if (!disponibles.length) return null;
     const elegida = disponibles[Math.floor(Math.random() * disponibles.length)];
     historial[categoria] = [...(historial[categoria] || []), elegida.youtubeId];
     guardarHistorial(historial);
@@ -151,23 +96,12 @@
     elBarra.innerHTML =
       '<button type="button" class="reproductor-btn" id="reproductorPlayPausa" aria-label="Pausar o reanudar">▶</button>' +
       '<span class="reproductor-info" id="reproductorInfo">Música lista</span>' +
-      '<button type="button" class="reproductor-btn" id="reproductorLocal" aria-label="Usar archivo local">💿</button>' +
       '<button type="button" class="reproductor-btn" id="reproductorSiguiente" aria-label="Cambiar canción">⟳</button>';
     document.body.appendChild(elBarra);
 
     elBarra.querySelector("#reproductorPlayPausa").addEventListener("click", function () {
       activarSonido(true);
       pausarOReanudar();
-    });
-    elBarra.querySelector("#reproductorLocal").addEventListener("click", function () {
-      activarSonido(true);
-      if (!cancionActual) return;
-      const local = buscarLocalParaCancion(cancionActual);
-      if (local) {
-        reproducirLocal(cancionActual, local);
-      } else {
-        mostrarEstadoError("No tienes este archivo en la carpeta musica/");
-      }
     });
     elBarra.querySelector("#reproductorSiguiente").addEventListener("click", function () {
       activarSonido(true);
@@ -185,7 +119,7 @@
       ? cancionActual.titulo + " · " + cancionActual.artista
       : cancionActual.titulo;
 
-    info.textContent = (fuenteActual === "local" ? "💿 " : "🎵 ") + nombre;
+    info.textContent = "🎵 " + nombre;
     elBarra.querySelector("#reproductorPlayPausa").textContent = sonando ? "⏸" : "▶";
     elBarra.setAttribute("data-playing", sonando ? "true" : "false");
   }
@@ -234,20 +168,16 @@
     elHost.className = "yt-reproductor-host";
     document.body.appendChild(elHost);
 
-    const origen = (location.protocol === "http:" || location.protocol === "https:") ? location.origin : undefined;
-    const variablesPlayer = {
-      autoplay: 0,
-      controls: 1,
-      playsinline: 1,
-      rel: 0,
-      modestbranding: 1,
-    };
-    if (origen) variablesPlayer.origin = origen;
-
     player = new YT.Player(elHost.id, {
       width: "200",
       height: "200",
-      playerVars: variablesPlayer,
+      playerVars: {
+        autoplay: 0,
+        controls: 1,
+        playsinline: 1,
+        rel: 0,
+        modestbranding: 1,
+      },
       events: {
         onReady: function () {
           apiLista = true;
@@ -257,22 +187,24 @@
         },
         onStateChange: function (event) {
           if (event.data === 1) {
-            fuenteActual = "youtube";
             sonando = true;
+            actualizarUI();
           } else if (event.data === 0) {
             sonando = false;
             actualizarUI();
-            // Cuando una canción termina, encadenamos otra automáticamente.
-            siguienteAutomatico();
-            return;
+            const categoria = cancionActual && cancionActual.categoria ? cancionActual.categoria : "amor";
+            siguienteDeCategoria(categoria);
           } else if (event.data === 2 || event.data === 5) {
             sonando = false;
+            actualizarUI();
           }
-          actualizarUI();
         },
-        onError: function (event) {
-          const fallida = cancionActual ? { ...cancionActual } : solicitudPendiente ? { ...solicitudPendiente } : null;
-          intentarAlternativaTrasError(fallida, event && event.data);
+        onError: function () {
+          const fallida = cancionActual;
+          sonando = false;
+          actualizarUI();
+          solicitudPendiente = null;
+          siguienteTrasFallo((fallida && fallida.categoria) || "amor", fallida);
         },
         onAutoplayBlocked: function () {
           sonando = false;
@@ -282,62 +214,28 @@
     });
   }
 
-  function marcarIdFallido(id, codigo) {
-    // 100 = eliminado/privado; 101/150 = no permite reproducción incrustada.
-    // 2 = ID inválido. Son fallos que sí justifican cambiar de video.
-    if (id && [2, 100, 101, 150].includes(Number(codigo))) {
-      idsFallidosSesion.add(String(id));
-    }
+  function marcarFallo(cancion) {
+    if (cancion && cancion.youtubeId) idsFallidosSesion.add(cancion.youtubeId);
   }
 
-  function elegirAlternativa(categoriaOriginal) {
-    const intentos = [];
-    const orden = [];
-    if (CATEGORIAS_VALIDAS.includes(categoriaOriginal)) orden.push(categoriaOriginal);
-    for (const categoria of CATEGORIAS_VALIDAS) {
-      if (!orden.includes(categoria)) orden.push(categoria);
+  function siguienteTrasFallo(categoria, fallida) {
+    marcarFallo(fallida);
+    const alternativa = elegirCancion(categoria);
+    if (alternativa) {
+      reproducirCancion(alternativa, true);
+      return true;
     }
-
-    for (const categoria of orden) {
-      const alternativa = elegirCancion(categoria, idsFallidosSesion);
-      if (alternativa) {
-        intentos.push(alternativa);
-        return alternativa;
+    // Si toda la categoría quedó temporalmente fuera, intenta cualquier otra.
+    for (const otra of CATEGORIAS_VALIDAS) {
+      if (otra === categoria) continue;
+      const respaldo = elegirCancion(otra);
+      if (respaldo) {
+        reproducirCancion(respaldo, true);
+        return true;
       }
     }
-    return null;
-  }
-
-  function intentarAlternativaTrasError(cancionFallida, codigo) {
-    marcarIdFallido(cancionFallida && cancionFallida.youtubeId, codigo);
-    sonando = false;
-    actualizarUI();
-
-    // Primera alternativa: el mismo tema desde un archivo local del usuario.
-    const local = codigo === "local" ? null : buscarLocalParaCancion(cancionFallida);
-    if (local && reproducirLocal(cancionFallida, local)) return;
-
-    const categoria = (cancionFallida && cancionFallida.categoria) || "amor";
-    const alternativa = elegirAlternativa(categoria);
-    if (!alternativa) {
-      mostrarEstadoError("No queda otro video disponible en este momento");
-      return;
-    }
-
-    cancionActual = { ...alternativa };
-    precargada = null;
-    solicitudPendiente = { ...alternativa };
-    crearUI();
-    elBarra.querySelector("#reproductorInfo").textContent = "↻ Cambiando a otra versión…";
-    actualizarUI();
-
-    // Si ya hubo interacción, intentamos inmediatamente. Si no, queda pendiente
-    // hasta el siguiente gesto, respetando las reglas de autoplay del navegador.
-    if (usuarioInteractuo) {
-      const pendiente = solicitudPendiente;
-      solicitudPendiente = null;
-      reproducirCancion(pendiente, true);
-    }
+    mostrarEstadoError("No hay otra canción disponible");
+    return false;
   }
 
   function precargarIntro() {
@@ -362,24 +260,11 @@
     }
   }
 
-  function siguienteAutomatico() {
-    if (!usuarioInteractuo || !cancionActual) return;
-    const siguiente = elegirCancion(cancionActual.categoria || "amor", idsFallidosSesion);
-    if (!siguiente) return;
-
-    const local = buscarLocalParaCancion(siguiente);
-    if (local && reproducirLocal(siguiente, local)) return;
-
-    reproducirCancion(siguiente, true);
-  }
-
   function reproducirCancion(cancion, reemplazarPendiente) {
     if (!tieneIdValido(cancion)) return;
 
     cancionActual = { ...cancion };
     precargada = null;
-    fuenteActual = "youtube";
-    if (audioLocal) { try { audioLocal.pause(); } catch (_) {} }
     crearUI();
 
     if (!apiLista || !player) {
@@ -396,7 +281,6 @@
       return;
     }
 
-    fuenteActual = "youtube";
     player.unMute();
     player.setVolume(100);
     player.loadVideoById(cancion.youtubeId);
@@ -507,13 +391,7 @@
   }
 
   function pausarOReanudar() {
-    if (!cancionActual) return;
-    if (fuenteActual === "local" && audioLocal) {
-      if (sonando) audioLocal.pause();
-      else audioLocal.play().catch(() => {});
-      return;
-    }
-    if (!player || !apiLista) return;
+    if (!player || !apiLista || !cancionActual) return;
     if (sonando) {
       player.pauseVideo();
     } else {
@@ -523,12 +401,25 @@
     }
   }
 
-  function siguienteDeLaMisma() {
-    if (!cancionActual) {
-      reproducirCategoria(INTRO_CATEGORIA);
-      return;
+  function siguienteDeCategoria(categoria) {
+    const siguiente = elegirCancion(categoria);
+    if (siguiente) {
+      reproducirCancion(siguiente, true);
+      return true;
     }
-    siguienteAutomatico();
+    for (const otra of CATEGORIAS_VALIDAS) {
+      if (otra === categoria) continue;
+      const respaldo = elegirCancion(otra);
+      if (respaldo) {
+        reproducirCancion(respaldo, true);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function siguienteDeLaMisma() {
+    return siguienteDeCategoria((cancionActual && cancionActual.categoria) || "amor");
   }
 
   // El primer gesto puede ocurrir antes de que YouTube termine de cargar.
@@ -569,11 +460,6 @@
     estaSonando: function () { return sonando; },
     haIniciado: function () { return !!cancionActual; },
     cancionActual: function () { return cancionActual ? { ...cancionActual } : null; },
-    fuenteActual: function () { return fuenteActual; },
-    reproducirLocal: function (datos) {
-      const local = buscarLocalParaCancion(datos);
-      return local ? reproducirLocal(datos, local) : false;
-    },
     limpiarHistorialMusical: function () { try { localStorage.removeItem(HISTORIAL_KEY); } catch (_) {} },
   };
 })();
