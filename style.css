@@ -588,3 +588,29 @@ a { color: inherit; }
   .particula-vuelo, .heart-big.abriendo,
   .modal-body > *, #pasoContenido > *, .modal-signature{ animation: none !important; }
 }
+
+
+/* Acceso al editor creativo */
+.calendario-footer a.btn-lienzo{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:.35rem .2rem;
+  padding:.55rem 1.15rem;
+  border:1px solid rgba(157,220,255,.55);
+  border-radius:999px;
+  color:#dff4ff;
+  background:linear-gradient(135deg,rgba(64,145,190,.22),rgba(22,39,57,.72));
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+  letter-spacing:.04em;
+  opacity:1;
+  box-shadow:0 5px 20px rgba(70,160,220,.13);
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+.calendario-footer a.btn-lienzo:hover{
+  transform:translateY(-2px);
+  border-color:rgba(190,235,255,.95);
+  background:linear-gradient(135deg,rgba(64,145,190,.34),rgba(22,39,57,.88));
+}
